@@ -24,7 +24,7 @@ public class EnemySelector : MonoBehaviour
     {
         _DisableAllEnemies();
         _DisableAllButtons();
-        _EnableEnemy();
+        //_EnableEnemy();
         _EnableButton();
         _Rename();
     }
@@ -49,10 +49,10 @@ public class EnemySelector : MonoBehaviour
         }
     }
 
-    public void _EnableEnemy()
-    {
-        enableEnemy.SetActive(true);
-    }
+    //public void _EnableEnemy()
+    //{
+    //    enableEnemy.SetActive(true);
+    //}
     public void _DisableAllEnemies()
     {
         for (int i = 0; i < allEnemyGOs.Length; i++)

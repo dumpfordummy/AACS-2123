@@ -18,13 +18,13 @@ public class Togglescript : MonoBehaviour {
 
     private void Update()
     {
-        if (toggle.isOn)
-        {
-            Slider.SetActive(false);
-        }
-        else
-        {
-            Slider.SetActive(true);
-        }
+        //if (toggle.isOn)
+        //{
+        //    Slider.SetActive(false);
+        //}
+        //else
+        //{
+        //    Slider.SetActive(true);
+        //}
     }
 }
