@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        InitOffset();
+        offset = transform.position - target.position;
     }
 
     private void Update()
@@ -27,11 +27,6 @@ public class CameraFollow : MonoBehaviour
         targetPos = target.position + offset;
         Vector3 lerp = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
         transform.position = new Vector3(lerp.x, lerp.y, -10);
-    }
-
-    internal void InitOffset()
-    {
-        offset = transform.position - target.position;
     }
 
 }
