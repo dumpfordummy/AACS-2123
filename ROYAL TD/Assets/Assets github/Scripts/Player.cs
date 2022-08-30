@@ -8,11 +8,6 @@ public class Player : GameCharacter
     public Animator animator;
     private float horizontalInput = 0;
     private float verticalInput = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -27,8 +22,6 @@ public class Player : GameCharacter
 
         animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
         animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
-        Debug.Log("Horizontal :" + horizontalInput);
-        Debug.Log("Vertical :" + verticalInput);
 
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
 
@@ -39,7 +32,6 @@ public class Player : GameCharacter
 
         if (Input.GetKeyDown(KeyCode.H))
         {
-            Debug.Log("Attack");
             animator.SetBool("Attack", true);
         }
         if (Input.GetKeyUp(KeyCode.H))

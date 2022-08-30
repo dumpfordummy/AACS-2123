@@ -22,6 +22,7 @@ public class GameObjectSpawner : MonoBehaviour
 
     public void spawnPlayer()
     {
-        GameObject.Instantiate(player);
+        GameObject instantiated = (GameObject)GameObject.Instantiate(player);
+        CameraFollow.target = instantiated.transform;
     }
 }
