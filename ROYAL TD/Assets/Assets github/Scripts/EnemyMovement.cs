@@ -27,6 +27,9 @@ public class EnemyMovement : MonoBehaviour
             pathfinding.GetGrid().GetXY(mouseWorldPosition, out int mouseX, out int mouseY);
             pathfinding.GetGrid().GetXY(transform.position, out int initX, out int initY);
 
+            if (mouseX - initX == 0 && mouseY - initY == 0)
+                return;
+
             List<PathNode> paths = pathfinding.FindPath(initX, initY, mouseX, mouseY);
 
             foreach (PathNode path in paths)
@@ -40,6 +43,8 @@ public class EnemyMovement : MonoBehaviour
 
     private void followPath()
     {
+        if (waypoint.Count == 0)
+            return;
         if (waypointIndex < waypoint.Count)
         {
             Vector3 finalPosition = Vector3.MoveTowards(transform.position, waypoint[waypointIndex], moveSpeed * Time.deltaTime);
