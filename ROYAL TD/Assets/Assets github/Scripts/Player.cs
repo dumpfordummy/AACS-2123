@@ -4,39 +4,74 @@ using UnityEngine;
 
 public class Player : GameCharacter
 {
+    [SerializeField] private AnimatorOverrideController[] overrideControllers;
     public float moveSpeed = 1;
-    public Animator animator;
     private float horizontalInput = 0;
     private float verticalInput = 0;
+    private Animator animator;
+    private void Awake()
+    {
+        
+    }
+    private void Start()
+    {
 
+    }
     // Update is called once per frame
     void Update()
     {
-        move();       
+        animator = GetComponent<Animator>();
+        move();
     }
 
     public void move()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        if (Input.GetKey(KeyCode.W))
+        {
+            verticalInput = 1;
+            SetAnimations(overrideControllers[3]);
+        }
+        else if (Input.GetKeyUp(KeyCode.W))
+        {
+            verticalInput = 0;
+            SetAnimations(overrideControllers[0]);
+        }
+        
+        
+        if (Input.GetKey(KeyCode.S))
+        {
+            verticalInput = -1;
+            SetAnimations(overrideControllers[5]);
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            verticalInput = 0;
+            SetAnimations(overrideControllers[2]);
+        }
 
-        animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
-        animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+        if (Input.GetKey(KeyCode.D))
+        {
+            horizontalInput = 1;
+            SetAnimations(overrideControllers[4]);
+            transform.localScale = new Vector3(-1, 1, 0);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            horizontalInput = -1;
+            SetAnimations(overrideControllers[4]);
+            transform.localScale = new Vector3(1, 1, 0);
+        }
+        else if ((Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)))
+        {
+            horizontalInput = 0;
+            SetAnimations(overrideControllers[1]);
+        }
 
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
+    }
 
-        if (horizontalInput > 0)
-            transform.localScale = new Vector3(-1, 1, 0);
-        else if (horizontalInput < 0)
-            transform.localScale = new Vector3(1, 1, 0);
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            animator.SetBool("Attack", true);
-        }
-        if (Input.GetKeyUp(KeyCode.H))
-        {
-            animator.SetBool("Attack", false);
-        }
+    public void SetAnimations(AnimatorOverrideController overrideController)
+    {
+        animator.runtimeAnimatorController = overrideController;
     }
 }
