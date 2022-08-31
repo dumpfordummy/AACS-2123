@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class GridHandler : MonoBehaviour
 {
-    private GridBase gridBase;
-    void Start()
-    {
-        GridBase grid = new GridBase(98, 54, 1, new Vector3(-45,-28));
-    }
-
-    void Update()
-    {
-
-    }
+    public static GridBase<PathNode> grid = new GridBase<PathNode>(98, 54, 1, new Vector3(-45, -28), (GridBase<PathNode> g, int x, int y) => new PathNode(g, x, y));
 
     public static Vector3 GetMouseWorldPosition()
     {
