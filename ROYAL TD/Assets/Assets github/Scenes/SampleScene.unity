@@ -2449,7 +2449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b8cd6e01bd66c4f83dd369982dc4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 5
 --- !u!4 &478349537
 Transform:
   m_ObjectHideFlags: 0
@@ -63353,7 +63353,7 @@ PrefabInstance:
     - target: {fileID: 224477034907414106, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 126.149994
+      value: 126.14996
       objectReference: {fileID: 0}
     - target: {fileID: 224477034907414106, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}

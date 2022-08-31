@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            waypoint.Clear();
             Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
             pathfinding.GetGrid().GetXY(mouseWorldPosition, out int mouseX, out int mouseY);
             pathfinding.GetGrid().GetXY(transform.position, out int initX, out int initY);
