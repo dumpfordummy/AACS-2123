@@ -74,10 +74,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -105541197
-  m_SortingLayer: 3
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -8410472694813616623, guid: 9c447c54c8e0416e9446cadb88c48fd3,
+  m_SortingLayerID: -44025399
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 8793639957104055765, guid: 9c447c54c8e0416e9446cadb88c48fd3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,7 +148,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efdb3ef790cd064b9d05c6c4f9add18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideControllers:
+  - {fileID: 22100000, guid: 71cde484c4302c8469c7da75977c5c48, type: 2}
+  - {fileID: 22100000, guid: 787fde96ab305504db3c9a06ab93a68a, type: 2}
+  - {fileID: 22100000, guid: 41f373c2c424a9c4084745bbe593b539, type: 2}
+  - {fileID: 22100000, guid: 2a28faacf4dde82409813664e012aeee, type: 2}
+  - {fileID: 22100000, guid: f5e30c8c8780e0d4bba8dfd60f9f8625, type: 2}
+  - {fileID: 22100000, guid: 021d1e4099cd65c44af77aba4253cea8, type: 2}
   moveSpeed: 2
+  hammer: {fileID: 4856947891504520115, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+  playerHammerCover: {fileID: 7538088136383353560, guid: e29e71628f3344e4ea4541f8b56d423b,
+    type: 3}
 --- !u!95 &-2594631025904284004
 Animator:
   serializedVersion: 4
@@ -159,7 +169,7 @@ Animator:
   m_GameObject: {fileID: 1400544828359227445}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf5f94defee0fb849b47be5ec9f6fc4a, type: 2}
+  m_Controller: {fileID: 9100000, guid: ef3d9dbcc18860b44a3970258957f25a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

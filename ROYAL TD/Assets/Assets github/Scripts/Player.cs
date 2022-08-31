@@ -5,10 +5,12 @@ using UnityEngine;
 public class Player : GameCharacter
 {
     [SerializeField] private AnimatorOverrideController[] overrideControllers;
+    private Animator animator;
+    private float timeRemaining;
     public float moveSpeed = 1;
     private float horizontalInput = 0;
     private float verticalInput = 0;
-    private Animator animator;
+    private int direction;
     private void Awake()
     {
         
@@ -21,32 +23,66 @@ public class Player : GameCharacter
     void Update()
     {
         animator = GetComponent<Animator>();
-        move();
+        Move();
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+        else if (timeRemaining <= 0 && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) == false)
+        {
+            if(direction == 3)
+            {
+                SetAnimations(overrideControllers[0]);
+            }
+            else if(direction == 1)
+            {
+                SetAnimations(overrideControllers[2]);
+            }
+            else if(direction == 2)
+            {
+                SetAnimations(overrideControllers[1]);
+            }
+            else if (direction == 4)
+            {
+                SetAnimations(overrideControllers[1]);
+            }
+        }
     }
 
-    public void move()
+    public void Move()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            verticalInput = 1;
-            SetAnimations(overrideControllers[3]);
-        }
-        else if (Input.GetKeyUp(KeyCode.W))
-        {
-            verticalInput = 0;
-            SetAnimations(overrideControllers[0]);
-        }
-        
-        
         if (Input.GetKey(KeyCode.S))
         {
             verticalInput = -1;
-            SetAnimations(overrideControllers[5]);
+            SetAnimations(overrideControllers[3]);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(3);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(3);
+            direction = 3;
         }
         else if (Input.GetKeyUp(KeyCode.S))
         {
             verticalInput = 0;
+            SetAnimations(overrideControllers[0]);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(3);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(3);
+            direction = 3;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            verticalInput = 1;
+            SetAnimations(overrideControllers[5]);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(1);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(1);
+            direction = 1;
+        }
+        else if (Input.GetKeyUp(KeyCode.W))
+        {
+            verticalInput = 0;
             SetAnimations(overrideControllers[2]);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(1);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(1);
+            direction = 1;
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -54,17 +90,62 @@ public class Player : GameCharacter
             horizontalInput = 1;
             SetAnimations(overrideControllers[4]);
             transform.localScale = new Vector3(-1, 1, 0);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(2);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(2);
+            direction = 2;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            horizontalInput = 0;
+            SetAnimations(overrideControllers[1]);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(2);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(2);
+            direction = 2;
+        }
+
+        if (Input.GetKey(KeyCode.A))
         {
             horizontalInput = -1;
             SetAnimations(overrideControllers[4]);
             transform.localScale = new Vector3(1, 1, 0);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(4);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(4);
+            direction = 4;
         }
-        else if ((Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A)))
+        else if (Input.GetKeyUp(KeyCode.A))
         {
             horizontalInput = 0;
             SetAnimations(overrideControllers[1]);
+            GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(4);
+            GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(4);
+            direction = 4;
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2) && direction == 3)
+        {
+            timeRemaining = 1;
+            SetAnimations(overrideControllers[6]);
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2) && direction == 1)
+        {
+            timeRemaining = 1;
+            SetAnimations(overrideControllers[8]);
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2) && direction == 2)
+        {
+            timeRemaining = 1;
+            transform.localScale = new Vector3(-1, 1, 0);
+            SetAnimations(overrideControllers[7]);
+
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2) && direction == 4)
+        {
+            timeRemaining = 1;
+            transform.localScale = new Vector3(1, 1, 0);
+            SetAnimations(overrideControllers[7]);
         }
 
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
