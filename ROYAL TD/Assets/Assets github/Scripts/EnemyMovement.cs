@@ -31,6 +31,9 @@ public class EnemyMovement : MonoBehaviour
 
             List<PathNode> paths = pathfinding.FindPath(initX, initY, mouseX, mouseY);
 
+            if (paths == null)
+                return;
+
             foreach (PathNode path in paths)
             {
                 waypoint.Add(pathfinding.GetGrid().GetWorldPosition(path.x, path.y) + new Vector3(.5f, .5f));

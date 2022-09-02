@@ -10,7 +10,7 @@ public class BuildingManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             PlaceBuilding();
         }
@@ -21,11 +21,17 @@ public class BuildingManager : MonoBehaviour
         PathNode currentNode;
         grid.GetXY(GridBase<PathNode>.GetMouseWorldPosition(), out int posX, out int posY);
         currentNode = Pathfinding.GetNode(posX, posY);
-        Instantiate(activeBuildingType.prefab, grid.GetWorldPosition(posX, posY) + positionBuildCorrection(), Quaternion.identity);
-        Pathfinding.obstacleList.Add(currentNode);
+        if (!Pathfinding.obstacleList.Contains(currentNode))
+        {
+            Instantiate(activeBuildingType.prefab, grid.GetWorldPosition(posX, posY) + offsetBuildCorrection(), Quaternion.identity);
+            Pathfinding.obstacleList.Add(currentNode);
+        }
+
+
+
     }
 
-    private Vector3 positionBuildCorrection()
+    private Vector3 offsetBuildCorrection()
     {
         return new Vector3(0.5f, 0.75f);
     }
