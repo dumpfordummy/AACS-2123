@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey.Utils;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             waypoint.Clear();
-            Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
+            Vector3 mouseWorldPosition = GridBase<PathNode>.GetMouseWorldPosition();
             pathfinding.GetGrid().GetXY(mouseWorldPosition, out int mouseX, out int mouseY);
             pathfinding.GetGrid().GetXY(transform.position, out int initX, out int initY);
 

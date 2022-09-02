@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using CodeMonkey.Utils;
 
 public class GridBase<TGridObject>
 {
@@ -124,4 +123,11 @@ public class GridBase<TGridObject>
         return GetGridObject(x, y);
     }
 
+
+    public static Vector3 GetMouseWorldPosition()
+    {
+        Vector3 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        vec.z = 0f;
+        return vec;
+    }
 }

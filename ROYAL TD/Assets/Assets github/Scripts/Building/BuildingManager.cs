@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CodeMonkey.Utils;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -20,7 +19,7 @@ public class BuildingManager : MonoBehaviour
     private void PlaceBuilding()
     {
         PathNode currentNode;
-        grid.GetXY(UtilsClass.GetMouseWorldPosition(), out int posX, out int posY);
+        grid.GetXY(GridBase<PathNode>.GetMouseWorldPosition(), out int posX, out int posY);
         currentNode = Pathfinding.GetNode(posX, posY);
         Instantiate(activeBuildingType.prefab, grid.GetWorldPosition(posX, posY) + positionBuildCorrection(), Quaternion.identity);
         Pathfinding.obstacleList.Add(currentNode);
