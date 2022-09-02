@@ -89,7 +89,7 @@ public class Weapon : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Stone"))
         {
-            
+            other.GetComponent<Stone>().receiveDamage(30);
         }
     }
 }
