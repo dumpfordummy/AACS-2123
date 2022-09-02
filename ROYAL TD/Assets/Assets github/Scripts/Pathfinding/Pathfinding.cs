@@ -10,10 +10,12 @@ public class Pathfinding
     private static GridBase<PathNode> grid;
     public List<PathNode> openList;
     public List<PathNode> closeList;
+    public static List<PathNode> obstacleList;
 
     public Pathfinding(GridBase<PathNode> grid)
     {
         Pathfinding.grid = grid;
+        obstacleList = new List<PathNode>();
     }
 
     public List<PathNode> FindPath(int startX, int startY, int endX, int endY)
@@ -23,6 +25,12 @@ public class Pathfinding
 
         openList = new List<PathNode> { startNode };
         closeList = new List<PathNode>();
+
+        foreach(PathNode node in obstacleList)
+        {
+            openList.Remove(node);
+            closeList.Add(node);
+        }
 
         for(int x = 0; x < grid.GetWidth(); x++)
         {
@@ -110,7 +118,7 @@ public class Pathfinding
         return grid;
     }
 
-    public PathNode GetNode(int x, int y)
+    public static PathNode GetNode(int x, int y)
     {
         return grid.GetGridObject(x, y);
     }

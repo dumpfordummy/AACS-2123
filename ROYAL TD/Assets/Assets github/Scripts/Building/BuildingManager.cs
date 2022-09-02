@@ -6,7 +6,7 @@ using CodeMonkey.Utils;
 public class BuildingManager : MonoBehaviour
 {
     [SerializeField] private BuildingTypeSO activeBuildingType;
-    private GridBase<PathNode> grid;
+    private GridBase<PathNode> grid = GridHandler.grid;
 
 
     void Update()
@@ -19,8 +19,15 @@ public class BuildingManager : MonoBehaviour
 
     private void PlaceBuilding()
     {
-        grid.GetXY(transform.position, out int posX, out int posY);
-        Instantiate(activeBuildingType.prefab, new Vector3(posX, posY), Quaternion.identity);
+        PathNode currentNode;
+        grid.GetXY(UtilsClass.GetMouseWorldPosition(), out int posX, out int posY);
+        currentNode = Pathfinding.GetNode(posX, posY);
+        Instantiate(activeBuildingType.prefab, grid.GetWorldPosition(posX, posY) + positionBuildCorrection(), Quaternion.identity);
+        Pathfinding.obstacleList.Add(currentNode);
+    }
 
+    private Vector3 positionBuildCorrection()
+    {
+        return new Vector3(0.5f, 0.75f);
     }
 }
