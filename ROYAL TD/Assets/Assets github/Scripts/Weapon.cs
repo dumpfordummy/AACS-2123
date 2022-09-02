@@ -41,7 +41,6 @@ public class Weapon : MonoBehaviour
         }
 
         timeRemaining = 1;
-        GetComponentInParent<Stone>().receiveDamage(30);
 
         if (direction == 3)
         {
@@ -82,7 +81,6 @@ public class Weapon : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Stone"))
         {
-            other.GetComponent<Stone>().receiveDamage(30);
         }
     }
 }

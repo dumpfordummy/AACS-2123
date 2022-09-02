@@ -12,9 +12,5 @@ public class Stone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 0)
-        {
-            Destroy(GameObject.FindGameObjectWithTag("Stone"));
-        }
     }
 }
