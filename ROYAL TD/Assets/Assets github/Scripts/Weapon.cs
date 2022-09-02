@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
-    private GameObject player;
     private void Awake()
     {
         direction = 3;
@@ -30,7 +29,6 @@ public class Weapon : MonoBehaviour
         else
         {
             SetAnimations(overrideControllers[0]);
-
         }
         Attack();
     }
