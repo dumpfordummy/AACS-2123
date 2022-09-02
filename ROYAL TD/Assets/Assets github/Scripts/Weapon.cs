@@ -37,7 +37,12 @@ public class Weapon : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 3)
+        if(!Input.GetKey(KeyCode.Alpha2))
+        {
+            return;
+        }
+
+        if(direction == 3)
         {
             GetComponent<SpriteRenderer>().sortingOrder = 0;
             timeRemaining = 1;
@@ -45,7 +50,7 @@ public class Weapon : MonoBehaviour
             GetComponentInParent<Stone>().receiveDamage(30);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 1)
+        if (direction == 1)
         {
             GetComponent<SpriteRenderer>().sortingOrder = -1;
             timeRemaining = 1;
@@ -53,7 +58,7 @@ public class Weapon : MonoBehaviour
             GetComponentInParent<Stone>().receiveDamage(30);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 2)
+        if (direction == 2)
         {
             GetComponent<SpriteRenderer>().sortingOrder = 0;
             timeRemaining = 1;
@@ -61,7 +66,7 @@ public class Weapon : MonoBehaviour
             GetComponentInParent<Stone>().receiveDamage(30);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 4)
+        if (direction == 4)
         {
             GetComponent<SpriteRenderer>().sortingOrder = 0;
             timeRemaining = 1;
