@@ -9,6 +9,7 @@ public class CameraFollow : MonoBehaviour
     internal static Transform target;
     public float lerpSpeed = 1.0f;
 
+    private GameObject player;
     private Vector3 offset;
 
     private Vector3 targetPos;
@@ -22,11 +23,15 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (target == null) return;
+        if ((player = GameObject.FindGameObjectWithTag("Player")) != null)
+        {
+            target = player.GetComponent<Transform>();
+            targetPos = target.position + offset;
+            Vector3 lerp = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
+            transform.position = new Vector3(lerp.x, lerp.y, -10);
+        }
 
-        targetPos = target.position + offset;
-        Vector3 lerp = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
-        transform.position = new Vector3(lerp.x, lerp.y, -10);
+        
     }
 
 }
