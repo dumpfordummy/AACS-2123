@@ -1,23 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CodeMonkey.Utils;
 
 public class BuildingManager : MonoBehaviour
 {
     [SerializeField] private BuildingTypeSO activeBuildingType;
+    private GridBase<PathNode> grid;
+
+
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Vector3 mouseWorldPosition = GetMouseWorldPosition();
-            Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+            PlaceBuilding();
         }
     }
 
-    private static Vector3 GetMouseWorldPosition()
+    private void PlaceBuilding()
     {
-        Vector3 vec = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        vec.z = 0f;
-        return vec;
+        grid.GetXY(transform.position, out int posX, out int posY);
+        Instantiate(activeBuildingType.prefab, new Vector3(posX, posY), Quaternion.identity);
+
     }
 }

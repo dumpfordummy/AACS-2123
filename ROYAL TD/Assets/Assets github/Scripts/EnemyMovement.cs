@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(1))
         {
             waypoint.Clear();
             Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
@@ -34,7 +34,6 @@ public class EnemyMovement : MonoBehaviour
 
             foreach (PathNode path in paths)
             {
-                // Debug.Log(pathfinding.GetGrid().GetWorldPosition(path.x, path.y));
                 waypoint.Add(pathfinding.GetGrid().GetWorldPosition(path.x, path.y) + new Vector3(.5f, .5f));
             }
         }
