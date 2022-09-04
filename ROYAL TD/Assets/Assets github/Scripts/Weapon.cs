@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
+
     private void Awake()
     {
         direction = 3;
@@ -31,25 +32,11 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[0]);
         }
         Attack();
-        if (direction == 3)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 1;
+            SetAnimations(overrideControllers[0]);
         }
 
-        if (direction == 1)
-        {
-            GetComponent<SpriteRenderer>().sortingOrder = -1;
-        }
-
-        if (direction == 2)
-        {
-            GetComponent<SpriteRenderer>().sortingOrder = 1;
-        }
-
-        if (direction == 4)
-        {
-            GetComponent<SpriteRenderer>().sortingOrder = 1;
-        }
     }
 
     public void Attack()
@@ -60,25 +47,32 @@ public class Weapon : MonoBehaviour
         }
 
         timeRemaining = 1;
-
-        if (direction == 3)
-        {
-            SetAnimations(overrideControllers[1]);
-        }
+        Animator anim = gameObject.GetComponentInChildren<Animator>();
+        anim.Rebind();
+        anim.Update(0f);
 
         if (direction == 1)
         {
             SetAnimations(overrideControllers[3]);
+            GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
 
         if (direction == 2)
         {
             SetAnimations(overrideControllers[2]);
+            GetComponent<SpriteRenderer>().sortingOrder = 2;
+        }
+
+        if (direction == 3)
+        {
+            SetAnimations(overrideControllers[1]);
+            GetComponent<SpriteRenderer>().sortingOrder = 3;
         }
 
         if (direction == 4)
         {
             SetAnimations(overrideControllers[2]);
+            GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
 
@@ -92,10 +86,20 @@ public class Weapon : MonoBehaviour
         this.direction = direction;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Stone"))
         {
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                other.GetComponent<Stone>().receiveDamage(30);
+                
+            }
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
     }
 }

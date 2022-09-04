@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Loot : MonoBehaviour
+public class Loot : ImmovableObject
 {
     // Start is called before the first frame update
     void Start()
