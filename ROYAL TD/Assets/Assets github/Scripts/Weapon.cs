@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     private int direction;
     private float nextFireTime;
     private Collider2D loot;
-    private int weaponDamage;
+    private int weaponDamage = 20;
 
     private void Awake()
     {
