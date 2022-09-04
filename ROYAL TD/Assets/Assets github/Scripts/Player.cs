@@ -11,6 +11,8 @@ public class Player : GameCharacter
     private float horizontalInput = 0;
     private float verticalInput = 0;
     private int direction;
+    private bool abbleToAtk = true;
+    private float nextFireTime;
     private void Awake()
     {
         
@@ -24,7 +26,6 @@ public class Player : GameCharacter
     {
         animator = GetComponent<Animator>();
         Move();
-        Attack();
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
@@ -46,6 +47,15 @@ public class Player : GameCharacter
             else if (direction == 4)
             {
                 SetAnimations(overrideControllers[1]);
+            }
+        }
+        if (!abbleToAtk)
+        {
+            if (Time.time > nextFireTime)
+            {
+                nextFireTime = Time.time + 2f;
+                Attack();
+                abbleToAtk = true;
             }
         }
     }

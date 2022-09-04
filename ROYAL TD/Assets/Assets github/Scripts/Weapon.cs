@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
+    private bool abbleToAtk = true;
+    private float nextFireTime;
 
     private void Awake()
     {
@@ -31,12 +33,21 @@ public class Weapon : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
-        Attack();
+        
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
         {
             SetAnimations(overrideControllers[0]);
         }
 
+        if (!abbleToAtk)
+        {
+            if (Time.time > nextFireTime)
+            {
+                nextFireTime = Time.time + 2f;
+                Attack();
+                abbleToAtk = true;
+            }
+        }
     }
 
     public void Attack()
@@ -90,16 +101,11 @@ public class Weapon : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Stone"))
         {
-            if (Input.GetKey(KeyCode.Alpha2))
+            if (Input.GetKeyDown(KeyCode.Alpha2) && abbleToAtk)
             {
                 other.GetComponent<Stone>().receiveDamage(30);
-                
+                abbleToAtk = false;
             }
         }
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(2);
     }
 }

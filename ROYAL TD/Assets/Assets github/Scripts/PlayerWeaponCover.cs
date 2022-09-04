@@ -8,6 +8,8 @@ public class PlayerWeaponCover : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
+    private bool abbleToAtk = true;
+    private float nextFireTime;
 
     private void Awake()
     {
@@ -30,10 +32,18 @@ public class PlayerWeaponCover : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
-        Attack();
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
         {
             SetAnimations(overrideControllers[0]);
+        }
+        if (!abbleToAtk)
+        {
+            if (Time.time > nextFireTime)
+            {
+                nextFireTime = Time.time + 2f;
+                Attack();
+                abbleToAtk = true;
+            }
         }
     }
 
