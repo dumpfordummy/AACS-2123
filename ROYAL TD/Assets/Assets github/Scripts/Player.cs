@@ -11,7 +11,7 @@ public class Player : GameCharacter
     private float horizontalInput = 0;
     private float verticalInput = 0;
     private int direction;
-    private bool abbleToAtk = true;
+    private bool ableToAtk = true;
     private float nextFireTime;
     private void Awake()
     {
@@ -49,15 +49,13 @@ public class Player : GameCharacter
                 SetAnimations(overrideControllers[1]);
             }
         }
-        if (!abbleToAtk)
+
+        if (!ableToAtk && (Time.time > nextFireTime))
         {
-            if (Time.time > nextFireTime)
-            {
-                nextFireTime = Time.time + 2f;
-                Attack();
-                abbleToAtk = true;
-            }
+            nextFireTime = Time.time + 2f;
+            ableToAtk = true;
         }
+        Attack();
     }
 
     public void Move()
@@ -137,11 +135,11 @@ public class Player : GameCharacter
 
     public void Attack()
     {
-        if (!Input.GetKey(KeyCode.Alpha2))
+        if (!(Input.GetKey(KeyCode.Alpha2) && ableToAtk))
         {
             return;
         }
-        
+
         timeRemaining = 1;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
@@ -168,6 +166,8 @@ public class Player : GameCharacter
             transform.localScale = new Vector3(1, 1, 0);
             SetAnimations(overrideControllers[7]);
         }
+
+        ableToAtk = false;
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)

@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
-    private bool abbleToAtk = true;
+    public bool ableToAtk = true;
     private float nextFireTime;
 
     private void Awake()
@@ -39,20 +39,17 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[0]);
         }
 
-        if (!abbleToAtk)
+        if (!ableToAtk && (Time.time > nextFireTime))
         {
-            if (Time.time > nextFireTime)
-            {
-                nextFireTime = Time.time + 2f;
-                Attack();
-                abbleToAtk = true;
-            }
+            nextFireTime = Time.time + 2f;
+            ableToAtk = true;
         }
+        Attack();
     }
 
     public void Attack()
     {
-        if (!Input.GetKey(KeyCode.Alpha2))
+        if (!Input.GetKey(KeyCode.Alpha2) || !ableToAtk)
         {
             return;
         }
@@ -67,24 +64,22 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[3]);
             GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
-
-        if (direction == 2)
+        else if (direction == 2)
         {
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
-
-        if (direction == 3)
+        else if (direction == 3)
         {
             SetAnimations(overrideControllers[1]);
             GetComponent<SpriteRenderer>().sortingOrder = 3;
         }
-
-        if (direction == 4)
+        else if (direction == 4)
         {
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
+        ableToAtk = false;
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
@@ -101,11 +96,8 @@ public class Weapon : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Stone"))
         {
-            if (Input.GetKeyDown(KeyCode.Alpha2) && abbleToAtk)
-            {
-                other.GetComponent<Stone>().receiveDamage(30);
-                abbleToAtk = false;
-            }
+            other.GetComponent<Stone>().receiveDamage(30);
+            ableToAtk = false;
         }
     }
 }

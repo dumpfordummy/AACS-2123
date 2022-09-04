@@ -8,7 +8,7 @@ public class PlayerWeaponCover : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
-    private bool abbleToAtk = true;
+    private bool ableToAtk = true;
     private float nextFireTime;
 
     private void Awake()
@@ -32,24 +32,23 @@ public class PlayerWeaponCover : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
         {
             SetAnimations(overrideControllers[0]);
         }
-        if (!abbleToAtk)
+
+        if (!ableToAtk && (Time.time > nextFireTime))
         {
-            if (Time.time > nextFireTime)
-            {
-                nextFireTime = Time.time + 2f;
-                Attack();
-                abbleToAtk = true;
-            }
+            nextFireTime = Time.time + 2f;
+            ableToAtk = true;
         }
+        Attack();
     }
 
     public void Attack()
     {
-        if (!Input.GetKey(KeyCode.Alpha2))
+        if (!(Input.GetKey(KeyCode.Alpha2) && ableToAtk))
         {
             return;
         }
@@ -64,18 +63,18 @@ public class PlayerWeaponCover : MonoBehaviour
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 3;
         }
-
-        if (direction == 3)
+        else if (direction == 3)
         {
             SetAnimations(overrideControllers[1]);
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
-
-        if (direction == 4)
+        else if (direction == 4)
         {
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 3;
         }
+
+        ableToAtk = false;
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
