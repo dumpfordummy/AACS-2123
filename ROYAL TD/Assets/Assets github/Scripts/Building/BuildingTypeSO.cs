@@ -6,4 +6,6 @@ using UnityEngine;
 public class BuildingTypeSO : ScriptableObject
 {
     public Transform prefab;
+
+    
 }

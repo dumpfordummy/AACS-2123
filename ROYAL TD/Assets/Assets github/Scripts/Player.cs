@@ -6,13 +6,17 @@ public class Player : GameCharacter
 {
     [SerializeField] private AnimatorOverrideController[] overrideControllers;
     private Animator animator;
-    private float timeRemaining;
+    private float AtkAnimtimeRemaining;
     public float moveSpeed = 1;
     private float horizontalInput = 0;
     private float verticalInput = 0;
     private int direction;
     private bool ableToAtk = true;
     private float nextFireTime;
+    public GameObject weapon;
+    public GameObject playerWeaponCover;
+    private float AtkCoolDowntimeRemaining;
+
     private void Awake()
     {
         
@@ -26,36 +30,50 @@ public class Player : GameCharacter
     {
         animator = GetComponent<Animator>();
         Move();
-        if (timeRemaining > 0)
+        if (AtkAnimtimeRemaining > 0)
         {
-            timeRemaining -= Time.deltaTime;
+            AtkAnimtimeRemaining -= Time.deltaTime;
         }
-        else if (timeRemaining <= 0 && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) == false)
+        else if (AtkAnimtimeRemaining <= 0)
         {
-            if(direction == 3)
+            if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) == false)
             {
-                SetAnimations(overrideControllers[0]);
-            }
-            else if(direction == 1)
-            {
-                SetAnimations(overrideControllers[2]);
-            }
-            else if(direction == 2)
-            {
-                SetAnimations(overrideControllers[1]);
-            }
-            else if (direction == 4)
-            {
-                SetAnimations(overrideControllers[1]);
+                if (direction == 3)
+                {
+                    SetAnimations(overrideControllers[0]);
+                }
+                else if (direction == 1)
+                {
+                    SetAnimations(overrideControllers[2]);
+                }
+                else if (direction == 2)
+                {
+                    SetAnimations(overrideControllers[1]);
+                }
+                else if (direction == 4)
+                {
+                    SetAnimations(overrideControllers[1]);
+                }
             }
         }
 
-        if (!ableToAtk && (Time.time > nextFireTime))
+        if (AtkCoolDowntimeRemaining > 0)
         {
-            nextFireTime = Time.time + 1f;
+            AtkCoolDowntimeRemaining -= Time.deltaTime;
+        }
+        else if (AtkCoolDowntimeRemaining <= 0)
+        {
             ableToAtk = true;
         }
-        Attack();
+
+        if (Input.GetKeyDown(KeyCode.Alpha2) && ableToAtk)
+        {
+            ableToAtk = false;
+            Attack();
+            playerWeaponCover.GetComponent<PlayerWeaponCover>().Attack();
+            weapon.GetComponent<Weapon>().Attack();
+        }
+        
     }
 
     public void Move()
@@ -135,12 +153,8 @@ public class Player : GameCharacter
 
     public void Attack()
     {
-        if (!(Input.GetKey(KeyCode.Alpha2) && ableToAtk))
-        {
-            return;
-        }
-
-        timeRemaining = 1;
+        AtkAnimtimeRemaining = 0.9f;
+        AtkCoolDowntimeRemaining = 1.2f;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
         anim.Update(0f);
@@ -149,25 +163,25 @@ public class Player : GameCharacter
         {
             SetAnimations(overrideControllers[6]);
         }
-
-        if (direction == 1)
+        else if (direction == 1)
         {
             SetAnimations(overrideControllers[8]);
         }
-
-        if (direction == 2)
+        else if (direction == 2)
         {
             transform.localScale = new Vector3(-1, 1, 0);
             SetAnimations(overrideControllers[7]);
         }
-
-        if (direction == 4)
+        else if (direction == 4)
         {
             transform.localScale = new Vector3(1, 1, 0);
             SetAnimations(overrideControllers[7]);
         }
+    }
 
-        ableToAtk = false;
+    public void setAttackDuration()
+    {
+
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)

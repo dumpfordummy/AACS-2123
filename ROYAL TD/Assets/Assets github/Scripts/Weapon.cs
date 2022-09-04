@@ -8,8 +8,9 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
-    public bool ableToAtk = true;
     private float nextFireTime;
+    private Collider2D loot;
+    private int weaponDamage;
 
     private void Awake()
     {
@@ -38,23 +39,10 @@ public class Weapon : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
-
-        if (!ableToAtk && (Time.time > nextFireTime))
-        {
-            nextFireTime = Time.time + 1f;
-            ableToAtk = true;
-        }
-
-        Attack();
     }
 
     public void Attack()
     {
-        if (!Input.GetKey(KeyCode.Alpha2) || !ableToAtk)
-        {
-            return;
-        }
-
         timeRemaining = 1;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
@@ -81,7 +69,7 @@ public class Weapon : MonoBehaviour
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
 
-        ableToAtk = false;
+        loot.GetComponent<Loot>().receiveDamage(weaponDamage);
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
@@ -96,14 +84,14 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Stone") && Input.GetKey(KeyCode.Alpha2) && ableToAtk)
+        if (other.gameObject.CompareTag("Stone"))
         {
-            other.GetComponent<Stone>().receiveDamage(30);
+            loot = other;
         }
 
-        if (other.gameObject.CompareTag("Tree") && Input.GetKey(KeyCode.Alpha2) && ableToAtk)
+        if (other.gameObject.CompareTag("Tree"))
         {
-            other.GetComponent<Tree>().receiveDamage(30);
+            loot = other;
         }
     }
 }

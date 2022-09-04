@@ -8,6 +8,7 @@ TagManager:
   - PlayerWeaponCover
   - Enemy
   - Stone
+  - Tree
   layers:
   - Default
   - TransparentFX

@@ -8,8 +8,7 @@ public class PlayerWeaponCover : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
-    private bool ableToAtk = true;
-    private float nextFireTime;
+    public float nextFireTime;
 
     private void Awake()
     {
@@ -37,22 +36,10 @@ public class PlayerWeaponCover : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
-
-        if (!ableToAtk && (Time.time > nextFireTime))
-        {
-            nextFireTime = Time.time + 1f;
-            ableToAtk = true;
-        }
-        Attack();
     }
 
     public void Attack()
     {
-        if (!(Input.GetKey(KeyCode.Alpha2) && ableToAtk))
-        {
-            return;
-        }
-
         timeRemaining = 1;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
@@ -73,8 +60,6 @@ public class PlayerWeaponCover : MonoBehaviour
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 3;
         }
-
-        ableToAtk = false;
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
