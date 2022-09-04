@@ -34,6 +34,9 @@ public class EnemyMovement : MonoBehaviour
 
             foreach (PathNode path in paths)
             {
+                // prevent entity move to center of starting grid
+                if (path.x == initX && path.y == initY)
+                    continue;
                 waypoint.Add(pathfinding.GetGrid().GetWorldPosition(path.x, path.y) + new Vector3(.5f, .5f));
             }
         }
