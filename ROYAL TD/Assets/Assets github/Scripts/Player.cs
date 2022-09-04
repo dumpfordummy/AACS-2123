@@ -25,6 +25,7 @@ public class Player : GameCharacter
         {
             AtkAnimtimeRemaining -= Time.deltaTime;
         }
+
         else if (AtkAnimtimeRemaining <= 0 && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
         {
             if (direction == 3)
@@ -165,11 +166,6 @@ public class Player : GameCharacter
             transform.localScale = new Vector3(1, 1, 0);
             SetAnimations(overrideControllers[7]);
         }
-    }
-
-    public void setAttackDuration()
-    {
-
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
