@@ -28,8 +28,17 @@ public class Pathfinding
 
         foreach(PathNode node in obstacleList)
         {
-            openList.Remove(node);
-            closeList.Add(node);
+            foreach(PathNode openNode in openList)
+            {
+                if (node.IsEqual(openNode))
+                {
+                    openNode.isOccupied = true;
+                    break;
+                }
+            }
+       
+            //openList.Remove(node);
+            //closeList.Add(node);
         }
 
         for(int x = 0; x < grid.GetWidth(); x++)
@@ -49,10 +58,10 @@ public class Pathfinding
 
         while (openList.Count > 0)
         {
+            
             PathNode currentNode = GetLowestFCostNode(openList);
             if(currentNode == endNode)
             {
-                // Reached final node
                 return CalculatePath(endNode);
             }
 
@@ -63,7 +72,16 @@ public class Pathfinding
             {
                 if (closeList.Contains(neighbourNode)) continue;
 
-                int tentativeGCost = currentNode.gCost + CalculateDistanceCost(currentNode, neighbourNode);
+                foreach(PathNode node in obstacleList)
+                {
+                    if (neighbourNode.IsEqual(node))
+                    {
+                        neighbourNode.isOccupied = true;
+                        break;
+                    }
+                }
+
+                int tentativeGCost = currentNode.gCost + CalculateGCost(currentNode, neighbourNode);
                 // lower cost path found
                 if (tentativeGCost < neighbourNode.gCost)
                 {
@@ -79,8 +97,6 @@ public class Pathfinding
                 }
             }
         }
-
-        // Out of nodes on the openlist
         return null;
     }
 
@@ -135,6 +151,19 @@ public class Pathfinding
         }
         path.Reverse();
         return path;
+    }
+
+    private int CalculateGCost(PathNode a, PathNode b)
+    {
+        if(!b.isOccupied)
+        {
+            return CalculateDistanceCost(a, b);
+        }
+
+        int xDistance = Mathf.Abs(a.x - b.x);
+        int yDistance = Mathf.Abs(a.y - b.y);
+        int remaining = Mathf.Abs(xDistance - yDistance);
+        return 141 * Mathf.Min(xDistance, yDistance) + 100 * remaining;
     }
 
     private int CalculateDistanceCost(PathNode a, PathNode b)

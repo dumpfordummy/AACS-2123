@@ -26,9 +26,6 @@ public class BuildingManager : MonoBehaviour
             Instantiate(activeBuildingType.prefab, grid.GetWorldPosition(posX, posY) + offsetBuildCorrection(), Quaternion.identity);
             Pathfinding.obstacleList.Add(currentNode);
         }
-
-
-
     }
 
     private Vector3 offsetBuildCorrection()
