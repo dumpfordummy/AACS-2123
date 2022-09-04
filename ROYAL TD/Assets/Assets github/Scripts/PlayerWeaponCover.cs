@@ -8,6 +8,7 @@ public class PlayerWeaponCover : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
+
     private void Awake()
     {
         direction = 3;
@@ -15,7 +16,6 @@ public class PlayerWeaponCover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -43,21 +43,22 @@ public class PlayerWeaponCover : MonoBehaviour
         {
             return;
         }
+
         timeRemaining = 1;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
         anim.Update(0f);
 
-        if (direction == 3)
-        {
-            SetAnimations(overrideControllers[1]);
-            GetComponent<SpriteRenderer>().sortingOrder = 2;
-        }
-
         if (direction == 2)
         {
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 3;
+        }
+
+        if (direction == 3)
+        {
+            SetAnimations(overrideControllers[1]);
+            GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
 
         if (direction == 4)
@@ -76,4 +77,5 @@ public class PlayerWeaponCover : MonoBehaviour
     {
         this.direction = direction;
     }
+
 }

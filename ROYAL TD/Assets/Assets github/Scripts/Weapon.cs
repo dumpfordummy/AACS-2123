@@ -8,6 +8,7 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
+
     private void Awake()
     {
         direction = 3;
@@ -35,6 +36,7 @@ public class Weapon : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
+
     }
 
     public void Attack()
@@ -49,12 +51,6 @@ public class Weapon : MonoBehaviour
         anim.Rebind();
         anim.Update(0f);
 
-        if (direction == 3)
-        {
-            SetAnimations(overrideControllers[1]);
-            GetComponent<SpriteRenderer>().sortingOrder = 3;
-        }
-
         if (direction == 1)
         {
             SetAnimations(overrideControllers[3]);
@@ -67,6 +63,12 @@ public class Weapon : MonoBehaviour
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
 
+        if (direction == 3)
+        {
+            SetAnimations(overrideControllers[1]);
+            GetComponent<SpriteRenderer>().sortingOrder = 3;
+        }
+
         if (direction == 4)
         {
             SetAnimations(overrideControllers[2]);
@@ -76,9 +78,6 @@ public class Weapon : MonoBehaviour
 
     public void SetAnimations(AnimatorOverrideController overrideController)
     {
-        Animator anim = gameObject.GetComponentInChildren<Animator>();
-        anim.Rebind();
-        anim.Update(0f);
         animator.runtimeAnimatorController = overrideController;
     }
 
@@ -87,10 +86,20 @@ public class Weapon : MonoBehaviour
         this.direction = direction;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Stone"))
         {
+            if (Input.GetKey(KeyCode.Alpha2))
+            {
+                other.GetComponent<Stone>().receiveDamage(30);
+                
+            }
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
     }
 }

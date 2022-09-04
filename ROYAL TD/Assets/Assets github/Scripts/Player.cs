@@ -131,6 +131,7 @@ public class Player : GameCharacter
         {
             return;
         }
+        
         timeRemaining = 1;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
