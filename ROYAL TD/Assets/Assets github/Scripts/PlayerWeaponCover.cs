@@ -31,6 +31,29 @@ public class PlayerWeaponCover : MonoBehaviour
             SetAnimations(overrideControllers[0]);
         }
         Attack();
+        if (direction == 3)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 2;
+            GetComponent<SpriteRenderer>().sortingLayerName = "Layer 2";
+        }
+
+        if (direction == 1)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = -1;
+            GetComponent<SpriteRenderer>().sortingLayerName = "Layer 1";
+        }
+
+        if (direction == 2)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 2;
+            GetComponent<SpriteRenderer>().sortingLayerName = "Layer 2";
+        }
+
+        if (direction == 4)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 2;
+            GetComponent<SpriteRenderer>().sortingLayerName = "Layer 2";
+        }
     }
 
     public void Attack()

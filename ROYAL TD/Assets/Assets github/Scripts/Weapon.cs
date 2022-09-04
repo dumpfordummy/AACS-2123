@@ -31,6 +31,25 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[0]);
         }
         Attack();
+        if (direction == 3)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+
+        if (direction == 1)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = -1;
+        }
+
+        if (direction == 2)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+
+        if (direction == 4)
+        {
+            GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
     }
 
     public void Attack()
@@ -44,25 +63,21 @@ public class Weapon : MonoBehaviour
 
         if (direction == 3)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 0;
             SetAnimations(overrideControllers[1]);
         }
 
         if (direction == 1)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = -1;
             SetAnimations(overrideControllers[3]);
         }
 
         if (direction == 2)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 0;
             SetAnimations(overrideControllers[2]);
         }
 
         if (direction == 4)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 0;
             SetAnimations(overrideControllers[2]);
         }
     }
