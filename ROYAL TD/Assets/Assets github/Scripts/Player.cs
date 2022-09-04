@@ -24,8 +24,6 @@ public class Player : GameCharacter
     private void Start()
     {
 
-    }
-    // Update is called once per frame
     void Update()
     {
         animator = GetComponent<Animator>();
@@ -134,7 +132,7 @@ public class Player : GameCharacter
         {
             horizontalInput = -1;
             SetAnimations(overrideControllers[4]);
-            transform.localScale = new Vector3(1, 1, 0);
+            transform.localScale = Vector3.one;
             GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(4);
             GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(4);
             direction = 4;

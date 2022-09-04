@@ -43,9 +43,7 @@ public class BuildingManager : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0))
-        {
             PlaceBuilding();
-        }
     }
 
     private void PlaceBuilding()
