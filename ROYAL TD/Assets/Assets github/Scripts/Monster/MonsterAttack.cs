@@ -22,12 +22,7 @@ public class MonsterAttack : MonoBehaviour
     {
         if (target != null)
         {
-            updateTowerHp(damage);
+            target.GetComponent<EntityHp>().DecreaseEntityHp(damage);
         }
-    }
-
-    private void updateTowerHp(float damage)
-    {
-        target.GetComponent<EntityHp>().DecreaseEntityHp(damage);
     }
 }

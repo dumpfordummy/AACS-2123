@@ -13,12 +13,7 @@ public class TowerAttack : MonoBehaviour
     {
         if(target != null)
         {
-            updateEnemyHp(damage);
+            target.GetComponent<EntityHp>().DecreaseEntityHp(damage);
         }
-    }
-
-    private void updateEnemyHp(float damage)
-    {
-        target.GetComponent<EntityHp>().DecreaseEntityHp(damage);
     }
 }
