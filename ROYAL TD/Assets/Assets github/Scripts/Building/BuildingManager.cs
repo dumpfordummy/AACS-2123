@@ -50,7 +50,7 @@ public class BuildingManager : MonoBehaviour
     private void PlaceBuilding()
     {
         PathNode currentNode;
-        grid.GetXY(GridBase<PathNode>.GetMouseWorldPosition(), out int posX, out int posY);
+        GridBase<PathNode>.GetXY(GridBase<PathNode>.GetMouseWorldPosition(), out int posX, out int posY);
         currentNode = Pathfinding.GetNode(posX, posY);
         if (!Pathfinding.obstacleList.Contains(currentNode))
         {

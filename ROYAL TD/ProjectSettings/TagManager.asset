@@ -12,6 +12,7 @@ TagManager:
   - Tower1Button
   - Tower2Button
   - Tower3Button
+  - Defense
   layers:
   - Default
   - TransparentFX

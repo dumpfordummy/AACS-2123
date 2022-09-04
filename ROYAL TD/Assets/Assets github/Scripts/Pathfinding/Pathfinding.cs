@@ -34,12 +34,12 @@ public class Pathfinding
 
         foreach(PathNode openNode in openList)
         {
-            foreach(PathNode node in obstacleList)
+            openNode.isOccupied = false;
+            foreach (PathNode node in obstacleList)
             {
                 if (node.IsEqual(openNode))
                 {
                     openNode.isOccupied = true;
-                    break;
                 }
             }
        
@@ -78,7 +78,8 @@ public class Pathfinding
             {
                 if (closeList.Contains(neighbourNode)) continue;
 
-                foreach(PathNode node in obstacleList)
+                neighbourNode.isOccupied = false;
+                foreach (PathNode node in obstacleList)
                 {
                     if (neighbourNode.IsEqual(node))
                     {

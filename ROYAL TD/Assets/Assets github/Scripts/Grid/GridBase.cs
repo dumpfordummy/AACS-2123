@@ -13,16 +13,16 @@ public class GridBase<TGridObject>
 
     private int width;
     private int height;
-    private float cellSize;
-    private Vector3 originPosition;
+    private static float cellSize;
+    private static Vector3 originPosition;
     private TGridObject[,] gridArray;
 
-    public GridBase(int width, int height, float cellSize, Vector3 originPosition, Func<GridBase<TGridObject>, int, int, TGridObject> createGridObject)
+    public GridBase(int width, int height, float cellsize, Vector3 originPos, Func<GridBase<TGridObject>, int, int, TGridObject> createGridObject)
     {
         this.width = width;
         this.height = height;
-        this.cellSize = cellSize;
-        this.originPosition = originPosition;
+        cellSize = cellsize;
+        originPosition = originPos;
 
         gridArray = new TGridObject[width, height];
 
@@ -77,7 +77,7 @@ public class GridBase<TGridObject>
         return new Vector3(x, y) * cellSize + originPosition;
     }
 
-    public void GetXY(Vector3 worldPosition, out int x, out int y)
+    public static void GetXY(Vector3 worldPosition, out int x, out int y)
     {
         x = Mathf.FloorToInt((worldPosition - originPosition).x / cellSize);
         y = Mathf.FloorToInt((worldPosition - originPosition).y / cellSize);

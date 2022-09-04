@@ -7,7 +7,6 @@ public class TowerRange : MonoBehaviour
     private TowerAttack parent;
     private float nextFireTime = 0.0f;
 
-    // Start is called before the first frame update
     void Start()
     {
         parent = GetComponentInParent<TowerAttack>();
@@ -31,14 +30,14 @@ public class TowerRange : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(parent.target == null)
+        if (parent.target == null)
         {
             parent.target = other.transform;
         }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if(Time.time > nextFireTime)
+            if (Time.time > nextFireTime)
             {
                 nextFireTime = Time.time + 1 / parent.attackSpeed;
                 parent.attackTarget();
