@@ -24,6 +24,7 @@ public class Player : GameCharacter
     {
         animator = GetComponent<Animator>();
         Move();
+        Attack();
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
@@ -121,34 +122,41 @@ public class Player : GameCharacter
             direction = 4;
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 3)
+        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
+    }
+
+    public void Attack()
+    {
+        if (!Input.GetKey(KeyCode.Alpha2))
         {
-            timeRemaining = 1;
+            return;
+        }
+        timeRemaining = 1;
+        Animator anim = gameObject.GetComponentInChildren<Animator>();
+        anim.Rebind();
+        anim.Update(0f);
+
+        if (direction == 3)
+        {
             SetAnimations(overrideControllers[6]);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 1)
+        if (direction == 1)
         {
-            timeRemaining = 1;
             SetAnimations(overrideControllers[8]);
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 2)
+        if (direction == 2)
         {
-            timeRemaining = 1;
             transform.localScale = new Vector3(-1, 1, 0);
             SetAnimations(overrideControllers[7]);
-
         }
 
-        if (Input.GetKey(KeyCode.Alpha2) && direction == 4)
+        if (direction == 4)
         {
-            timeRemaining = 1;
             transform.localScale = new Vector3(1, 1, 0);
             SetAnimations(overrideControllers[7]);
         }
-
-        transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
