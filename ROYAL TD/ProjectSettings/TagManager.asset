@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Stone
   - Tree
+  - Tower1Button
+  - Tower2Button
+  - Tower3Button
   layers:
   - Default
   - TransparentFX

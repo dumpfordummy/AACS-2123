@@ -31,15 +31,21 @@ public class BuildingManager : MonoBehaviour
         }
         else if (typeOfTower == 1)
         {
-            GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().localPosition = Input.mousePosition;
+            GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(65, 55, 0);
+            GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
+            GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
         }
         else if(typeOfTower == 2)
         {
-            GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().localPosition = Input.mousePosition;
+            GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(185, 55, 0);
+            GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
+            GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
         }
         else if(typeOfTower == 3)
         {
-            GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().localPosition = Input.mousePosition;
+            GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(305, 55, 0);
+            GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
+            GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);    
         }
 
         if (Input.GetMouseButtonDown(0))
