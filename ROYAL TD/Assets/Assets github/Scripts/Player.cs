@@ -25,26 +25,23 @@ public class Player : GameCharacter
         {
             AtkAnimtimeRemaining -= Time.deltaTime;
         }
-        else if (AtkAnimtimeRemaining <= 0)
+        else if (AtkAnimtimeRemaining <= 0 && !(Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
         {
-            if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) == false)
+            if (direction == 3)
             {
-                if (direction == 3)
-                {
-                    SetAnimations(overrideControllers[0]);
-                }
-                else if (direction == 1)
-                {
-                    SetAnimations(overrideControllers[2]);
-                }
-                else if (direction == 2)
-                {
-                    SetAnimations(overrideControllers[1]);
-                }
-                else if (direction == 4)
-                {
-                    SetAnimations(overrideControllers[1]);
-                }
+                SetAnimations(overrideControllers[0]);
+            }
+            else if (direction == 1)
+            {
+                SetAnimations(overrideControllers[2]);
+            }
+            else if (direction == 2)
+            {
+                SetAnimations(overrideControllers[1]);
+            }
+            else if (direction == 4)
+            {
+                SetAnimations(overrideControllers[1]);
             }
         }
 
@@ -64,7 +61,7 @@ public class Player : GameCharacter
             playerWeaponCover.GetComponent<PlayerWeaponCover>().Attack();
             weapon.GetComponent<Weapon>().Attack();
         }
-        
+
     }
 
     public void Move()

@@ -10,20 +10,14 @@ public class Weapon : MonoBehaviour
     private int direction;
     private float nextFireTime;
     private Collider2D loot;
-
-    private int weaponDamage = 10;
+    private int weaponDamage;
 
     private void Awake()
     {
+        weaponDamage = 10;
         direction = 3;
     }
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         animator = GetComponent<Animator>();
