@@ -66439,6 +66439,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rat
       objectReference: {fileID: 0}
+    - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 122913961388822375, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_RootOrder
