@@ -68,8 +68,11 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
+        if(loot != null)
+        {
+            loot.GetComponent<Loot>().receiveDamage(weaponDamage);
+        }
 
-        loot.GetComponent<Loot>().receiveDamage(weaponDamage);
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
@@ -93,5 +96,10 @@ public class Weapon : MonoBehaviour
         {
             loot = other;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        loot = null;
     }
 }
