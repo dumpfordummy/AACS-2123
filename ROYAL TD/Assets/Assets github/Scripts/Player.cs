@@ -17,13 +17,6 @@ public class Player : GameCharacter
     public GameObject playerWeaponCover;
     private float AtkCoolDowntimeRemaining;
 
-    private void Awake()
-    {
-        
-    }
-    private void Start()
-    {
-
     void Update()
     {
         animator = GetComponent<Animator>();
