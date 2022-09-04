@@ -41,9 +41,10 @@ public class Weapon : MonoBehaviour
 
         if (!ableToAtk && (Time.time > nextFireTime))
         {
-            nextFireTime = Time.time + 2f;
+            nextFireTime = Time.time + 1f;
             ableToAtk = true;
         }
+
         Attack();
     }
 
@@ -79,6 +80,7 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[2]);
             GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
+
         ableToAtk = false;
     }
 
@@ -94,10 +96,14 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Stone"))
+        if (other.gameObject.CompareTag("Stone") && Input.GetKey(KeyCode.Alpha2) && ableToAtk)
         {
             other.GetComponent<Stone>().receiveDamage(30);
-            ableToAtk = false;
+        }
+
+        if (other.gameObject.CompareTag("Tree") && Input.GetKey(KeyCode.Alpha2) && ableToAtk)
+        {
+            other.GetComponent<Tree>().receiveDamage(30);
         }
     }
 }
