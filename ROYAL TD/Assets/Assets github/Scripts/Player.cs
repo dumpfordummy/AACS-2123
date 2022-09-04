@@ -52,7 +52,7 @@ public class Player : GameCharacter
 
         if (!ableToAtk && (Time.time > nextFireTime))
         {
-            nextFireTime = Time.time + 2f;
+            nextFireTime = Time.time + 1f;
             ableToAtk = true;
         }
         Attack();

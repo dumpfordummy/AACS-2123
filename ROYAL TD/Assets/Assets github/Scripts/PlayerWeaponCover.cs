@@ -40,7 +40,7 @@ public class PlayerWeaponCover : MonoBehaviour
 
         if (!ableToAtk && (Time.time > nextFireTime))
         {
-            nextFireTime = Time.time + 2f;
+            nextFireTime = Time.time + 1f;
             ableToAtk = true;
         }
         Attack();
