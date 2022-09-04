@@ -11,9 +11,7 @@ public class BuildingManager : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {
             PlaceBuilding();
-        }
     }
 
     private void PlaceBuilding()

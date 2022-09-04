@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
             waypoint.Clear();
             Vector3 mouseWorldPosition = GridBase<PathNode>.GetMouseWorldPosition();
@@ -45,24 +45,22 @@ public class EnemyMovement : MonoBehaviour
 
     private void followPath()
     {
-        if (waypoint.Count == 0)
+        if (waypoint.Count == 0 || waypointIndex >= waypoint.Count)
             return;
-        if (waypointIndex < waypoint.Count)
+
+        Vector3 finalPosition = Vector3.MoveTowards(transform.position, waypoint[waypointIndex], moveSpeed * Time.deltaTime);
+        transform.position = finalPosition;
+
+        if (transform.position == waypoint[waypointIndex])
         {
-            Vector3 finalPosition = Vector3.MoveTowards(transform.position, waypoint[waypointIndex], moveSpeed * Time.deltaTime);
-            transform.position = finalPosition;
+            waypointIndex++;
 
-            if (transform.position == waypoint[waypointIndex])
+            if (waypointIndex == waypoint.Count)
             {
-                waypointIndex++;
-
-                if (waypointIndex == waypoint.Count)
-                {
-                    waypointIndex = 0;
-                    waypoint.Clear();
-                }
+                waypointIndex = 0;
+                waypoint.Clear();
             }
-
         }
+
     }
 }
