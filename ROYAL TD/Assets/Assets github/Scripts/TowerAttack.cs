@@ -6,15 +6,12 @@ public class TowerAttack : MonoBehaviour
 {
     public Transform target;
     public float attackSpeed = 1;
-    public int damage = 10;
+    public float damage = 10f;
     private EnemyHp getHp;
 
-    private void Update()
-    {
-        attackTarget();
-    }
 
-    private void attackTarget()
+
+    public void attackTarget()
     {
         if(target != null)
         {
@@ -22,7 +19,7 @@ public class TowerAttack : MonoBehaviour
         }
     }
 
-    private void changeHp(int damage)
+    private void changeHp(float damage)
     {
         getHp = target.GetComponent<EnemyHp>();
         getHp.hp -= damage;

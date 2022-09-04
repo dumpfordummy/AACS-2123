@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyHp : MonoBehaviour
 {
-    public int hp;
+    public float hp;
 
     void Start()
     {
-        setHp(100);
+        setHp(500);
     }
 
     private void Update()
@@ -19,7 +19,7 @@ public class EnemyHp : MonoBehaviour
         }
     }
 
-    private void setHp(int value)
+    private void setHp(float value)
     {
         this.hp = value;
     }
