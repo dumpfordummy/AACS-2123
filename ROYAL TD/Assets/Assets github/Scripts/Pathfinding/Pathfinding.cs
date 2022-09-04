@@ -6,6 +6,8 @@ public class Pathfinding
 {
     private const int MOVE_STRAIGHT_COST = 10;
     private const int MOVE_DIAGONAL_COST = 14;
+    private const int MOVE_STRAIGHT_COST_OBSTACLE = 100;
+    private const int MOVE_DIAGONAL_COST_OBSTACLE = 104;
 
     private static GridBase<PathNode> grid;
     public List<PathNode> openList;
@@ -42,7 +44,7 @@ public class Pathfinding
         }
 
         for(int x = 0; x < grid.GetWidth(); x++)
-        {
+        {          
             for (int y = 0; y < grid.GetHeight(); y++)
             {
                 PathNode pathNode = grid.GetGridObject(x, y);
@@ -152,7 +154,7 @@ public class Pathfinding
         path.Reverse();
         return path;
     }
-
+    
     private int CalculateGCost(PathNode a, PathNode b)
     {
         if(!b.isOccupied)
@@ -163,7 +165,7 @@ public class Pathfinding
         int xDistance = Mathf.Abs(a.x - b.x);
         int yDistance = Mathf.Abs(a.y - b.y);
         int remaining = Mathf.Abs(xDistance - yDistance);
-        return 141 * Mathf.Min(xDistance, yDistance) + 100 * remaining;
+        return MOVE_DIAGONAL_COST_OBSTACLE * Mathf.Min(xDistance, yDistance) + MOVE_STRAIGHT_COST_OBSTACLE * remaining;
     }
 
     private int CalculateDistanceCost(PathNode a, PathNode b)

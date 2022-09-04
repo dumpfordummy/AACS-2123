@@ -9,14 +9,12 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed = 1f;
     private int waypointIndex = 0;
 
-    // Start is called before the first frame update
     void Start()
     {
         pathfinding = new Pathfinding(GridHandler.grid);
         waypoint = new List<Vector3>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Input.GetMouseButtonDown(1))
