@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHp : MonoBehaviour
+public class EntityHp : MonoBehaviour
 {
     public float hp;
 
@@ -12,5 +12,10 @@ public class EnemyHp : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void DecreaseEntityHp(float hpToDecrease)
+    {
+        hp -= hpToDecrease;
     }
 }

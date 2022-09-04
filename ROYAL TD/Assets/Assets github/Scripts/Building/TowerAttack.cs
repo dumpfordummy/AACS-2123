@@ -7,21 +7,18 @@ public class TowerAttack : MonoBehaviour
     public Transform target;
     public float attackSpeed = 1;
     public float damage = 10f;
-    private EnemyHp getHp;
-
-
+    private EntityHp getHp;
 
     public void attackTarget()
     {
         if(target != null)
         {
-            changeHp(damage);
+            updateEnemyHp(damage);
         }
     }
 
-    private void changeHp(float damage)
+    private void updateEnemyHp(float damage)
     {
-        getHp = target.GetComponent<EnemyHp>();
-        getHp.hp -= damage;
+        target.GetComponent<EntityHp>().DecreaseEntityHp(damage);
     }
 }
