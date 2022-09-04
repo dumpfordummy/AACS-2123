@@ -57,7 +57,7 @@ public class Player : GameCharacter
             ableToAtk = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && ableToAtk)
+        if (Input.GetMouseButtonDown(1) && ableToAtk)
         {
             ableToAtk = false;
             Attack();
