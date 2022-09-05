@@ -42,8 +42,6 @@ public class MonsterAttack : MonoBehaviour
             return;
         }
 
-
-
         if (other.gameObject.CompareTag("Defense") && Time.time > nextFireTime)
         {
             parent.GetComponent<Enemy>().isAttacking = true;

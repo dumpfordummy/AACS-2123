@@ -43,7 +43,7 @@ public class BuildingManager : MonoBehaviour
             ResetButtonPosition(tower1: true, tower2: true);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && typeOfTower != 0)
             PlaceBuilding();
     }
 
