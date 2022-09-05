@@ -12,6 +12,7 @@ public class MonsterAttack : MonoBehaviour
         parent = GetComponentInParent<Enemy>();
     }
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Defense"))
@@ -30,7 +31,6 @@ public class MonsterAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-
         if (parent.target == null)
         {
             parent.target = other.transform;
