@@ -16,14 +16,11 @@ public class EnemyMovement : MonoBehaviour
         pathfinding = new Pathfinding(GridHandler.grid);
         enemy = GetComponent<Enemy>();
         waypoint = new List<Vector3>();
+        InitializeMovement();
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            InitializeMovement();
-        }
         if (!TowerHp.isInitializing)
         {
             followPath();
@@ -33,12 +30,13 @@ public class EnemyMovement : MonoBehaviour
     public void InitializeMovement()
     {
         enemy.isAttacking = false;
+        waypointIndex = 0;
         waypoint.Clear();
-        Vector3 mouseWorldPosition = GridBase<PathNode>.GetMouseWorldPosition();
-        GridBase<PathNode>.GetXY(mouseWorldPosition, out int mouseX, out int mouseY);
+        Vector3 townHallPosition = GameObject.Find("/TownHall").GetComponent<Transform>().position;
+        GridBase<PathNode>.GetXY(townHallPosition, out int endX, out int endY);
         GridBase<PathNode>.GetXY(transform.position, out int initX, out int initY);
 
-        List<PathNode> paths = pathfinding.FindPath(initX, initY, mouseX, mouseY);
+        List<PathNode> paths = pathfinding.FindPath(initX, initY, endX, endY);
 
         if (paths == null)
             return;
