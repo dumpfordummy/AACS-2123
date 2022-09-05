@@ -21,11 +21,6 @@ public class TowerHp : MonoBehaviour
     public void CleanUp(Transform enemy)
     {
         isInitializing = true;
-        if (Pathfinding.obstacleList == null)
-        {
-            // THIS IS THE END OF GAME
-            return;
-        }
         foreach (PathNode node in Pathfinding.obstacleList)
         {
             GridBase<PathNode>.GetXY(GetComponent<Transform>().position, out int x, out int y);

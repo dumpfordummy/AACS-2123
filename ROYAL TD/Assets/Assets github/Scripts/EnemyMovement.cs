@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
         InitializeMovement();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (!TowerHp.isInitializing)
         {
