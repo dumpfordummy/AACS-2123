@@ -16,6 +16,8 @@ public class Player : GameCharacter
     public GameObject weapon;
     public GameObject playerWeaponCover;
     private float AtkCoolDowntimeRemaining;
+    float xWidthM = 50f;
+    float yHeightM = 25f;
 
     void Update()
     {
@@ -63,6 +65,9 @@ public class Player : GameCharacter
             weapon.GetComponent<Weapon>().Attack();
         }
 
+        float xClamp = Mathf.Clamp(transform.position.x, -xWidthM + 0.5f, xWidthM - 0.5f);
+        float yClamp = Mathf.Clamp(transform.position.y, -yHeightM, yHeightM - 1f);
+        transform.position = new Vector3(xClamp, yClamp, transform.position.z);
     }
 
     public void Move()
