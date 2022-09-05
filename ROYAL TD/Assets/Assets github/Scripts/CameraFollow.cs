@@ -12,23 +12,33 @@ public class CameraFollow : MonoBehaviour
     private Vector3 offset;
 
     private Vector3 targetPos;
+    float xWidthM = 55f;
+    float yHeightM = 30f;
+    
+
+
 
     private void Start()
     {
         if (target == null) return;
 
         offset = transform.position - target.position;
+
     }
 
     private void Update()
     {
         if ((player = GameObject.FindGameObjectWithTag("Player")) == null)
             return;
+        Camera cam = Camera.main;
+        float yHeightC = cam.orthographicSize;
+        float xWidthC = yHeightC * cam.aspect;
 
         target = player.GetComponent<Transform>();
-        targetPos = target.position + offset;
-        Vector3 lerp = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
-        transform.position = new Vector3(lerp.x, lerp.y, -10);
+
+        float xClamp = Mathf.Clamp(target.position.x, -(xWidthM - xWidthC), xWidthM - xWidthC);
+        float yClamp = Mathf.Clamp(target.position.y, -(yHeightM - yHeightC), yHeightM - yHeightC);
+        transform.position = new Vector3(xClamp, yClamp, transform.position.z);
     }
 }
 
