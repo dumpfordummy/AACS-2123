@@ -5,8 +5,16 @@ using UnityEngine;
 public class BuildingManager : MonoBehaviour
 {
     [SerializeField] private List<BuildingTypeSO> activeBuildingType;
+    private PathNode townhallNode;
     private GridBase<PathNode> grid = GridHandler.grid;
     private int typeOfTower = 0;
+
+    private void Start()
+    {
+        townhallNode = grid.GetGridObject(GameObject.Find("/TownHall").GetComponent<Transform>().position);
+        townhallNode.isOccupied = true;
+        Pathfinding.obstacleList.Add(townhallNode);
+    }
 
     void Update()
     {

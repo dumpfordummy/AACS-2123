@@ -9,7 +9,7 @@ public class PathNode
     public int hCost; // cost to reach end node
     public int fCost; // g + h
     public bool isOccupied;
-    public bool isWalkable;
+    public bool isWalkable; 
     public PathNode cameFromNode; // for backtracking to find back the path
 
     public PathNode(GridBase<PathNode> grid, int x, int y)

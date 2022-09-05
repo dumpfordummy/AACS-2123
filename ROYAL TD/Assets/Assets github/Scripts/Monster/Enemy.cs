@@ -12,7 +12,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(isAttacking);
         if (target == null)
         {
             isAttacking = false;
