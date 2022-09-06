@@ -13,6 +13,8 @@ TagManager:
   - Tower2Button
   - Tower3Button
   - Defense
+  - TownHall
+  - StoneWallButton
   layers:
   - Default
   - TransparentFX

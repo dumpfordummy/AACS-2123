@@ -30,25 +30,34 @@ public class BuildingManager : MonoBehaviour
         {
             typeOfTower = (typeOfTower == 3) ? 0 : 3;
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            typeOfTower = (typeOfTower == 4) ? 0 : 4;
+        }
 
         if(typeOfTower == 0)
         {
-            ResetButtonPosition(tower1: true, tower2: true, tower3: true);
+            ResetButtonPosition(tower1: true, tower2: true, tower3: true, tower4: true);
         }
         else if (typeOfTower == 1)
         {
             GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(65, 55, 0);
-            ResetButtonPosition(tower2: true, tower3: true);
+            ResetButtonPosition(tower2: true, tower3: true, tower4: true);
         }
         else if(typeOfTower == 2)
         {
             GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(185, 55, 0);
-            ResetButtonPosition(tower1: true, tower3: true);
+            ResetButtonPosition(tower1: true, tower3: true, tower4: true);
         }
         else if(typeOfTower == 3)
         {
             GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(305, 55, 0);
-            ResetButtonPosition(tower1: true, tower2: true);
+            ResetButtonPosition(tower1: true, tower2: true, tower4: true);
+        }
+        else if (typeOfTower == 4)
+        {
+            GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(425, 55, 0);
+            ResetButtonPosition(tower1: true, tower2: true, tower3: true);
         }
 
         if (Input.GetMouseButtonDown(0) && typeOfTower != 0)
@@ -68,7 +77,7 @@ public class BuildingManager : MonoBehaviour
         typeOfTower = 0;
     }
 
-    private void ResetButtonPosition(bool? tower1 = false, bool? tower2 = false, bool? tower3 = false)
+    private void ResetButtonPosition(bool? tower1 = false, bool? tower2 = false, bool? tower3 = false, bool? tower4 = false)
     {
         if(tower1 == true)
         {
@@ -83,6 +92,11 @@ public class BuildingManager : MonoBehaviour
         if (tower3 == true)
         {
             GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().localPosition = Vector3.zero;
+        }
+
+        if (tower4 == true)
+        {
+            GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().localPosition = Vector3.zero;
         }
     }
 
