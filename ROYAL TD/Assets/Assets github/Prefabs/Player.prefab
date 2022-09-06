@@ -162,7 +162,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 4af68939e8517b74586616071e06f851, type: 2}
   - {fileID: 22100000, guid: 83dd25e9cfc5d9249a6f0d72e361eabb, type: 2}
   - {fileID: 22100000, guid: b5b12a64dec209c49ae04ca21a225332, type: 2}
-  moveSpeed: 10
+  moveSpeed: 1
   weapon: {fileID: 4856947892395365621}
   playerWeaponCover: {fileID: 6947070756112856795}
 --- !u!95 &-2594631025904284004
