@@ -25,7 +25,7 @@ public class woodResources : MonoBehaviour
         this.woodQty += woodQty;
     }
 
-    public void decStoneQty(int woodQty)
+    public void decWoddQty(int woodQty)
     {
         if (woodQty <= this.woodQty)
         {
@@ -33,5 +33,10 @@ public class woodResources : MonoBehaviour
         }
         else
             return;
+    }
+
+    public int getWoodQty()
+    {
+        return this.woodQty;
     }
 }

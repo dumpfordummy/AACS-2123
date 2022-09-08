@@ -19,21 +19,69 @@ public class Player : GameCharacter
     float xWidthM = 50f;
     float yHeightM = 25f;
     int typeOfWeapon = 0;
+    private woodResources woodResouce;
+    private stoneResources stoneResource;
+    private GameObject unlockSword;
+    private GameObject unlockSycthe;
+    private bool unlockedSword;
+    private bool unlockedSycthe;
 
+    private void Start()
+    {
+        woodResouce = GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>();
+        stoneResource = GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>();
+        unlockSword = GameObject.FindGameObjectWithTag("UnlockSword");
+        unlockSycthe = GameObject.FindGameObjectWithTag("UnlockSycthe");
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
             typeOfWeapon = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.X))
+
+        if (unlockedSword)
         {
-            typeOfWeapon = 1;
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                typeOfWeapon = 1;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.C))
+        else
         {
-            typeOfWeapon = 2;
+            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30)
+            {
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    unlockSword.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+                    woodResouce.decWoddQty(10);
+                    stoneResource.decStoneQty(30);
+                    unlockedSword = true;
+                }
+            }
         }
+
+        if (unlockedSycthe)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                typeOfWeapon = 2;
+            }
+        }
+        else
+        {
+            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30)
+            {
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    unlockSycthe.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+                    woodResouce.decWoddQty(10);
+                    stoneResource.decStoneQty(30);
+                    unlockedSycthe = true;
+                }
+            }
+        }
+
 
         animator = GetComponent<Animator>();
         Move();

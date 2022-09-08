@@ -34,4 +34,9 @@ public class stoneResources : MonoBehaviour
         else
             return;
     }
+
+    public int getStoneQty()
+    {
+        return this.stoneQty;
+    }
 }

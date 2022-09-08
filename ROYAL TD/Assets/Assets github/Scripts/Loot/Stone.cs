@@ -16,7 +16,7 @@ public class Stone : Loot
         if (getHp() <= 0)
         {
             Destroy(gameObject);
-            GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().addStoneQty(10);
+            GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().addStoneQty(100);
         }
     }
 }

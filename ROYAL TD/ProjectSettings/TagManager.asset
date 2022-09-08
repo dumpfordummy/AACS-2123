@@ -17,6 +17,12 @@ TagManager:
   - StoneWallButton
   - StoneResources
   - WoodResources
+  - UnlockTower1
+  - UnlockTower2
+  - UnlockTower3
+  - UnlockStoneWall
+  - UnlockSword
+  - UnlockSycthe
   layers:
   - Default
   - TransparentFX

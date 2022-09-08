@@ -405,7 +405,7 @@ MonoBehaviour:
 
     (Sword)
 
-    Click Z To Unlock'
+    Click X To Unlock'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 420639566}
   m_Layer: 5
   m_Name: ResourcesNeeded
-  m_TagString: Untagged
+  m_TagString: UnlockTower1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 748911272}
   m_Layer: 5
   m_Name: ResourcesNeeded
-  m_TagString: Untagged
+  m_TagString: UnlockSword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1187,7 +1187,7 @@ GameObject:
   - component: {fileID: 1452632718}
   m_Layer: 5
   m_Name: ResourcesNeeded
-  m_TagString: Untagged
+  m_TagString: UnlockTower3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1315,7 +1315,7 @@ MonoBehaviour:
 
     (Sycthe)
 
-    Click Z To Unlock'
+    Click C To Unlock'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1558,7 +1558,7 @@ GameObject:
   - component: {fileID: 1750004431}
   m_Layer: 5
   m_Name: ResourcesNeeded
-  m_TagString: Untagged
+  m_TagString: UnlockTower2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1773,7 +1773,7 @@ GameObject:
   - component: {fileID: 1953555584}
   m_Layer: 5
   m_Name: ResourcesNeeded
-  m_TagString: Untagged
+  m_TagString: UnlockStoneWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1850,7 +1850,7 @@ GameObject:
   - component: {fileID: 2005068624}
   m_Layer: 5
   m_Name: ResourcesNeeded
-  m_TagString: Untagged
+  m_TagString: UnlockSycthe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
