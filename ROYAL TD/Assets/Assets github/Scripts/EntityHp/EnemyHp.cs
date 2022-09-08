@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHp : MonoBehaviour
 {
-    [SerializeField] private float hp;
+    [SerializeField] public float hp;
 
     public void DecreaseEntityHp(float hpToDecrease)
     {
