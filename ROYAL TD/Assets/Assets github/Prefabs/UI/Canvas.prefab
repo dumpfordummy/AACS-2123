@@ -645,9 +645,10 @@ GameObject:
   - component: {fileID: 1226168690}
   - component: {fileID: 1226168692}
   - component: {fileID: 1226168691}
+  - component: {fileID: 1226168693}
   m_Layer: 5
   m_Name: stoneQty
-  m_TagString: Untagged
+  m_TagString: StoneResources
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -769,6 +770,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1226168693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226168689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce62378555cefe4aa7eb4455b6cd176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stoneQty: 0
+  text: {fileID: 0}
 --- !u!1 &1466564815
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,9 +795,10 @@ GameObject:
   - component: {fileID: 1466564816}
   - component: {fileID: 1466564818}
   - component: {fileID: 1466564817}
+  - component: {fileID: 1466564819}
   m_Layer: 5
   m_Name: woodQty
-  m_TagString: Untagged
+  m_TagString: WoodResources
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -904,6 +920,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1466564819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466564815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c2c3eba8df068e46a0fd682ef01c430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodQty: 0
+  text: {fileID: 0}
 --- !u!1 &1579945303
 GameObject:
   m_ObjectHideFlags: 0

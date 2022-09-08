@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        weaponDamage = 10;
+        weaponDamage = 50;
         direction = 3;
     }
 

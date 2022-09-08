@@ -16,6 +16,7 @@ public class Tree : Loot
         if (getHp() <= 0)
         {
             Destroy(gameObject);
+            GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().addWoodQty(10);
         }
     }
 }
