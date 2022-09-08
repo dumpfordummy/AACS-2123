@@ -116,9 +116,6 @@ public class Weapon : MonoBehaviour
             }
         }
 
-
-
-
         if (loot != null)
         {
             loot.GetComponent<Loot>().receiveDamage(weaponDamage);
