@@ -36,34 +36,90 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void Attack()
+    public void Attack(int typeOfWeapon)
     {
-        timeRemaining = 1;
+        
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
         anim.Update(0f);
 
-        if (direction == 1)
+        if (typeOfWeapon == 0)
         {
-            SetAnimations(overrideControllers[3]);
-            GetComponent<SpriteRenderer>().sortingOrder = 0;
+            timeRemaining = 0.95f;
+            if (direction == 1)
+            {
+                SetAnimations(overrideControllers[3]);
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
+            }
+            else if (direction == 2)
+            {
+                SetAnimations(overrideControllers[2]);
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
+            else if (direction == 3)
+            {
+                SetAnimations(overrideControllers[1]);
+                GetComponent<SpriteRenderer>().sortingOrder = 3;
+            }
+            else if (direction == 4)
+            {
+                SetAnimations(overrideControllers[2]);
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
         }
-        else if (direction == 2)
+        else if (typeOfWeapon == 1)
         {
-            SetAnimations(overrideControllers[2]);
-            GetComponent<SpriteRenderer>().sortingOrder = 2;
+            timeRemaining = 0.55f;
+            if (direction == 1)
+            {
+                SetAnimations(overrideControllers[6]);
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
+            }
+            else if (direction == 2)
+            {
+                SetAnimations(overrideControllers[5]);
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
+            else if (direction == 3)
+            {
+                SetAnimations(overrideControllers[4]);
+                GetComponent<SpriteRenderer>().sortingOrder = 3;
+            }
+            else if (direction == 4)
+            {
+                SetAnimations(overrideControllers[5]);
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
         }
-        else if (direction == 3)
+        else if (typeOfWeapon == 2)
         {
-            SetAnimations(overrideControllers[1]);
-            GetComponent<SpriteRenderer>().sortingOrder = 3;
+            timeRemaining = 0.55f;
+            if (direction == 1)
+            {
+                SetAnimations(overrideControllers[9]);
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
+            }
+            else if (direction == 2)
+            {
+                SetAnimations(overrideControllers[8]);
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
+            else if (direction == 3)
+            {
+                SetAnimations(overrideControllers[7]);
+                GetComponent<SpriteRenderer>().sortingOrder = 3;
+            }
+            else if (direction == 4)
+            {
+                SetAnimations(overrideControllers[8]);
+                GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
         }
-        else if (direction == 4)
-        {
-            SetAnimations(overrideControllers[2]);
-            GetComponent<SpriteRenderer>().sortingOrder = 2;
-        }
-        if(loot != null)
+
+
+
+
+        if (loot != null)
         {
             loot.GetComponent<Loot>().receiveDamage(weaponDamage);
         }

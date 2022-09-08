@@ -18,9 +18,23 @@ public class Player : GameCharacter
     private float AtkCoolDowntimeRemaining;
     float xWidthM = 50f;
     float yHeightM = 25f;
+    int typeOfWeapon = 0;
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            typeOfWeapon = 0;
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            typeOfWeapon = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            typeOfWeapon = 2;
+        }
+
         animator = GetComponent<Animator>();
         Move();
         if (AtkAnimtimeRemaining > 0)
@@ -60,9 +74,9 @@ public class Player : GameCharacter
         if (Input.GetMouseButtonDown(1) && ableToAtk)
         {
             ableToAtk = false;
-            Attack();
-            playerWeaponCover.GetComponent<PlayerWeaponCover>().Attack();
-            weapon.GetComponent<Weapon>().Attack();
+            Attack(typeOfWeapon);
+            playerWeaponCover.GetComponent<PlayerWeaponCover>().Attack(typeOfWeapon);
+            weapon.GetComponent<Weapon>().Attack(typeOfWeapon);
         }
 
         float xClamp = Mathf.Clamp(transform.position.x, -xWidthM + 0.5f, xWidthM - 0.5f);
@@ -145,32 +159,81 @@ public class Player : GameCharacter
         transform.Translate(new Vector3(horizontalInput, verticalInput, 0) * moveSpeed * Time.deltaTime);
     }
 
-    public void Attack()
+    public void Attack(int typeOfWeapon)
     {
-        AtkAnimtimeRemaining = 0.9f;
+        
         AtkCoolDowntimeRemaining = 1.2f;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
         anim.Update(0f);
 
-        if (direction == 3)
+        if(typeOfWeapon == 0)
         {
-            SetAnimations(overrideControllers[6]);
+            AtkAnimtimeRemaining = 0.95f;
+            if (direction == 3)
+            {
+                SetAnimations(overrideControllers[6]);
+            }
+            else if (direction == 1)
+            {
+                SetAnimations(overrideControllers[8]);
+            }
+            else if (direction == 2)
+            {
+                transform.localScale = new Vector3(-1, 1, 0);
+                SetAnimations(overrideControllers[7]);
+            }
+            else if (direction == 4)
+            {
+                transform.localScale = new Vector3(1, 1, 0);
+                SetAnimations(overrideControllers[7]);
+            }
         }
-        else if (direction == 1)
+        else if (typeOfWeapon == 1)
         {
-            SetAnimations(overrideControllers[8]);
+            AtkAnimtimeRemaining = 0.55f;
+            if (direction == 3)
+            {
+                SetAnimations(overrideControllers[9]);
+            }
+            else if (direction == 1)
+            {
+                SetAnimations(overrideControllers[11]);
+            }
+            else if (direction == 2)
+            {
+                transform.localScale = new Vector3(-1, 1, 0);
+                SetAnimations(overrideControllers[10]);
+            }
+            else if (direction == 4)
+            {
+                transform.localScale = new Vector3(1, 1, 0);
+                SetAnimations(overrideControllers[10]);
+            }
         }
-        else if (direction == 2)
+        else if (typeOfWeapon == 2)
         {
-            transform.localScale = new Vector3(-1, 1, 0);
-            SetAnimations(overrideControllers[7]);
+            AtkAnimtimeRemaining = 0.55f;
+            if (direction == 3)
+            {
+                SetAnimations(overrideControllers[12]);
+            }
+            else if (direction == 1)
+            {
+                SetAnimations(overrideControllers[14]);
+            }
+            else if (direction == 2)
+            {
+                transform.localScale = new Vector3(-1, 1, 0);
+                SetAnimations(overrideControllers[13]);
+            }
+            else if (direction == 4)
+            {
+                transform.localScale = new Vector3(1, 1, 0);
+                SetAnimations(overrideControllers[13]);
+            }
         }
-        else if (direction == 4)
-        {
-            transform.localScale = new Vector3(1, 1, 0);
-            SetAnimations(overrideControllers[7]);
-        }
+
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)

@@ -162,6 +162,12 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 4af68939e8517b74586616071e06f851, type: 2}
   - {fileID: 22100000, guid: 83dd25e9cfc5d9249a6f0d72e361eabb, type: 2}
   - {fileID: 22100000, guid: b5b12a64dec209c49ae04ca21a225332, type: 2}
+  - {fileID: 22100000, guid: e6fd82b1517f8c940ab3b596c8129b01, type: 2}
+  - {fileID: 22100000, guid: 8143991dce6c332429b1228e46cdfda5, type: 2}
+  - {fileID: 22100000, guid: c0cd9b3ad2de06a4b9890efe65391fb7, type: 2}
+  - {fileID: 22100000, guid: bfbfbcb0d48a4d0488fb4941b3892e07, type: 2}
+  - {fileID: 22100000, guid: 6e89f7ff803480647b75ad89ddbae113, type: 2}
+  - {fileID: 22100000, guid: 1273a1fede1ea5e4bab3c6f605d8d27f, type: 2}
   moveSpeed: 1
   weapon: {fileID: 4856947892395365621}
   playerWeaponCover: {fileID: 6947070756112856795}
@@ -192,6 +198,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400544828359229384}
     m_Modifications:
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.data[4]
+      value: 
+      objectReference: {fileID: 22100000, guid: 7e7b3ea6619df674f863b877157b3d1b,
+        type: 2}
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.data[5]
+      value: 
+      objectReference: {fileID: 22100000, guid: 1ceba13d7f098d24a81bcac4844d4cbd,
+        type: 2}
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.data[6]
+      value: 
+      objectReference: {fileID: 22100000, guid: e4fa787a31d15ff4bb7f3cebd4056f99,
+        type: 2}
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.data[7]
+      value: 
+      objectReference: {fileID: 22100000, guid: babb94db97d67ee4b962e0e570346846,
+        type: 2}
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.data[8]
+      value: 
+      objectReference: {fileID: 22100000, guid: 0b614f17813700c439848d9df568229f,
+        type: 2}
+    - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
+      propertyPath: overrideControllers.Array.data[9]
+      value: 
+      objectReference: {fileID: 22100000, guid: c89ac79dd2c9d134180258b8944f644e,
+        type: 2}
     - target: {fileID: 3635217252597560574, guid: a2d360ff369f8bb4a85fb97f1fe8f226,
         type: 3}
       propertyPath: m_Radius
@@ -283,6 +323,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1400544828359229384}
     m_Modifications:
+    - target: {fileID: 3646644407275373741, guid: e29e71628f3344e4ea4541f8b56d423b,
+        type: 3}
+      propertyPath: overrideControllers.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646644407275373741, guid: e29e71628f3344e4ea4541f8b56d423b,
+        type: 3}
+      propertyPath: overrideControllers.Array.data[3]
+      value: 
+      objectReference: {fileID: 22100000, guid: 6917f49a89054234dbd87d86b72dc20e,
+        type: 2}
+    - target: {fileID: 3646644407275373741, guid: e29e71628f3344e4ea4541f8b56d423b,
+        type: 3}
+      propertyPath: overrideControllers.Array.data[4]
+      value: 
+      objectReference: {fileID: 22100000, guid: 1e27885131b28e445992cf7f42943952,
+        type: 2}
+    - target: {fileID: 3646644407275373741, guid: e29e71628f3344e4ea4541f8b56d423b,
+        type: 3}
+      propertyPath: overrideControllers.Array.data[5]
+      value: 
+      objectReference: {fileID: 22100000, guid: 70bfc6270a5f63f46a107c0d62cecb5f,
+        type: 2}
+    - target: {fileID: 3646644407275373741, guid: e29e71628f3344e4ea4541f8b56d423b,
+        type: 3}
+      propertyPath: overrideControllers.Array.data[6]
+      value: 
+      objectReference: {fileID: 22100000, guid: d3cba09666931614483621d95316dd2b,
+        type: 2}
     - target: {fileID: 7538088136383353382, guid: e29e71628f3344e4ea4541f8b56d423b,
         type: 3}
       propertyPath: m_RootOrder
