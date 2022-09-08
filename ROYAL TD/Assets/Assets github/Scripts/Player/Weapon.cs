@@ -8,9 +8,10 @@ public class Weapon : MonoBehaviour
     private Animator animator;
     private float timeRemaining;
     private int direction;
-    private float nextFireTime;
     private Collider2D loot;
+    private Collider2D enemy;
     private int weaponDamage;
+    private int typeOfWeapon;
 
     private void Awake()
     {
@@ -18,8 +19,14 @@ public class Weapon : MonoBehaviour
         direction = 3;
     }
 
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
+        typeOfWeapon = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().typeOfWeapon;
         animator = GetComponent<Animator>();
         if (timeRemaining > 0)
         {
@@ -34,6 +41,7 @@ public class Weapon : MonoBehaviour
         {
             SetAnimations(overrideControllers[0]);
         }
+
     }
 
     public void Attack(int typeOfWeapon)
@@ -121,6 +129,10 @@ public class Weapon : MonoBehaviour
             loot.GetComponent<Loot>().receiveDamage(weaponDamage);
         }
 
+        if (enemy != null)
+        {
+            enemy.GetComponent<EnemyHp>().DecreaseEntityHp(100);
+        }
     }
 
     public void SetAnimations(AnimatorOverrideController overrideController)
@@ -135,14 +147,25 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Stone"))
+        if (typeOfWeapon == 0)
         {
-            loot = other;
+            if (other.gameObject.CompareTag("Stone"))
+            {
+                loot = other;
+            }
+
+            if (other.gameObject.CompareTag("Tree"))
+            {
+                loot = other;
+            }
         }
 
-        if (other.gameObject.CompareTag("Tree"))
+        if (typeOfWeapon == 1 || typeOfWeapon == 2)
         {
-            loot = other;
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                enemy = other;
+            }
         }
     }
 

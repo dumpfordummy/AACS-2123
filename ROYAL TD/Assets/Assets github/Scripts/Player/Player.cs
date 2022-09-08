@@ -12,13 +12,12 @@ public class Player : GameCharacter
     private float verticalInput = 0;
     private int direction;
     private bool ableToAtk = true;
-    private float nextFireTime;
     public GameObject weapon;
     public GameObject playerWeaponCover;
     private float AtkCoolDowntimeRemaining;
     float xWidthM = 50f;
     float yHeightM = 25f;
-    int typeOfWeapon = 0;
+    public int typeOfWeapon = 0;
     private woodResources woodResouce;
     private stoneResources stoneResource;
     private GameObject unlockSword;
