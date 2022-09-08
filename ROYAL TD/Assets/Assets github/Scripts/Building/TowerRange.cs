@@ -35,6 +35,12 @@ public class TowerRange : MonoBehaviour
             parent.target = other.transform;
         }
 
+        if (!other.gameObject.CompareTag("Enemy"))
+        {
+            parent.target = null;
+            return;
+        }
+
         if (other.gameObject.CompareTag("Enemy"))
         {
             if (Time.time > nextFireTime)
