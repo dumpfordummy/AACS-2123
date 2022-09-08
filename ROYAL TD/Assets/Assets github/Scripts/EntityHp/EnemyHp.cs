@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyHp : MonoBehaviour
 {
-    [SerializeField] public float maxHp = 10000;
-    [SerializeField] public float currentHp = 10000;
+    [SerializeField] private float maxHp;
+    [SerializeField] private float currentHp;
     public EnemyHpBar healthBar;
     private Enemy enemy;
 
