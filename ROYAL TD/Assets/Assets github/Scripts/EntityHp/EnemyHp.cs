@@ -19,10 +19,6 @@ public class EnemyHp : MonoBehaviour
 
     public void DecreaseEntityHp(float hpToDecrease)
     {
-        if(enemy.target == null)
-        {
-            return;
-        }
 
         currentHp -= hpToDecrease;
 
