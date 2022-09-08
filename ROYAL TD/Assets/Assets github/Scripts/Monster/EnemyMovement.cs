@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
-        pathfinding = new Pathfinding(GridHandler.grid);
+        pathfinding = GridHandler.pathInit;
         enemy = GetComponent<Enemy>();
         waypoint = new List<Vector3>();
         InitializeMovement();
