@@ -38,9 +38,7 @@ public class Pathfinding
                     openNode.isOccupied = true;
                 }
             }
-       
-            //openList.Remove(node);
-            //closeList.Add(node);
+
         }
 
         for(int x = 0; x < grid.GetWidth(); x++)
