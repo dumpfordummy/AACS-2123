@@ -510,6 +510,7 @@ GameObject:
   - component: {fileID: 722187611915347902}
   - component: {fileID: 2072266781}
   - component: {fileID: 2983554778320703728}
+  - component: {fileID: 5079294385115430372}
   m_Layer: 0
   m_Name: Golem Phase 1
   m_TagString: Enemy
@@ -685,3 +686,17 @@ MonoBehaviour:
   maxHp: 1500
   currentHp: 1500
   healthBar: {fileID: 1875369910}
+--- !u!114 &5079294385115430372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795938909665345719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b8cd6e01bd66c4f83dd369982dc4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  moveSpeed: 0.6

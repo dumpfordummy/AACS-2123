@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  moveSpeed: 2
+  moveSpeed: 1.2
 --- !u!114 &270560197295537745
 MonoBehaviour:
   m_ObjectHideFlags: 0
