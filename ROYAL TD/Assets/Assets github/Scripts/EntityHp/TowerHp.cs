@@ -6,7 +6,7 @@ public class TowerHp : MonoBehaviour
 {
     [SerializeField] private float maxHp;
     [SerializeField] private float currentHp;
-    public TownHallHpBar hpBar;
+    public TowerHpBar hpBar;
     public static bool isInitializing = false;
 
     private void Start()

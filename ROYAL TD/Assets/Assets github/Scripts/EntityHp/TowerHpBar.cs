@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TownHallHpBar : MonoBehaviour
+public class TowerHpBar : MonoBehaviour
 {
     public Slider slider;
 
