@@ -12,6 +12,9 @@ public class Weapon : MonoBehaviour
     private Collider2D enemy;
     private int weaponDamage;
     private int typeOfWeapon;
+    [SerializeField] private AudioSource sound1;
+    [SerializeField] private AudioSource sound2;
+    [SerializeField] private AudioSource sound3;
 
     private void Awake()
     {
@@ -74,6 +77,11 @@ public class Weapon : MonoBehaviour
                 SetAnimations(overrideControllers[2]);
                 GetComponent<SpriteRenderer>().sortingOrder = 2;
             }
+
+            if (!sound1.isPlaying)
+            {
+                sound1.Play();
+            }
         }
         else if (typeOfWeapon == 1)
         {
@@ -98,6 +106,11 @@ public class Weapon : MonoBehaviour
                 SetAnimations(overrideControllers[5]);
                 GetComponent<SpriteRenderer>().sortingOrder = 2;
             }
+
+            if (!sound2.isPlaying)
+            {
+                sound2.Play();
+            }
         }
         else if (typeOfWeapon == 2)
         {
@@ -121,6 +134,11 @@ public class Weapon : MonoBehaviour
             {
                 SetAnimations(overrideControllers[8]);
                 GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
+
+            if (!sound3.isPlaying)
+            {
+                sound3.Play();
             }
         }
 
