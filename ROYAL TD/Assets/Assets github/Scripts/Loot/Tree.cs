@@ -17,6 +17,7 @@ public class Tree : Loot
         {
             Destroy(gameObject);
             GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().addWoodQty(100);
+            GameObject.FindGameObjectWithTag("LootSpawner").GetComponent<LootSpawner>().treeCount--;
         }
     }
 }

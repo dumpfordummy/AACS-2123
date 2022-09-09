@@ -17,6 +17,7 @@ public class Stone : Loot
         {
             Destroy(gameObject);
             GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().addStoneQty(100);
+            GameObject.FindGameObjectWithTag("LootSpawner").GetComponent<LootSpawner>().stoneCount--;
         }
     }
 }

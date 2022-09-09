@@ -23,6 +23,7 @@ TagManager:
   - UnlockStoneWall
   - UnlockSword
   - UnlockSycthe
+  - LootSpawner
   layers:
   - Default
   - TransparentFX
