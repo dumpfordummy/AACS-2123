@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <README>
-///  IGNORE THE NESTED LOOP! I TRIED VARIOUS TECHNIQUE SUCH AS HASHSET BUT STILL CANNOT MAKE IT
-/// </README>
-
 public class Pathfinding
 {
     private const int MOVE_STRAIGHT_COST = 10;
