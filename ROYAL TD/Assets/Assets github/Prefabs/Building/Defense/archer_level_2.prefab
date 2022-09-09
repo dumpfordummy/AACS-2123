@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c329b89865e975d4b80339f976a49aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 200
-  currentHp: 200
+  maxHp: 2000
+  currentHp: 2000
   hpBar: {fileID: 1700030411}
 --- !u!50 &4026513800916994646
 Rigidbody2D:

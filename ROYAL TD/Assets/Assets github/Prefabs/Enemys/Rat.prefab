@@ -668,8 +668,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  attackSpeed: 2
-  damage: 7
+  attackSpeed: 1
+  damage: 400
   isAttacking: 0
 --- !u!114 &-3861343581653891694
 MonoBehaviour:
@@ -683,8 +683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba964f872a32dba4a84e93eaad77aff1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 300
-  currentHp: 300
+  maxHp: 2000
+  currentHp: 2000
   healthBar: {fileID: 1099044715}
 --- !u!114 &-3668910978634646858
 MonoBehaviour:
