@@ -625,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   attackSpeed: 3
-  damage: 50
+  damage: 3
 --- !u!114 &-4597097447154268791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,8 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c329b89865e975d4b80339f976a49aa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 5000
-  currentHp: 5000
+  maxHp: 300
+  currentHp: 300
   hpBar: {fileID: 517930462}
 --- !u!50 &-8870776957336485166
 Rigidbody2D:

@@ -24,6 +24,9 @@ TagManager:
   - UnlockSword
   - UnlockSycthe
   - LootSpawner
+  - HammerFrame
+  - SwordFrame
+  - SyctheFrame
   layers:
   - Default
   - TransparentFX
