@@ -24,6 +24,7 @@ public class Player : GameCharacter
     private GameObject unlockSycthe;
     private bool unlockedSword;
     private bool unlockedSycthe;
+    public AudioSource sound;
 
     private void Start()
     {
@@ -140,6 +141,11 @@ public class Player : GameCharacter
             GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(3);
             GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(3);
             direction = 3;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+            
         }
         else if (Input.GetKeyUp(KeyCode.S))
         {
@@ -157,6 +163,11 @@ public class Player : GameCharacter
             GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(1);
             GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(1);
             direction = 1;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+
         }
         else if (Input.GetKeyUp(KeyCode.W))
         {
@@ -175,6 +186,11 @@ public class Player : GameCharacter
             GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(2);
             GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(2);
             direction = 2;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
@@ -193,6 +209,11 @@ public class Player : GameCharacter
             GameObject.FindGameObjectWithTag("Weapon").GetComponent<Weapon>().setDirection(4);
             GameObject.FindGameObjectWithTag("PlayerWeaponCover").GetComponent<PlayerWeaponCover>().setDirection(4);
             direction = 4;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+
         }
         else if (Input.GetKeyUp(KeyCode.A))
         {
