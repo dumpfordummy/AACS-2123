@@ -10,7 +10,7 @@ public class LootRange : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lootHpBar = transform.FindChild("Canvas").gameObject;
+        lootHpBar = transform.Find("Canvas").gameObject;
         lootHpBar.SetActive(false);
     }
 
