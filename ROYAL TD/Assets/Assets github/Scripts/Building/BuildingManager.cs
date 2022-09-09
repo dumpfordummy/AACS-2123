@@ -30,6 +30,14 @@ public class BuildingManager : MonoBehaviour
 
     void Update()
     {
+        PlaceBuildingValidate();
+
+        if (Input.GetMouseButtonDown(0) && typeOfTower != 0)
+            PlaceBuilding();
+    }
+
+    private void PlaceBuildingValidate()
+    {
         if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -84,12 +92,12 @@ public class BuildingManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(65, 55, 0);
             ResetButtonPosition(tower2: true, tower3: true, tower4: true);
         }
-        else if(typeOfTower == 2)
+        else if (typeOfTower == 2)
         {
             GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(185, 55, 0);
             ResetButtonPosition(tower1: true, tower3: true, tower4: true);
         }
-        else if(typeOfTower == 3)
+        else if (typeOfTower == 3)
         {
             GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(305, 55, 0);
             ResetButtonPosition(tower1: true, tower2: true, tower4: true);
@@ -99,9 +107,6 @@ public class BuildingManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(425, 55, 0);
             ResetButtonPosition(tower1: true, tower2: true, tower3: true);
         }
-
-        if (Input.GetMouseButtonDown(0) && typeOfTower != 0)
-            PlaceBuilding();
     }
 
     private void PlaceBuilding()
@@ -111,7 +116,7 @@ public class BuildingManager : MonoBehaviour
         currentNode = Pathfinding.GetNode(posX, posY);
         if (!Pathfinding.obstacleList.Contains(currentNode))
         {
-            Instantiate(activeBuildingType[typeOfTower].prefab, grid.GetWorldPosition(posX, posY) + offsetBuildCorrection(), Quaternion.identity);
+            Instantiate(activeBuildingType[typeOfTower].prefab, grid.GetWorldPosition(posX, posY) + new Vector3(0.5f, 0.75f), Quaternion.identity);
             Pathfinding.obstacleList.Add(currentNode);
 
             if(typeOfTower == 1)
@@ -159,10 +164,5 @@ public class BuildingManager : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().localPosition = Vector3.zero;
         }
-    }
-
-    private Vector3 offsetBuildCorrection()
-    {
-        return new Vector3(0.5f, 0.75f);
     }
 }

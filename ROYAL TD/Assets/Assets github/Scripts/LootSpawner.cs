@@ -10,13 +10,7 @@ public class LootSpawner : MonoBehaviour
     public int stoneCount;
     public int treeCount;
     int spawnRegion;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeRemaining <= 0)
@@ -42,19 +36,19 @@ public class LootSpawner : MonoBehaviour
         spawnRegion = Random.Range(0, 4);
         if (spawnRegion == 0)
         {
-            GameObject.Instantiate(stone, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(stone, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
         }
         else if (spawnRegion == 1)
         {
-            GameObject.Instantiate(stone, new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(stone, new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f, 0), new Quaternion());
         }
         else if (spawnRegion == 2)
         {
-            GameObject.Instantiate(stone, new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(stone, new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f, 0), new Quaternion());
         }
         else if (spawnRegion == 3)
         {
-            GameObject.Instantiate(stone, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(stone, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
         }
         
         stoneCount++;
@@ -65,20 +59,29 @@ public class LootSpawner : MonoBehaviour
         spawnRegion = Random.Range(0, 4);
         if (spawnRegion == 0)
         {
-            GameObject.Instantiate(tree, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(tree, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
         }
         else if (spawnRegion == 1)
         {
-            GameObject.Instantiate(tree, new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(tree, new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f, 0), new Quaternion());
         }
         else if (spawnRegion == 2)
         {
-            GameObject.Instantiate(tree, new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(tree, new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f, 0), new Quaternion());
         }
         else if (spawnRegion == 3)
         {
-            GameObject.Instantiate(tree, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
+            objectSpawner<GameObject>(tree, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
         }
         treeCount++;
+    }
+
+    T objectSpawner<T>(T original, Vector3 position, Quaternion rotation) where T : Object
+    {
+        PathNode currentNode;
+        GridBase<PathNode>.GetXY(position, out int posX, out int posY);
+        currentNode = Pathfinding.GetNode(posX, posY);
+        Pathfinding.obstacleList.Add(currentNode);
+        return (T)Instantiate((Object)original, position, rotation);
     }
 }
