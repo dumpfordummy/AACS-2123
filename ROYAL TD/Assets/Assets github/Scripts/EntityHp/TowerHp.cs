@@ -38,7 +38,11 @@ public class TowerHp : MonoBehaviour
 
         enemy.gameObject.GetComponent<EnemyMovement>().InitializeMovement();
 
-        GetComponent<TowerAttack>().target = null;
+        if (TryGetComponent<TowerAttack>(out var target))
+        {
+            target.target = null;
+        }
+
         isInitializing = false;
     }
 }
