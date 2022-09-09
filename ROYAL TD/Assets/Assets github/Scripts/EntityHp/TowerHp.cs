@@ -4,18 +4,28 @@ using UnityEngine;
 
 public class TowerHp : MonoBehaviour
 {
-    [SerializeField] private float hp;
+    [SerializeField] private float maxHp;
+    [SerializeField] private float currentHp;
+    public TownHallHpBar hpBar;
     public static bool isInitializing = false;
+
+    private void Start()
+    {
+        currentHp = maxHp;
+        hpBar.setMaxHealth(maxHp);
+    }
 
     public void DecreaseEntityHp(Transform enemy, float hpToDecrease)
     {
-        hp -= hpToDecrease;
+        currentHp -= hpToDecrease;
 
-        if (hp <= 0)
+        if (currentHp <= 0)
         {
             CleanUp(enemy);
             Destroy(gameObject);
         }
+
+        hpBar.setHealth(currentHp);
     }
 
     public void CleanUp(Transform enemy)
