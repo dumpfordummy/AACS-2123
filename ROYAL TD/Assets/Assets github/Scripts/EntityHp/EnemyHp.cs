@@ -24,6 +24,7 @@ public class EnemyHp : MonoBehaviour
 
         if (currentHp <= 0)
         {
+            gameObject.GetComponent<Enemy>().SetAnimations(2);
             Destroy(gameObject);
         }
 

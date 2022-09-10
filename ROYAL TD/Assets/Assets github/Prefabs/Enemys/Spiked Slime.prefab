@@ -381,7 +381,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.2
 --- !u!114 &1785437326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ Animator:
   m_GameObject: {fileID: 1428093621257878115}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 31193055c1a5c4d46acf0cf8d3686ea8, type: 2}
+  m_Controller: {fileID: 9100000, guid: a3875359d98767a428938f3df287b707, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -667,6 +667,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d6e011b6590784490314f35dcc729d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideControllers:
+  - {fileID: 22100000, guid: af2f9dcf3f689a24098b5ba97ed699c6, type: 2}
+  - {fileID: 22100000, guid: a52d5f70b019e1048abfad80828a2f1c, type: 2}
+  - {fileID: 22100000, guid: fa44c06894474294098e9b7073e57373, type: 2}
   target: {fileID: 0}
   attackSpeed: 1
   damage: 600
