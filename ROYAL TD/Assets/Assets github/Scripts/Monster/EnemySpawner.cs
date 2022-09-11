@@ -35,7 +35,8 @@ public class EnemySpawner : MonoBehaviour
     public GameObject sixthEnemy;
 
     private int spawnRegion;
-    public float spawnCooldown;
+    private float spawnCooldown;
+    public float spawnCooldownDuration;
     private Timer timer;
 
     // Update is called once per frame
@@ -59,7 +60,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnEnemy(firstEnemy);
                     firstEnemyCount--;
-                    spawnCooldown = 1f;
+                    spawnCooldown = spawnCooldownDuration;
                 }
             }
             firstEnemyWaveTime -= Time.deltaTime;
@@ -82,7 +83,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnEnemy(secondEnemy);
                     secondEnemyCount--;
-                    spawnCooldown = 1f;
+                    spawnCooldown = spawnCooldownDuration;
                 }
             }
             secondEnemyWaveTime -= Time.deltaTime;
@@ -105,7 +106,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnEnemy(thirdEnemy);
                     thirdEnemyCount--;
-                    spawnCooldown = 1f;
+                    spawnCooldown = spawnCooldownDuration;
                 }
             }
             thirdEnemyWaveTime -= Time.deltaTime;
@@ -128,7 +129,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnEnemy(fourthEnemy);
                     fourthEnemyCount--;
-                    spawnCooldown = 1f;
+                    spawnCooldown = spawnCooldownDuration;
                 }
             }
             fourthEnemyWaveTime -= Time.deltaTime;
@@ -151,7 +152,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnEnemy(fifthEnemy);
                     fifthEnemyCount--;
-                    spawnCooldown = 1f;
+                    spawnCooldown = spawnCooldownDuration;
                 }
             }
             fifthEnemyWaveTime -= Time.deltaTime;
@@ -174,7 +175,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnEnemy(sixthEnemy);
                     sixthEnemyCount--;
-                    spawnCooldown = 1f;
+                    spawnCooldown = spawnCooldownDuration;
                 }
             }
             sixthEnemyWaveTime -= Time.deltaTime;
