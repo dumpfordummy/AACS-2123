@@ -39,99 +39,155 @@ public class EnemySpawner : MonoBehaviour
     private Timer timer;
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
-        if (spawnCooldown <= 0)
+        if (firstBuildingTime > 0)
         {
-            spawnCooldown = 1f;
-            
-            if (firstBuildingTime > 0)
+            firstBuildingTime -= Time.deltaTime;
+            timer.DisplayTime(firstBuildingTime);
+        }
+        else if (firstEnemyWaveTime > 0)
+        {
+            if (firstEnemyCount > 0)
             {
-                firstBuildingTime -= Time.deltaTime;
-            }
-            else if (firstEnemyWaveTime > 0)
-            {
-                if (firstEnemyCount > 0)
+                if (spawnCooldown > 0)
+                {
+                    spawnCooldown -= Time.deltaTime;
+                }
+                else
                 {
                     spawnEnemy(firstEnemy);
                     firstEnemyCount--;
+                    spawnCooldown = 1f;
                 }
-                firstEnemyWaveTime -= Time.deltaTime;
             }
-            else if (secondBuildingTime > 0)
+            firstEnemyWaveTime -= Time.deltaTime;
+            timer.DisplayTime(firstEnemyWaveTime);
+        }
+        else if (secondBuildingTime > 0)
+        {
+            secondBuildingTime -= Time.deltaTime;
+            timer.DisplayTime(secondBuildingTime);
+        }
+        else if (secondEnemyWaveTime > 0)
+        {
+            if (secondEnemyCount > 0)
             {
-                secondBuildingTime -= Time.deltaTime;
-            }
-            else if (secondEnemyWaveTime > 0)
-            {
-                if (secondEnemyCount > 0)
+                if (spawnCooldown > 0)
+                {
+                    spawnCooldown -= Time.deltaTime;
+                }
+                else
                 {
                     spawnEnemy(secondEnemy);
                     secondEnemyCount--;
+                    spawnCooldown = 1f;
                 }
-                secondEnemyWaveTime -= Time.deltaTime;
             }
-            else if (thirdBuildingTime > 0)
+            secondEnemyWaveTime -= Time.deltaTime;
+            timer.DisplayTime(secondEnemyWaveTime);
+        }
+        else if (thirdBuildingTime > 0)
+        {
+            thirdBuildingTime -= Time.deltaTime;
+            timer.DisplayTime(thirdBuildingTime);
+        }
+        else if (thirdEnemyWaveTime > 0)
+        {
+            if (thirdEnemyCount > 0)
             {
-                thirdBuildingTime -= Time.deltaTime;
-            }
-            else if (thirdEnemyWaveTime > 0)
-            {
-                if (thirdEnemyCount > 0)
+                if (spawnCooldown > 0)
+                {
+                    spawnCooldown -= Time.deltaTime;
+                }
+                else
                 {
                     spawnEnemy(thirdEnemy);
                     thirdEnemyCount--;
+                    spawnCooldown = 1f;
                 }
-                thirdEnemyWaveTime -= Time.deltaTime;
             }
-            else if (fourthBuildingTime > 0)
+            thirdEnemyWaveTime -= Time.deltaTime;
+            timer.DisplayTime(thirdEnemyWaveTime);
+        }
+        else if (fourthBuildingTime > 0)
+        {
+            fourthBuildingTime -= Time.deltaTime;
+            timer.DisplayTime(fourthBuildingTime);
+        }
+        else if (fourthEnemyWaveTime > 0)
+        {
+            if (fourthEnemyCount > 0)
             {
-                fourthBuildingTime -= Time.deltaTime;
-            }
-            else if (fourthEnemyWaveTime > 0)
-            {
-                if (fourthEnemyCount > 0)
+                if (spawnCooldown > 0)
+                {
+                    spawnCooldown -= Time.deltaTime;
+                }
+                else
                 {
                     spawnEnemy(fourthEnemy);
                     fourthEnemyCount--;
+                    spawnCooldown = 1f;
                 }
-                fourthEnemyWaveTime -= 2 * Time.deltaTime;
             }
-            else if (fifthBuildingTime > 0)
+            fourthEnemyWaveTime -= Time.deltaTime;
+            timer.DisplayTime(fourthEnemyWaveTime);
+        }
+        else if (fifthBuildingTime > 0)
+        {
+            fifthBuildingTime -= Time.deltaTime;
+            timer.DisplayTime(fifthBuildingTime);
+        }
+        else if (fifthEnemyWaveTime > 0)
+        {
+            if (fifthEnemyCount > 0)
             {
-                fifthBuildingTime -= 2 * Time.deltaTime;
-            }
-            else if (fifthEnemyWaveTime > 0)
-            {
-                if (fifthEnemyCount > 0)
+                if (spawnCooldown > 0)
+                {
+                    spawnCooldown -= Time.deltaTime;
+                }
+                else
                 {
                     spawnEnemy(fifthEnemy);
                     fifthEnemyCount--;
+                    spawnCooldown = 1f;
                 }
-                fifthEnemyWaveTime -= 2 * Time.deltaTime;
             }
-            else if (sixthBuildingTime > 0)
+            fifthEnemyWaveTime -= Time.deltaTime;
+            timer.DisplayTime(fifthEnemyWaveTime);
+        }
+        else if (sixthBuildingTime > 0)
+        {
+            sixthBuildingTime -= Time.deltaTime;
+            timer.DisplayTime(sixthBuildingTime);
+        }
+        else if (sixthEnemyWaveTime > 0)
+        {
+            if (sixthEnemyCount > 0)
             {
-                sixthBuildingTime -= 2 * Time.deltaTime;
-            }
-            else if (sixthEnemyWaveTime > 0)
-            {
-                if (sixthEnemyCount > 0)
+                if (spawnCooldown > 0)
+                {
+                    spawnCooldown -= Time.deltaTime;
+                }
+                else
                 {
                     spawnEnemy(sixthEnemy);
                     sixthEnemyCount--;
+                    spawnCooldown = 1f;
                 }
-                sixthEnemyWaveTime -= 2 * Time.deltaTime;
             }
+            sixthEnemyWaveTime -= Time.deltaTime;
+            timer.DisplayTime(sixthEnemyWaveTime);
         }
-        else
-            spawnCooldown -= Time.deltaTime;
     }
 
     void spawnEnemy(GameObject enemy)
     {
+        
         spawnRegion = Random.Range(0, 4);
+
+
         if (spawnRegion == 0)
         {
             GameObject.Instantiate(enemy, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
