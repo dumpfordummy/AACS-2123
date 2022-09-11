@@ -23,9 +23,6 @@ public class Enemy : MonoBehaviour
         else
         {
             SetAnimations(1);
-            Animator anim = gameObject.GetComponentInChildren<Animator>();
-            anim.Rebind();
-            anim.Update(0f);
         }
         
     }
