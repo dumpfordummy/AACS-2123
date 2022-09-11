@@ -36,28 +36,35 @@ public class EnemySpawner : MonoBehaviour
 
     private int spawnRegion;
     public float spawnCooldown;
+
+    private Timer timer;
+    private bool isFirstRoundEnd = false;
+
     // Update is called once per frame
     void FixedUpdate()
     {
+        timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         if (spawnCooldown <= 0)
         {
             spawnCooldown = 1f;
-            if (firstBuildingTime > 0)
+            timer.SetTimeValue(firstBuildingTime);
+            if (timer.isTimeUp() && !isFirstBuildRoundEnd)
             {
-                firstBuildingTime -= 2 * Time.deltaTime;
+                timer.SetTimeValue(firstEnemyWaveTime);
+                isFirstRoundEnd = true;
             }
-            else if (firstEnemyWaveTime > 0)
+            else if (timer.isTimeUp() && )
             {
                 if (firstEnemyCount > 0)
                 {
                     spawnEnemy(firstEnemy);
                     firstEnemyCount--;
                 }
-                firstEnemyWaveTime -= 2 * Time.deltaTime;
+                firstEnemyWaveTime -= Time.deltaTime;
             }
             else if (secondBuildingTime > 0)
             {
-                secondBuildingTime -= 2 * Time.deltaTime;
+                secondBuildingTime -= Time.deltaTime;
             }
             else if (secondEnemyWaveTime > 0)
             {
@@ -66,11 +73,11 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(secondEnemy);
                     secondEnemyCount--;
                 }
-                secondEnemyWaveTime -= 2 * Time.deltaTime;
+                secondEnemyWaveTime -= Time.deltaTime;
             }
             else if (thirdBuildingTime > 0)
             {
-                thirdBuildingTime -= 2 * Time.deltaTime;
+                thirdBuildingTime -= Time.deltaTime;
             }
             else if (thirdEnemyWaveTime > 0)
             {
@@ -79,11 +86,11 @@ public class EnemySpawner : MonoBehaviour
                     spawnEnemy(thirdEnemy);
                     thirdEnemyCount--;
                 }
-                thirdEnemyWaveTime -= 2 * Time.deltaTime;
+                thirdEnemyWaveTime -= Time.deltaTime;
             }
             else if (fourthBuildingTime > 0)
             {
-                fourthBuildingTime -= 2 * Time.deltaTime;
+                fourthBuildingTime -= Time.deltaTime;
             }
             else if (fourthEnemyWaveTime > 0)
             {
