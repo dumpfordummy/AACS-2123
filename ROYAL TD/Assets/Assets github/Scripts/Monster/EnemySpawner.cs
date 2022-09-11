@@ -36,9 +36,7 @@ public class EnemySpawner : MonoBehaviour
 
     private int spawnRegion;
     public float spawnCooldown;
-
     private Timer timer;
-    private bool isFirstRoundEnd = false;
 
     // Update is called once per frame
     void FixedUpdate()
@@ -47,13 +45,12 @@ public class EnemySpawner : MonoBehaviour
         if (spawnCooldown <= 0)
         {
             spawnCooldown = 1f;
-            timer.SetTimeValue(firstBuildingTime);
-            if (timer.isTimeUp() && !isFirstBuildRoundEnd)
+            
+            if (firstBuildingTime > 0)
             {
-                timer.SetTimeValue(firstEnemyWaveTime);
-                isFirstRoundEnd = true;
+                firstBuildingTime -= Time.deltaTime;
             }
-            else if (timer.isTimeUp() && )
+            else if (firstEnemyWaveTime > 0)
             {
                 if (firstEnemyCount > 0)
                 {

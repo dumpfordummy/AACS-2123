@@ -27,6 +27,7 @@ TagManager:
   - HammerFrame
   - SwordFrame
   - SyctheFrame
+  - Timer
   layers:
   - Default
   - TransparentFX
