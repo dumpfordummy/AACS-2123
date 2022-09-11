@@ -9,6 +9,7 @@ public class EnemyHp : MonoBehaviour
     [SerializeField] private float currentHp;
     public EnemyHpBar healthBar;
     private Enemy enemy;
+    private float dieCountDown = 1;
 
     private void Start()
     {
@@ -24,8 +25,14 @@ public class EnemyHp : MonoBehaviour
 
         if (currentHp <= 0)
         {
-            gameObject.GetComponent<Enemy>().SetAnimations(2);
-            Destroy(gameObject);
+            GetComponentInParent<Enemy>().isAllive = false;
+            GetComponentInParent<Enemy>().SetAnimations(2);
+            if (dieCountDown > 0)
+            {
+                dieCountDown -= Time.deltaTime;
+            }
+            else
+                Destroy(gameObject);
         }
 
 
