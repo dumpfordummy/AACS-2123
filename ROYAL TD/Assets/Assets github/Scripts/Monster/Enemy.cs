@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public float damage = 10f;
     public bool isAttacking = false;
     public bool isAllive = true;
+    public AudioSource sound;
 
     private void Update()
     {
@@ -29,6 +30,10 @@ public class Enemy : MonoBehaviour
             }
         }
 
+        if (!sound.isPlaying)
+        {
+            sound.Play();
+        }
 
     }
 
