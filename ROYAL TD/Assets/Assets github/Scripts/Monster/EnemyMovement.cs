@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public Enemy enemy;
     public float moveSpeed = 1f;
     private int waypointIndex = 0;
-    
+    Vector3 initialScale;
 
     void Start()
     {
@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
         enemy = GetComponent<Enemy>();
         waypoint = new List<Vector3>();
         InitializeMovement();
+        initialScale = transform.localScale;
     }
 
     void FixedUpdate()
@@ -56,6 +57,15 @@ public class EnemyMovement : MonoBehaviour
 
         Vector3 finalPosition = Vector3.MoveTowards(transform.position, waypoint[waypointIndex], moveSpeed * Time.deltaTime);
         transform.position = finalPosition;
+
+        if (waypoint[waypointIndex].x - transform.position.x > 0)
+        {
+            transform.localScale = initialScale;
+        }
+        else
+        {
+            transform.localScale = new Vector3(-initialScale.x, initialScale.y, initialScale.z);
+        }
 
         if (transform.position == waypoint[waypointIndex])
         {

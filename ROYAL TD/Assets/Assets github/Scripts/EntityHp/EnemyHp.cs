@@ -18,11 +18,8 @@ public class EnemyHp : MonoBehaviour
         enemy = GetComponent<Enemy>();
     }
 
-    public void DecreaseEntityHp(float hpToDecrease)
+    private void Update()
     {
-
-        currentHp -= hpToDecrease;
-
         if (currentHp <= 0)
         {
             GetComponentInParent<Enemy>().isAllive = false;
@@ -31,12 +28,17 @@ public class EnemyHp : MonoBehaviour
             {
                 dieCountDown -= Time.deltaTime;
             }
-            else
+            else if (dieCountDown <= 0)
+            {
                 Destroy(gameObject);
+            }
         }
+    }
 
+    public void DecreaseEntityHp(float hpToDecrease)
+    {
 
-
+        currentHp -= hpToDecrease;
         healthBar.setHealth(currentHp);
     }
 }

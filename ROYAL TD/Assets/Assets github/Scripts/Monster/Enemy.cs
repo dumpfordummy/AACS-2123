@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
                 isAttacking = false;
                 SetAnimations(0);
             }
-            else
+            else if (target != null)
             {
                 SetAnimations(1);
             }
