@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     spawnCooldown -= Time.deltaTime;
                 }
-                else
+                else if (spawnCooldown <= 0)
                 {
                     spawnEnemy(firstEnemy);
                     firstEnemyCount--;
