@@ -284,7 +284,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043214235454775864}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -296,7 +296,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &718686321
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -344,8 +344,11 @@ MonoBehaviour:
   damage: 100
   isAttacking: 0
   isAllive: 1
+<<<<<<< Updated upstream
   sound: {fileID: 178023830}
   isPlaying: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &1603754810
 MonoBehaviour:
   m_ObjectHideFlags: 0
