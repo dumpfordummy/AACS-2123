@@ -46,7 +46,7 @@ public class BuildingManager : MonoBehaviour
 
     private void PlaceBuildingValidate()
     {
-        if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30)
+        if (woodResouce.getWoodQty() >= buildTower1WoodQty && stoneResource.getStoneQty() >= buildTower1StoneQty)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
@@ -57,7 +57,7 @@ public class BuildingManager : MonoBehaviour
         else
             unlockTower1.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-        if (woodResouce.getWoodQty() >= 20 && stoneResource.getStoneQty() >= 40)
+        if (woodResouce.getWoodQty() >= buildTower2WoodQty && stoneResource.getStoneQty() >= buildTower2StoneQty)
         {
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
@@ -68,7 +68,7 @@ public class BuildingManager : MonoBehaviour
         else
             unlockTower2.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-        if (woodResouce.getWoodQty() >= 20 && stoneResource.getStoneQty() >= 40)
+        if (woodResouce.getWoodQty() >= buildTower3WoodQty && stoneResource.getStoneQty() >= buildTower3StoneQty)
         {
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
@@ -79,7 +79,7 @@ public class BuildingManager : MonoBehaviour
         else
             unlockTower3.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-        if (woodResouce.getWoodQty() >= 5 && stoneResource.getStoneQty() >= 10)
+        if (woodResouce.getWoodQty() >= buildStoneWallWoodQty && stoneResource.getStoneQty() >= buildStoneWallStoneQty)
         {
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
