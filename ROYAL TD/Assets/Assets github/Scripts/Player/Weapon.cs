@@ -45,6 +45,18 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[0]);
         }
 
+        if(typeOfWeapon == 0)
+        {
+            weaponDamage = 50;
+        }
+        else if (typeOfWeapon == 1)
+        {
+            weaponDamage = 100;
+        }
+        else if (typeOfWeapon == 2)
+        {
+            weaponDamage = 200;
+        }
     }
 
     public void Attack(int typeOfWeapon)
@@ -149,7 +161,7 @@ public class Weapon : MonoBehaviour
 
         if (enemy != null)
         {
-            enemy.GetComponent<EnemyHp>().DecreaseEntityHp(100);
+            enemy.GetComponent<EnemyHp>().DecreaseEntityHp(weaponDamage);
         }
     }
 

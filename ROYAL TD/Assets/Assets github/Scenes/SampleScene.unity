@@ -632,6 +632,26 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1400544828359229387, guid: c8b3965617301394583c4bb71d3dc18a,
+        type: 3}
+      propertyPath: unlockSwordWoodQty
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400544828359229387, guid: c8b3965617301394583c4bb71d3dc18a,
+        type: 3}
+      propertyPath: unlockSwordStoneQty
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400544828359229387, guid: c8b3965617301394583c4bb71d3dc18a,
+        type: 3}
+      propertyPath: unlockSyctheWoodQty
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1400544828359229387, guid: c8b3965617301394583c4bb71d3dc18a,
+        type: 3}
+      propertyPath: unlockSyctheStoneQty
+      value: 400
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8b3965617301394583c4bb71d3dc18a, type: 3}
 --- !u!1001 &229620431607756794
@@ -710,22 +730,22 @@ PrefabInstance:
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: fifthBuildingTime
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: firstBuildingTime
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: sixthBuildingTime
-      value: 31
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: thirdBuildingTime
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
@@ -740,12 +760,12 @@ PrefabInstance:
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: fourthBuildingTime
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: secondBuildingTime
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
@@ -786,6 +806,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildTower1WoodQty
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildTower2WoodQty
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildTower3WoodQty
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildTower1StoneQty
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildTower2StoneQty
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildTower3StoneQty
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildStoneWallWoodQty
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1886031137514653402, guid: cdde971f79e3eef4294a825fa5633182,
+        type: 3}
+      propertyPath: buildStoneWallStoneQty
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1886031137514653403, guid: cdde971f79e3eef4294a825fa5633182,
         type: 3}
       propertyPath: m_Name
@@ -924,23 +984,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 105990062, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: m_text
+      value: '300 wood
+
+        150 stone'
+      objectReference: {fileID: 0}
+    - target: {fileID: 162097166, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: m_text
+      value: '100 wood
+
+        200 stone
+
+        (Sword)
+
+        Click X To Unlock'
+      objectReference: {fileID: 0}
+    - target: {fileID: 468625116, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: m_text
+      value: '200 wood
+
+        100 stone'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1127338230, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: m_text
+      value: '10 wood
+
+        100 stone'
+      objectReference: {fileID: 0}
     - target: {fileID: 1226168693, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
       propertyPath: stoneQty
-      value: 99999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1466564819, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
       propertyPath: woodQty
-      value: 99999
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2124926416, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a,
-        type: 2}
-    - target: {fileID: 2124926416, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+    - target: {fileID: 1482864079, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: m_text
+      value: '200 wood
+
+        400 stone
+
+        (Sycthe)
+
+        Click C To Unlock'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1680782417, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: m_text
+      value: '100 wood
+
+        50 stone
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 2966296713389559523, guid: 1bb4ebaf971de114a922ca4214e7a18e,
         type: 3}
       propertyPath: m_AnchorMax.x

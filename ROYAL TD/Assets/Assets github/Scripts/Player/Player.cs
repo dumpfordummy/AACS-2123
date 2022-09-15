@@ -25,6 +25,10 @@ public class Player : GameCharacter
     private bool unlockedSword;
     private bool unlockedSycthe;
     public AudioSource sound;
+    public int unlockSwordWoodQty;
+    public int unlockSwordStoneQty;
+    public int unlockSyctheWoodQty;
+    public int unlockSyctheStoneQty;
 
     private void Start()
     {
@@ -54,8 +58,8 @@ public class Player : GameCharacter
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     unlockSword.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
-                    woodResouce.decWoddQty(10);
-                    stoneResource.decStoneQty(30);
+                    woodResouce.decWoddQty(unlockSwordWoodQty);
+                    stoneResource.decStoneQty(unlockSwordStoneQty);
                     unlockedSword = true;
                 }
             }
@@ -75,8 +79,8 @@ public class Player : GameCharacter
                 if (Input.GetKeyDown(KeyCode.C))
                 {
                     unlockSycthe.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
-                    woodResouce.decWoddQty(10);
-                    stoneResource.decStoneQty(30);
+                    woodResouce.decWoddQty(unlockSyctheWoodQty);
+                    stoneResource.decStoneQty(unlockSyctheStoneQty);
                     unlockedSycthe = true;
                 }
             }

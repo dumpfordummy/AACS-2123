@@ -14,6 +14,14 @@ public class BuildingManager : MonoBehaviour
     private GameObject unlockTower2;
     private GameObject unlockTower3;
     private GameObject unlockStoneWall;
+    public int buildTower1WoodQty;
+    public int buildTower1StoneQty;
+    public int buildTower2WoodQty;
+    public int buildTower2StoneQty;
+    public int buildTower3WoodQty;
+    public int buildTower3StoneQty;
+    public int buildStoneWallWoodQty;
+    public int buildStoneWallStoneQty;
 
     private void Start()
     {
@@ -121,23 +129,23 @@ public class BuildingManager : MonoBehaviour
 
             if(typeOfTower == 1)
             {
-                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(10);
-                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(30);
+                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(buildTower1WoodQty);
+                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(buildTower1StoneQty);
             }
             else if (typeOfTower == 2)
             {
-                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(10);
-                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(30);
+                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(buildTower2WoodQty);
+                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(buildTower2StoneQty);
             }
             else if (typeOfTower == 3)
             {
-                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(10);
-                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(30);
+                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(buildTower3WoodQty);
+                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(buildTower3StoneQty);
             }
             else if (typeOfTower == 4)
             {
-                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(5);
-                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(10);
+                GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(buildStoneWallWoodQty);
+                GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(buildStoneWallStoneQty);
             }
         }
         typeOfTower = 0;
