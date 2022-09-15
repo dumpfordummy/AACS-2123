@@ -720,7 +720,7 @@ PrefabInstance:
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: sixthBuildingTime
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
