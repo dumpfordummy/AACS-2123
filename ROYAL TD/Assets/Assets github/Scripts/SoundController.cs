@@ -7,6 +7,9 @@ public class SoundController : MonoBehaviour
     public AudioSource sound;
     public AudioClip batClip;
     public AudioClip crabClip;
+    public AudioClip ratClip;
+    public AudioClip slimeClip;
+    public AudioClip golemClip;
 
     void Update()
     {
@@ -21,6 +24,38 @@ public class SoundController : MonoBehaviour
         else if (GameObject.Find("Crab"))
         {
             GetComponent<AudioSource>().clip = crabClip;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+        }
+        else if (GameObject.Find("Rat"))
+        {
+            GetComponent<AudioSource>().clip = ratClip;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+        }
+        else if (GameObject.Find("Spiked Slime"))
+        {
+            GetComponent<AudioSource>().clip = slimeClip;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+        }
+        else if (GameObject.Find("Golem Phase 1"))
+        {
+            GetComponent<AudioSource>().clip = golemClip;
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+        }
+        else if (GameObject.Find("Golem Phase 3"))
+        {
+            GetComponent<AudioSource>().clip = golemClip;
             if (!sound.isPlaying)
             {
                 sound.Play();

@@ -730,6 +730,9 @@ MonoBehaviour:
   sound: {fileID: 1928211487}
   batClip: {fileID: 8300000, guid: 9af5b073c4f1627449c30ed57479c8ae, type: 3}
   crabClip: {fileID: 8300000, guid: 666b9afe476d4b842bcbacb46bd53d28, type: 3}
+  ratClip: {fileID: 8300000, guid: 061e8676a14604e48a1debc5c073cd8d, type: 3}
+  slimeClip: {fileID: 8300000, guid: e0d0b31d6a953584aad078fd3c3bfd52, type: 3}
+  golemClip: {fileID: 8300000, guid: 0cea48216b86ac247b2c169f9245d8e7, type: 3}
 --- !u!82 &1928211487
 AudioSource:
   m_ObjectHideFlags: 0
