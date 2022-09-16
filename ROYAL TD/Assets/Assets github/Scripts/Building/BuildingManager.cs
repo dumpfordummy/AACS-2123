@@ -52,10 +52,10 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfTower = (typeOfTower == 1) ? 0 : 1;
             }
-            unlockTower1.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+            unlockTower1.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
-            unlockTower1.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            unlockTower1.GetComponent<RectTransform>().localScale = Vector3.one;
 
         if (woodResouce.getWoodQty() >= buildTower2WoodQty && stoneResource.getStoneQty() >= buildTower2StoneQty)
         {
@@ -63,10 +63,10 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfTower = (typeOfTower == 2) ? 0 : 2;
             }
-            unlockTower2.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+            unlockTower2.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
-            unlockTower2.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            unlockTower2.GetComponent<RectTransform>().localScale = Vector3.one;
 
         if (woodResouce.getWoodQty() >= buildTower3WoodQty && stoneResource.getStoneQty() >= buildTower3StoneQty)
         {
@@ -74,10 +74,10 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfTower = (typeOfTower == 3) ? 0 : 3;
             }
-            unlockTower3.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+            unlockTower3.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
-            unlockTower3.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            unlockTower3.GetComponent<RectTransform>().localScale = Vector3.one;
 
         if (woodResouce.getWoodQty() >= buildStoneWallWoodQty && stoneResource.getStoneQty() >= buildStoneWallStoneQty)
         {
@@ -85,35 +85,44 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfTower = (typeOfTower == 4) ? 0 : 4;
             }
-            unlockStoneWall.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+            unlockStoneWall.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
-            unlockStoneWall.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            unlockStoneWall.GetComponent<RectTransform>().localScale = Vector3.one;
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            typeOfTower = (typeOfTower == 5) ? 0 : 5;
+        }
 
         if (typeOfTower == 0)
         {
-            ResetButtonPosition(tower1: true, tower2: true, tower3: true, tower4: true);
+            ResetButtonPosition(tower1: true, tower2: true, tower3: true, tower4: true, shovel: true);
         }
         else if (typeOfTower == 1)
         {
             GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(65, 55, 0);
-            ResetButtonPosition(tower2: true, tower3: true, tower4: true);
+            ResetButtonPosition(tower2: true, tower3: true, tower4: true, shovel:true);
         }
         else if (typeOfTower == 2)
         {
             GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(185, 55, 0);
-            ResetButtonPosition(tower1: true, tower3: true, tower4: true);
+            ResetButtonPosition(tower1: true, tower3: true, tower4: true, shovel: true);
         }
         else if (typeOfTower == 3)
         {
             GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(305, 55, 0);
-            ResetButtonPosition(tower1: true, tower2: true, tower4: true);
+            ResetButtonPosition(tower1: true, tower2: true, tower4: true, shovel: true);
         }
         else if (typeOfTower == 4)
         {
             GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(425, 55, 0);
-            ResetButtonPosition(tower1: true, tower2: true, tower3: true);
+            ResetButtonPosition(tower1: true, tower2: true, tower3: true, shovel: true);
+        }
+        else if (typeOfTower == 5)
+        {
+            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(1465, 25, 0);
+            ResetButtonPosition(tower1: true, tower2: true, tower3: true, tower4:true);
         }
     }
 
@@ -122,12 +131,17 @@ public class BuildingManager : MonoBehaviour
         PathNode currentNode;
         GridBase<PathNode>.GetXY(GridBase<PathNode>.GetMouseWorldPosition(), out int posX, out int posY);
         currentNode = Pathfinding.GetNode(posX, posY);
-        if (!Pathfinding.obstacleList.Contains(currentNode))
+        if(typeOfTower == 5 && Pathfinding.obstacleList.Contains(currentNode))
+        {
+            RemoveTower(currentNode);
+            Pathfinding.obstacleList.Remove(currentNode);
+        }
+        else if (!Pathfinding.obstacleList.Contains(currentNode))
         {
             Instantiate(activeBuildingType[typeOfTower].prefab, grid.GetWorldPosition(posX, posY) + new Vector3(0.5f, 0.75f), Quaternion.identity);
             Pathfinding.obstacleList.Add(currentNode);
 
-            if(typeOfTower == 1)
+            if (typeOfTower == 1)
             {
                 GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>().decWoddQty(buildTower1WoodQty);
                 GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>().decStoneQty(buildTower1StoneQty);
@@ -151,9 +165,23 @@ public class BuildingManager : MonoBehaviour
         typeOfTower = 0;
     }
 
-    private void ResetButtonPosition(bool? tower1 = false, bool? tower2 = false, bool? tower3 = false, bool? tower4 = false)
+    private void RemoveTower(PathNode node)
     {
-        if(tower1 == true)
+        Vector3 towerPos = grid.GetWorldPosition(node.x, node.y) + new Vector3(0.5f, 0.75f);
+        GameObject[] defenseList = GameObject.FindGameObjectsWithTag("Defense");
+        foreach(GameObject defense in defenseList)
+        {
+            if(defense.transform.position == towerPos)
+            {
+                Destroy(defense);
+                break;
+            }
+        }
+    }
+
+    private void ResetButtonPosition(bool? tower1 = false, bool? tower2 = false, bool? tower3 = false, bool? tower4 = false, bool? shovel = false)
+    {
+        if (tower1 == true)
         {
             GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().localPosition = Vector3.zero;
         }
@@ -171,6 +199,10 @@ public class BuildingManager : MonoBehaviour
         if (tower4 == true)
         {
             GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().localPosition = Vector3.zero;
+        }
+        if(shovel == true)
+        {
+            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().localPosition = new Vector3(-42, 42);
         }
     }
 }
