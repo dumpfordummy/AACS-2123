@@ -123,7 +123,7 @@ public class Player : GameCharacter
             ableToAtk = true;
         }
 
-        if (Input.GetMouseButtonDown(0) && ableToAtk)
+        if (Input.GetMouseButtonDown(1) && ableToAtk)
         {
             ableToAtk = false;
             Attack(typeOfWeapon);
