@@ -13,49 +13,55 @@ public class SoundController : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.Find("Bat"))
+        if (GameObject.Find("Bat(Clone)"))
         {
             GetComponent<AudioSource>().clip = batClip;
+            GetComponent<AudioSource>().volume = 0.2f;
             if (!sound.isPlaying)
             {
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Crab"))
+        else if (GameObject.Find("Crab(Clone)"))
         {
             GetComponent<AudioSource>().clip = crabClip;
+            GetComponent<AudioSource>().volume = 0.05f;
             if (!sound.isPlaying)
             {
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Rat"))
+        else if (GameObject.Find("Rat(Clone)"))
         {
             GetComponent<AudioSource>().clip = ratClip;
+            GetComponent<AudioSource>().volume = 0.2f;
             if (!sound.isPlaying)
             {
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Spiked Slime"))
+        else if (GameObject.Find("Spiked Slime(Clone)"))
         {
             GetComponent<AudioSource>().clip = slimeClip;
+            GetComponent<AudioSource>().volume = 0.2f;
             if (!sound.isPlaying)
             {
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Golem Phase 1"))
+        else if (GameObject.Find("Golem Phase 1(Clone)"))
         {
             GetComponent<AudioSource>().clip = golemClip;
+            GetComponent<AudioSource>().volume = 0.2f;
             if (!sound.isPlaying)
             {
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Golem Phase 3"))
+        else if (GameObject.Find("Golem Phase 3(Clone)"))
         {
             GetComponent<AudioSource>().clip = golemClip;
+            GetComponent<AudioSource>().volume = 0.2f;
             if (!sound.isPlaying)
             {
                 sound.Play();
