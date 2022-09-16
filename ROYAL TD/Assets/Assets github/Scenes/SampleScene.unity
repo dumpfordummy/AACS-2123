@@ -435,6 +435,37 @@ Camera:
     type: 3}
   m_PrefabInstance: {fileID: 8972002131995664508}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &659445365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659445366}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &659445366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659445365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.3524728, y: 0.40086532, z: -0.4457169}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1518836026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5938975008769309587, guid: 65c18e210cf415f4085848dbf84500ad,
@@ -562,6 +593,18 @@ PrefabInstance:
       propertyPath: sound3
       value: 
       objectReference: {fileID: 432066246}
+    - target: {fileID: 1334775668, guid: c8b3965617301394583c4bb71d3dc18a, type: 3}
+      propertyPath: damageOfSword
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334775668, guid: c8b3965617301394583c4bb71d3dc18a, type: 3}
+      propertyPath: damageOfHammer
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334775668, guid: c8b3965617301394583c4bb71d3dc18a, type: 3}
+      propertyPath: damageOfSycthe
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1400544828359227445, guid: c8b3965617301394583c4bb71d3dc18a,
         type: 3}
       propertyPath: m_Name
