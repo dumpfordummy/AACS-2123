@@ -28,6 +28,7 @@ TagManager:
   - SwordFrame
   - SyctheFrame
   - Timer
+  - ShovelButton
   layers:
   - Default
   - TransparentFX
