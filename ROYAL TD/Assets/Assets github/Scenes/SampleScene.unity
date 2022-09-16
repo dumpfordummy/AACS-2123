@@ -730,62 +730,62 @@ PrefabInstance:
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: fifthBuildingTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: firstBuildingTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: sixthBuildingTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: thirdBuildingTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: fifthEnemyWaveTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: firstEnemyWaveTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: fourthBuildingTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: secondBuildingTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: sixthEnemyWaveTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: thirdEnemyWaveTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: fourthEnemyWaveTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
       propertyPath: secondEnemyWaveTime
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}

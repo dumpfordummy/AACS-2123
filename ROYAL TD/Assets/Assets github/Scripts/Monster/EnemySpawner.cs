@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class EnemySpawner : MonoBehaviour
 {
     public float firstBuildingTime;
@@ -47,6 +47,7 @@ public class EnemySpawner : MonoBehaviour
         {
             firstBuildingTime -= Time.deltaTime;
             timer.DisplayTime(firstBuildingTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
         else if (firstEnemyWaveTime > 0)
         {
@@ -65,11 +66,13 @@ public class EnemySpawner : MonoBehaviour
             }
             firstEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(firstEnemyWaveTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
         else if (secondBuildingTime > 0)
         {
             secondBuildingTime -= Time.deltaTime;
             timer.DisplayTime(secondBuildingTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
         else if (secondEnemyWaveTime > 0)
         {
@@ -88,11 +91,13 @@ public class EnemySpawner : MonoBehaviour
             }
             secondEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(secondEnemyWaveTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
         else if (thirdBuildingTime > 0)
         {
             thirdBuildingTime -= Time.deltaTime;
             timer.DisplayTime(thirdBuildingTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
         else if (thirdEnemyWaveTime > 0)
         {
@@ -111,11 +116,13 @@ public class EnemySpawner : MonoBehaviour
             }
             thirdEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(thirdEnemyWaveTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
         else if (fourthBuildingTime > 0)
         {
             fourthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fourthBuildingTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
         else if (fourthEnemyWaveTime > 0)
         {
@@ -134,11 +141,13 @@ public class EnemySpawner : MonoBehaviour
             }
             fourthEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(fourthEnemyWaveTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
         else if (fifthBuildingTime > 0)
         {
             fifthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fifthBuildingTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
         else if (fifthEnemyWaveTime > 0)
         {
@@ -157,11 +166,13 @@ public class EnemySpawner : MonoBehaviour
             }
             fifthEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(fifthEnemyWaveTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
         else if (sixthBuildingTime > 0)
         {
             sixthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(sixthBuildingTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.white;
         }
         else if (sixthEnemyWaveTime > 0)
         {
@@ -180,6 +191,7 @@ public class EnemySpawner : MonoBehaviour
             }
             sixthEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(sixthEnemyWaveTime);
+            timer.GetComponent<TextMeshProUGUI>().color = Color.red;
         }
     }
 

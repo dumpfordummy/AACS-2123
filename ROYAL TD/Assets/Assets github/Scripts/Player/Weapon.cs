@@ -15,6 +15,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] private AudioSource sound1;
     [SerializeField] private AudioSource sound2;
     [SerializeField] private AudioSource sound3;
+    public int damageOfHammer;
+    public int damageOfSword;
+    public int damageOfSycthe;
 
     private void Awake()
     {
@@ -47,15 +50,15 @@ public class Weapon : MonoBehaviour
 
         if(typeOfWeapon == 0)
         {
-            weaponDamage = 50;
+            weaponDamage = damageOfHammer;
         }
         else if (typeOfWeapon == 1)
         {
-            weaponDamage = 100;
+            weaponDamage = damageOfSword;
         }
         else if (typeOfWeapon == 2)
         {
-            weaponDamage = 200;
+            weaponDamage = damageOfSycthe;
         }
     }
 
