@@ -23,24 +23,17 @@ public class MonsterAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (parent.target == null)
-        {
-            parent.target = other.transform;
-        }
-
         if (!other.gameObject.CompareTag("Defense"))
         {
-            parent.target = null;
             return;
         }
-        if (other.gameObject.CompareTag("Defense"))
+        parent.target = other.transform;
+        parent.GetComponent<Enemy>().isAttacking = true;
+        if (Time.time > nextFireTime)
         {
-            parent.GetComponent<Enemy>().isAttacking = true;
-            if (Time.time > nextFireTime)
-            {
-                nextFireTime = Time.time + 1 / parent.attackSpeed;
-                parent.attackTarget();
-            }
+            nextFireTime = Time.time + 1 / parent.attackSpeed;
+            parent.attackTarget();
         }
+
     }
 }

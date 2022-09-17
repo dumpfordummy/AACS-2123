@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
         enemy.isAttacking = false;
         waypointIndex = 0;
         waypoint.Clear();
-        Vector3 townHallPosition = GameObject.Find("/TownHall").GetComponent<Transform>().position;
+        Vector3 townHallPosition = GameObject.Find("TownHall").GetComponent<Transform>().position;
         GridBase<PathNode>.GetXY(townHallPosition, out int endX, out int endY);
         GridBase<PathNode>.GetXY(transform.position, out int initX, out int initY);
 
