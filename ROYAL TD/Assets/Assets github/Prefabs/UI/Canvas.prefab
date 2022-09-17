@@ -66,9 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10 wood
+  m_text: '300 wood
 
-    30 stone'
+    150 stone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10 wood
+  m_text: '100 wood
 
-    30 stone
+    200 stone
 
     (Sword)
 
@@ -691,9 +691,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10 wood
+  m_text: '200 wood
 
-    30 stone'
+    100 stone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1271,7 +1271,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '10 wood
 
-    30 stone'
+    100 stone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1488,7 +1488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce62378555cefe4aa7eb4455b6cd176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoneQty: 99999
+  stoneQty: 2147483647
   text: {fileID: 0}
 --- !u!1 &1452632716
 GameObject:
@@ -1715,7 +1715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2c3eba8df068e46a0fd682ef01c430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodQty: 99999
+  woodQty: 2147483647
   text: {fileID: 0}
 --- !u!1 &1482864077
 GameObject:
@@ -1783,9 +1783,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10 wood
+  m_text: '200 wood
 
-    30 stone
+    400 stone
 
     (Sycthe)
 
@@ -2001,9 +2001,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10 wood
+  m_text: '100 wood
 
-    30 stone
+    50 stone
 
 '
   m_isRightToLeft: 0
@@ -2413,7 +2413,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3041884966682444185}
-  m_RootOrder: 10
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2696,7 +2696,7 @@ GameObject:
   - component: {fileID: 3461609106217718682}
   m_Layer: 5
   m_Name: ShovelButton
-  m_TagString: Untagged
+  m_TagString: ShovelButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2906,7 +2906,7 @@ GameObject:
   - component: {fileID: 3041884966527112664}
   - component: {fileID: 3041884966527112665}
   m_Layer: 5
-  m_Name: Tower2Image
+  m_Name: Tower_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2928,7 +2928,7 @@ RectTransform:
   - {fileID: 3041884967171997203}
   - {fileID: 1750004430}
   m_Father: {fileID: 3041884966682444185}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3081,6 +3081,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2966695626185886445}
+  - {fileID: 2124926414}
   - {fileID: 2966591146881791575}
   - {fileID: 2966591146356072286}
   - {fileID: 3041884967748519049}
@@ -3090,7 +3091,6 @@ RectTransform:
   - {fileID: 2966084433229888109}
   - {fileID: 2966084433311478242}
   - {fileID: 2966084434402047532}
-  - {fileID: 2124926414}
   - {fileID: 5476195431462872419}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -3133,7 +3133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -3595,7 +3595,7 @@ GameObject:
   - component: {fileID: 3041884967358897617}
   - component: {fileID: 3041884967358897622}
   m_Layer: 5
-  m_Name: Tower3Image
+  m_Name: Tower_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3617,7 +3617,7 @@ RectTransform:
   - {fileID: 3041884966918481668}
   - {fileID: 1452632717}
   m_Father: {fileID: 3041884966682444185}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3674,7 +3674,7 @@ GameObject:
   - component: {fileID: 3041884967748519051}
   - component: {fileID: 3041884967748519048}
   m_Layer: 5
-  m_Name: Tower1Image
+  m_Name: Tower_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3696,7 +3696,7 @@ RectTransform:
   - {fileID: 3041884966364668140}
   - {fileID: 420639565}
   m_Father: {fileID: 3041884966682444185}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3964,7 +3964,7 @@ GameObject:
   - component: {fileID: 3106384379709827351}
   - component: {fileID: 6909479557126679962}
   m_Layer: 5
-  m_Name: StoneWallImage
+  m_Name: Stone_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3986,7 +3986,7 @@ RectTransform:
   - {fileID: 5752070592257380759}
   - {fileID: 1953555583}
   m_Father: {fileID: 3041884966682444185}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4040,7 +4040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1814479342345258, guid: ad84c37a896f54e1180d600bd7746b95, type: 3}
       propertyPath: m_Name
-      value: TowerHP
+      value: Town_Hall_HP
       objectReference: {fileID: 0}
     - target: {fileID: 114361196886809056, guid: ad84c37a896f54e1180d600bd7746b95,
         type: 3}
@@ -4400,7 +4400,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1721865566984626, guid: 0f0f65e4964e948d8a086b5077532dca, type: 3}
       propertyPath: m_Name
-      value: Stone_Quantity_Icon
+      value: Stone_Quantity
       objectReference: {fileID: 0}
     - target: {fileID: 114087240545405742, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
@@ -4460,7 +4460,7 @@ PrefabInstance:
     - target: {fileID: 224477034907414106, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224477034907414106, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
@@ -4609,7 +4609,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1972287095692402, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3, type: 3}
       propertyPath: m_Name
-      value: SyctheImage
+      value: Sycthe
       objectReference: {fileID: 0}
     - target: {fileID: 224240465379986228, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
@@ -4634,7 +4634,7 @@ PrefabInstance:
     - target: {fileID: 224991214931034124, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 224991214931034124, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
@@ -4759,7 +4759,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1721865566984626, guid: 0f0f65e4964e948d8a086b5077532dca, type: 3}
       propertyPath: m_Name
-      value: Wood_Quantity_Icon
+      value: Wood_Quantity
       objectReference: {fileID: 0}
     - target: {fileID: 114087240545405742, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
@@ -4819,7 +4819,7 @@ PrefabInstance:
     - target: {fileID: 224477034907414106, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224477034907414106, guid: 0f0f65e4964e948d8a086b5077532dca,
         type: 3}
@@ -4968,7 +4968,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1972287095692402, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3, type: 3}
       propertyPath: m_Name
-      value: HammerImage
+      value: Hammer
       objectReference: {fileID: 0}
     - target: {fileID: 114624649468195536, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
@@ -5003,7 +5003,7 @@ PrefabInstance:
     - target: {fileID: 224991214931034124, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224991214931034124, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
@@ -5128,7 +5128,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1972287095692402, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3, type: 3}
       propertyPath: m_Name
-      value: SwordImage
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 224240465379986228, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
@@ -5153,7 +5153,7 @@ PrefabInstance:
     - target: {fileID: 224991214931034124, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224991214931034124, guid: 44e2c76c5947e4ef2a5ccce3807fe9e3,
         type: 3}
