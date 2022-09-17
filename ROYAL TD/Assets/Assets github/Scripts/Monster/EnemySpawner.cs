@@ -7,32 +7,26 @@ public class EnemySpawner : MonoBehaviour
     public float firstBuildingTime;
     public float firstEnemyWaveTime;
     public int firstEnemyCount;
-    public GameObject firstEnemy;
 
     public float secondBuildingTime;
     public float secondEnemyWaveTime;
     public int secondEnemyCount;
-    public GameObject secondEnemy;
 
     public float thirdBuildingTime;
     public float thirdEnemyWaveTime;
     public int thirdEnemyCount;
-    public GameObject thirdEnemy;
 
     public float fourthBuildingTime;
     public float fourthEnemyWaveTime;
     public int fourthEnemyCount;
-    public GameObject fourthEnemy;
 
     public float fifthBuildingTime;
     public float fifthEnemyWaveTime;
     public int fifthEnemyCount;
-    public GameObject fifthEnemy;
 
     public float sixthBuildingTime;
     public float sixthEnemyWaveTime;
     public int sixthEnemyCount;
-    public GameObject sixthEnemy;
 
     private int spawnRegion;
     private float spawnCooldown;
