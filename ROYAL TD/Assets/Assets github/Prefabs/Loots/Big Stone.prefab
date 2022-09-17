@@ -625,6 +625,7 @@ MonoBehaviour:
   gameObjectName: 
   hp: 0
   hpBar: {fileID: 1498648628}
+  stoneMaxHP: 100
 --- !u!1 &7947911505844789836
 GameObject:
   m_ObjectHideFlags: 0

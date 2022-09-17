@@ -22,6 +22,7 @@ public class EnemyHp : MonoBehaviour
     {
         if (currentHp <= 0)
         {
+            GetComponentInParent<Enemy>().target = null;
             GetComponentInParent<Enemy>().isAllive = false;
             GetComponentInParent<Enemy>().SetAnimations(2);
             if (dieCountDown > 0)
@@ -30,7 +31,7 @@ public class EnemyHp : MonoBehaviour
             }
             else if (dieCountDown <= 0)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

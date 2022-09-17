@@ -21,14 +21,6 @@ public class MonsterAttack : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Defense"))
-        {
-            parent.target = null;
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if (parent.target == null)

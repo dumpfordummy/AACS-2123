@@ -627,6 +627,7 @@ MonoBehaviour:
   gameObjectName: 
   hp: 0
   hpBar: {fileID: 2025318647}
+  treeMaxHP: 100
 --- !u!1 &2055102312182832482
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,15 +53,12 @@ public class Player : GameCharacter
         }
         else
         {
-            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30)
+            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30 && Input.GetKeyDown(KeyCode.X))
             {
-                if (Input.GetKeyDown(KeyCode.X))
-                {
-                    unlockSword.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
-                    woodResouce.decWoddQty(unlockSwordWoodQty);
-                    stoneResource.decStoneQty(unlockSwordStoneQty);
-                    unlockedSword = true;
-                }
+                unlockSword.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+                woodResouce.decWoddQty(unlockSwordWoodQty);
+                stoneResource.decStoneQty(unlockSwordStoneQty);
+                unlockedSword = true;
             }
         }
 
@@ -74,15 +71,12 @@ public class Player : GameCharacter
         }
         else
         {
-            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30)
+            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30 && Input.GetKeyDown(KeyCode.C))
             {
-                if (Input.GetKeyDown(KeyCode.C))
-                {
-                    unlockSycthe.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
-                    woodResouce.decWoddQty(unlockSyctheWoodQty);
-                    stoneResource.decStoneQty(unlockSyctheStoneQty);
-                    unlockedSycthe = true;
-                }
+                unlockSycthe.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
+                woodResouce.decWoddQty(unlockSyctheWoodQty);
+                stoneResource.decStoneQty(unlockSyctheStoneQty);
+                unlockedSycthe = true;
             }
         }
 
@@ -149,7 +143,7 @@ public class Player : GameCharacter
             {
                 sound.Play();
             }
-            
+
         }
         else if (Input.GetKeyUp(KeyCode.S))
         {
@@ -233,13 +227,13 @@ public class Player : GameCharacter
 
     public void Attack(int typeOfWeapon)
     {
-        
+
         AtkCoolDowntimeRemaining = 1.2f;
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.Rebind();
         anim.Update(0f);
 
-        if(typeOfWeapon == 0)
+        if (typeOfWeapon == 0)
         {
             AtkAnimtimeRemaining = 0.95f;
             if (direction == 3)

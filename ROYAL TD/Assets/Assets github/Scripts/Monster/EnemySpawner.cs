@@ -39,6 +39,13 @@ public class EnemySpawner : MonoBehaviour
     public float spawnCooldownDuration;
     private Timer timer;
 
+    public GameObject[] bats;
+    public GameObject[] crabs;
+    public GameObject[] golem1;
+    public GameObject[] golem2;
+    public GameObject[] rat;
+    public GameObject[] spikedSlime;
+
     // Update is called once per frame
     void Update()
     {
@@ -59,7 +66,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else if (spawnCooldown <= 0)
                 {
-                    spawnEnemy(firstEnemy);
+                    spawnEnemy(1);
                     firstEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -84,7 +91,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(secondEnemy);
+                    spawnEnemy(2);
                     secondEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -109,7 +116,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(thirdEnemy);
+                    spawnEnemy(3);
                     thirdEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -134,7 +141,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(fourthEnemy);
+                    spawnEnemy(4);
                     fourthEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -159,7 +166,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(fifthEnemy);
+                    spawnEnemy(5);
                     fifthEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -184,7 +191,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(sixthEnemy);
+                    spawnEnemy(6);
                     sixthEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -195,29 +202,82 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    void spawnEnemy(GameObject enemy)
+    void spawnEnemy(int n)
     {
-        
-        spawnRegion = Random.Range(0, 4);
+        GameObject enemy = FindEnemy(n);
+        enemy.SetActive(true);
 
+        spawnRegion = Random.Range(0, 4);
 
         if (spawnRegion == 0)
         {
-            GameObject.Instantiate(enemy, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
+            //GameObject.Instantiate(enemy, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
+            enemy.transform.position = new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f);
         }
         else if (spawnRegion == 1)
         {
-            GameObject.Instantiate(enemy, new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f, 0), new Quaternion());
+            //GameObject.Instantiate(enemy, new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f, 0), new Quaternion());
+            enemy.transform.position = new Vector3(Random.Range(-50, 40) + 0.5f, Random.Range(-25, -15) + 0.5f);
         }
         else if (spawnRegion == 2)
         {
-            GameObject.Instantiate(enemy, new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f, 0), new Quaternion());
+            //GameObject.Instantiate(enemy, new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f, 0), new Quaternion());
+            enemy.transform.position = new Vector3(Random.Range(40, 50) - 0.5f, Random.Range(-25, 15) + 0.5f);
         }
         else if (spawnRegion == 3)
         {
-            GameObject.Instantiate(enemy, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
+            //GameObject.Instantiate(enemy, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
+            enemy.transform.position = new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f);
         }
+    }
 
-
+    private GameObject FindEnemy(int n)
+    {
+        switch (n)
+        {
+            case 1:
+                for (int i = 0; i < bats.Length; i++)
+                {
+                    if (!bats[i].activeInHierarchy)
+                        return bats[i];
+                }
+                break;
+            case 2:
+                for (int i = 0; i < crabs.Length; i++)
+                {
+                    if (!crabs[i].activeInHierarchy)
+                        return crabs[i];
+                }
+                break;
+            case 3:
+                for (int i = 0; i < golem1.Length; i++)
+                {
+                    if (!golem1[i].activeInHierarchy)
+                        return golem1[i];
+                }
+                break;
+            case 4:
+                for (int i = 0; i < golem2.Length; i++)
+                {
+                    if (!golem2[i].activeInHierarchy)
+                        return golem2[i];
+                }
+                break;
+            case 5:
+                for (int i = 0; i < rat.Length; i++)
+                {
+                    if (!rat[i].activeInHierarchy)
+                        return rat[i];
+                }
+                break;
+            case 6:
+                for (int i = 0; i < spikedSlime.Length; i++)
+                {
+                    if (!spikedSlime[i].activeInHierarchy)
+                        return spikedSlime[i];
+                }
+                break;
+        }
+        return null;
     }
 }

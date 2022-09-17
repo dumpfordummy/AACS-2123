@@ -20,14 +20,6 @@ public class TowerRange : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            parent.target = null;
-        }
-    }
-
     private void OnTriggerStay2D(Collider2D other)
     {
         if (parent.target == null)
