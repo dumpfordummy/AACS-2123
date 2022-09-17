@@ -5,11 +5,12 @@ using UnityEngine;
 public class Tree : Loot
 {
     public LootHpBar hpBar;
+    public int treeMaxHP;
 
     // Start is called before the first frame update
     void Start()
     {
-        setHp(100);
+        setHp(treeMaxHP);
         hpBar.setHealth(getHp());
     }
 

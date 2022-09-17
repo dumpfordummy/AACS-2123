@@ -5,11 +5,12 @@ using UnityEngine;
 public class Stone : Loot
 {
     public LootHpBar hpBar;
+    public int stoneMaxHP;
 
     // Start is called before the first frame update
     void Start()
     {
-        setHp(100);
+        setHp(stoneMaxHP);
         hpBar.setHealth(getHp());
     }
 

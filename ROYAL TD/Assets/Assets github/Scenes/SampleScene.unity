@@ -910,7 +910,25 @@ PrefabInstance:
         type: 3}
       propertyPath: firstEnemy
       value: 
+      objectReference: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
+        type: 3}
+    - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
+        type: 3}
+      propertyPath: thirdEnemy
+      value: 
       objectReference: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
+        type: 3}
+    - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
+        type: 3}
+      propertyPath: fourthEnemy
+      value: 
+      objectReference: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
+        type: 3}
+    - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
+        type: 3}
+      propertyPath: secondEnemy
+      value: 
+      objectReference: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
     - target: {fileID: 229620430047753465, guid: 485a64183ebee404799282a9aef8669e,
         type: 3}
@@ -1204,11 +1222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226168693, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
       propertyPath: stoneQty
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1466564819, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
       propertyPath: woodQty
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1482864079, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
       propertyPath: m_text
@@ -1358,6 +1376,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3041884966682444191, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
 --- !u!1001 &3382281748363917699

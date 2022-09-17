@@ -180,7 +180,7 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (typeOfWeapon == 0)
+        if (typeOfWeapon == 0 || typeOfWeapon == 2)
         {
             if (other.gameObject.CompareTag("Stone"))
             {
