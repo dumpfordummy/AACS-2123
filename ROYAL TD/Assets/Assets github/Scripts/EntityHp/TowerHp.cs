@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerHp : MonoBehaviour
 {
+    public static event Action OnTownHallDestroy;
     [SerializeField] private float maxHp;
     [SerializeField] private float currentHp;
     public TowerHpBar hpBar;
@@ -24,7 +26,9 @@ public class TowerHp : MonoBehaviour
         {
             if(name == "TownHall")
             {
-                // GameOver
+                currentHp = 0;
+                Debug.Log("Game Over!");
+                OnTownHallDestroy?.Invoke();
             }
             CleanUp(enemy);
             Destroy(gameObject);
