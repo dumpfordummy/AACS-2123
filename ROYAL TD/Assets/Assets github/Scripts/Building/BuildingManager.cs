@@ -46,7 +46,7 @@ public class BuildingManager : MonoBehaviour
             GridBase<PathNode>.GetXY(GridBase<PathNode>.GetMouseWorldPosition(), out posX, out posY);
             currentNode = Pathfinding.GetNode(posX, posY);
 
-            if (typeOfButton == 5) // its actually shovel
+            if (typeOfButton == 5) // shovel
             {
                 RemoveTower(currentNode);
             }
@@ -114,27 +114,27 @@ public class BuildingManager : MonoBehaviour
         }
         else if (typeOfButton == 1)
         {
-            GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(65, 55, 0);
+            GameObject.FindGameObjectWithTag("Tower1Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(65, 55);
             ResetButtonPosition(tower2: true, tower3: true, tower4: true, shovel: true);
         }
         else if (typeOfButton == 2)
         {
-            GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(185, 55, 0);
+            GameObject.FindGameObjectWithTag("Tower2Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(185, 55);
             ResetButtonPosition(tower1: true, tower3: true, tower4: true, shovel: true);
         }
         else if (typeOfButton == 3)
         {
-            GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(305, 55, 0);
+            GameObject.FindGameObjectWithTag("Tower3Button").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(305, 55);
             ResetButtonPosition(tower1: true, tower2: true, tower4: true, shovel: true);
         }
         else if (typeOfButton == 4)
         {
-            GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(425, 55, 0);
+            GameObject.FindGameObjectWithTag("StoneWallButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(425, 55);
             ResetButtonPosition(tower1: true, tower2: true, tower3: true, shovel: true);
         }
         else if (typeOfButton == 5)
         {
-            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(1465, 25, 0);
+            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(Screen.width - 65, 25);
             ResetButtonPosition(tower1: true, tower2: true, tower3: true, tower4: true);
         }
     }
@@ -208,7 +208,7 @@ public class BuildingManager : MonoBehaviour
         }
         if (shovel == true)
         {
-            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().localPosition = new Vector3(-42, 42);
+            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().localPosition = Vector3.zero;
         }
     }
 }
