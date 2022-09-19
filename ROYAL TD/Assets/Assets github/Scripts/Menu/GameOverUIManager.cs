@@ -2,12 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class GameOverUIManager : MonoBehaviour
 {
     public GameObject gameOverMenu;
 
-    public void EnableGameMenu()
+    private void OnEnable()
     {
-        gameObject.SetActive(true);
+        TowerHp.OnTownHallDestroy += EnableGameOverMenu;
+    }
+
+    private void OnDisable()
+    {
+        TowerHp.OnTownHallDestroy -= EnableGameOverMenu;
+    }
+
+    public void EnableGameOverMenu()
+    {
+        gameOverMenu.SetActive(true);
     }
 }

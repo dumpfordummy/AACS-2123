@@ -21,7 +21,6 @@ public class TowerHp : MonoBehaviour
     {
         currentHp -= hpToDecrease;
 
-
         if (currentHp <= 0)
         {
             if(name == "TownHall")
