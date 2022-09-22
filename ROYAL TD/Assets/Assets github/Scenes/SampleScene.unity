@@ -19899,6 +19899,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3040728849236382314, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+        type: 3}
+      propertyPath: m_TagString
+      value: SyctheFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040728850278817323, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+        type: 3}
+      propertyPath: m_TagString
+      value: HammerFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040728850326984100, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+        type: 3}
+      propertyPath: m_TagString
+      value: SwordFrame
+      objectReference: {fileID: 0}
     - target: {fileID: 3041884966682444185, guid: 1bb4ebaf971de114a922ca4214e7a18e,
         type: 3}
       propertyPath: m_Pivot.x
