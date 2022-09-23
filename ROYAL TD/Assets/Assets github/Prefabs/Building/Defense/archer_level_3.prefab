@@ -625,7 +625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   attackSpeed: 3
-  damage: 3
+  damage: 30
 --- !u!114 &-4597097447154268791
 MonoBehaviour:
   m_ObjectHideFlags: 0
