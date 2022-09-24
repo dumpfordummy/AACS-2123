@@ -402,7 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8901071040006362924}
   - component: {fileID: 8472786708937020124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MiniMapIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,15 +465,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb432f02832c6746a5b3bb2eba35927, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1065045830
@@ -497,7 +497,7 @@ PrefabInstance:
       objectReference: {fileID: 4220960748160642386}
     - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
       propertyPath: damageOfSword
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
       propertyPath: damageOfHammer
@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
       propertyPath: damageOfSycthe
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1895055410, guid: a2d360ff369f8bb4a85fb97f1fe8f226, type: 3}
       propertyPath: overrideControllers.Array.size
@@ -913,7 +913,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &2130652857258004942
+--- !u!82 &1422735684490820353
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -923,7 +923,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6764089db05a7f440b217eccdbfcb819, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 11991b7080a44a34ca9163a11d753a52, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1009,7 +1009,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &1422735684490820353
+--- !u!82 &2130652857258004942
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1019,7 +1019,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 11991b7080a44a34ca9163a11d753a52, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6764089db05a7f440b217eccdbfcb819, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
