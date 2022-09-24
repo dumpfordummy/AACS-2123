@@ -196,7 +196,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (3)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (28)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -565,7 +565,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (2)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -726,7 +726,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (14)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -808,7 +808,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (8)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -835,7 +835,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (17)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -941,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (9)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -1023,7 +1023,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (4)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -1141,7 +1141,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (13)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -1223,7 +1223,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (20)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -1432,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (12)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -1514,7 +1514,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (22)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -1656,7 +1656,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (26)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -1683,7 +1683,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (28)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -1765,7 +1765,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (23)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -1902,7 +1902,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (14)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -1929,7 +1929,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (16)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -2035,7 +2035,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (4)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -2184,7 +2184,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (6)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -2211,7 +2211,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (10)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -2372,7 +2372,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (6)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -2435,7 +2435,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (8)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -2596,7 +2596,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (13)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -2796,7 +2796,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (24)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -2835,7 +2835,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (27)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -2929,7 +2929,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (22)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -3066,7 +3066,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (20)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -3093,7 +3093,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (26)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -3278,7 +3278,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (16)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -3329,7 +3329,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (9)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -3411,7 +3411,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (18)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -3505,7 +3505,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (25)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -3660,7 +3660,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (27)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -3687,7 +3687,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (9)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -3805,7 +3805,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (27)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -3899,7 +3899,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (13)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -4053,7 +4053,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (14)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -4159,7 +4159,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (27)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -4296,7 +4296,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (15)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -4378,7 +4378,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (22)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -4460,7 +4460,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (10)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -4581,7 +4581,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (10)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -4663,7 +4663,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (1)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -4745,7 +4745,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (26)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -4906,7 +4906,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (19)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -5037,7 +5037,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (6)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -5064,7 +5064,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (14)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -5230,7 +5230,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (24)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -5475,7 +5475,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (18)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -5538,7 +5538,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (14)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -5675,7 +5675,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (24)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -5757,7 +5757,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (22)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -5808,7 +5808,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (16)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -5894,7 +5894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 857583465}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: BatHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6018,7 +6018,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (7)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -6045,7 +6045,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (11)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -6127,7 +6127,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (5)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -6276,7 +6276,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (27)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -6370,7 +6370,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (16)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -6464,7 +6464,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (12)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -6546,7 +6546,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (1)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -6628,7 +6628,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (13)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -6655,7 +6655,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (29)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -6737,7 +6737,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (1)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -6819,7 +6819,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (19)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -6968,7 +6968,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (5)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -7050,7 +7050,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (18)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -7089,7 +7089,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (23)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -7195,7 +7195,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (7)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -7277,7 +7277,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (21)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -7426,7 +7426,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (1)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -7453,7 +7453,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (21)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -7590,7 +7590,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (21)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -7617,7 +7617,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (6)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -7802,7 +7802,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (16)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -7829,7 +7829,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (12)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -7923,7 +7923,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (3)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -8029,7 +8029,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (1)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -8202,7 +8202,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (17)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -8241,7 +8241,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (25)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -8390,7 +8390,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (28)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -8472,7 +8472,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (20)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -8554,7 +8554,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (8)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -8581,7 +8581,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (7)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -8745,7 +8745,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (19)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -8839,7 +8839,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (11)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -8976,7 +8976,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (27)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -9106,7 +9106,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (10)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -9212,7 +9212,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (19)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -9231,7 +9231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1220778740}
   m_Layer: 0
-  m_Name: Golem Phase 2
+  m_Name: GolemPhase3Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9312,7 +9312,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (5)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -9449,7 +9449,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (15)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -9488,7 +9488,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (15)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -9625,7 +9625,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (23)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -9652,7 +9652,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (2)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -9758,7 +9758,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (21)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -9955,7 +9955,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (25)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -10061,7 +10061,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (26)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -10088,7 +10088,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (17)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -10170,7 +10170,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (23)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -10319,7 +10319,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (23)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -10346,7 +10346,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (22)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -10428,7 +10428,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (16)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -10565,7 +10565,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (17)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -10659,7 +10659,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (5)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -10753,7 +10753,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (20)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -10835,7 +10835,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (11)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -10886,7 +10886,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (5)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -11023,7 +11023,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (7)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -11105,7 +11105,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (14)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -11187,7 +11187,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (21)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -11269,7 +11269,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (7)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -11375,7 +11375,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (9)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -11457,7 +11457,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (24)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -11488,7 +11488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1463062514}
   m_Layer: 0
-  m_Name: Crab
+  m_Name: CrabHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11549,7 +11549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1464616841}
   m_Layer: 0
-  m_Name: Golem Phase 1
+  m_Name: GolemPhase1Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11618,7 +11618,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (24)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -11712,7 +11712,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (10)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -11861,7 +11861,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (21)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -11943,7 +11943,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (28)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -12049,7 +12049,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (9)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -12131,7 +12131,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (4)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -12158,7 +12158,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (8)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -12264,7 +12264,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (15)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -12346,7 +12346,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (13)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -12507,7 +12507,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (29)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -12589,7 +12589,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (2)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -12671,7 +12671,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (5)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -12753,7 +12753,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (29)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -12835,7 +12835,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (2)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -12862,7 +12862,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (7)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -12956,7 +12956,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (17)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -13050,7 +13050,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (19)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -13168,7 +13168,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (24)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -13317,7 +13317,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (4)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -13356,7 +13356,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (29)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -13532,7 +13532,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (3)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -13614,7 +13614,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (3)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -13708,7 +13708,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (26)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -13790,7 +13790,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (20)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -13872,7 +13872,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (22)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -14009,7 +14009,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (26)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -14036,7 +14036,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (18)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -14173,7 +14173,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (19)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -14212,7 +14212,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (18)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -14349,7 +14349,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (8)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -14431,7 +14431,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (9)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -14549,7 +14549,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (1)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -14631,7 +14631,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (12)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -14775,7 +14775,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (29)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -14912,7 +14912,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (15)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -14931,7 +14931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850284863}
   m_Layer: 0
-  m_Name: Spiked Slime
+  m_Name: SpikedSlimeHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15012,7 +15012,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (28)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -15149,7 +15149,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (18)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -15200,7 +15200,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (12)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -15337,7 +15337,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (3)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -15364,7 +15364,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (25)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -15446,7 +15446,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (8)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -15528,7 +15528,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (12)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -15792,7 +15792,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (10)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -15819,7 +15819,7 @@ PrefabInstance:
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 3 (6)
+      value: Golem Phase 3
       objectReference: {fileID: 0}
     - target: {fileID: 8027181108614617486, guid: 243205b62e97c534eac5f1a6f93bd059,
         type: 3}
@@ -16127,7 +16127,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (13)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -16209,7 +16209,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (11)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -16236,7 +16236,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (11)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -16409,7 +16409,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (4)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -16491,7 +16491,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (25)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -16522,7 +16522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997107486}
   m_Layer: 0
-  m_Name: Rat
+  m_Name: RatHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16694,7 +16694,7 @@ PrefabInstance:
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
       propertyPath: m_Name
-      value: Golem Phase 1 (23)
+      value: Golem Phase 1
       objectReference: {fileID: 0}
     - target: {fileID: 2795938909665345719, guid: 24459c413dd31c74b89a1cef0938efab,
         type: 3}
@@ -16812,7 +16812,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (2)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -16839,7 +16839,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (2)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
@@ -16933,7 +16933,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (4)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -17082,7 +17082,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (29)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -17109,7 +17109,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (20)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -17258,7 +17258,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (28)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -17364,7 +17364,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (25)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -17391,7 +17391,7 @@ PrefabInstance:
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
       propertyPath: m_Name
-      value: Spiked Slime (6)
+      value: Spiked Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1428093621257878115, guid: a385aa3685e268d49ba9cfbcd1ff423c,
         type: 3}
@@ -17540,7 +17540,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (17)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -17622,7 +17622,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
       propertyPath: m_Name
-      value: Bat (11)
+      value: Bat
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 4517ebaf6e80b0445b019f09070b0d5c,
         type: 3}
@@ -17704,7 +17704,7 @@ PrefabInstance:
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
       propertyPath: m_Name
-      value: Crab (3)
+      value: Crab
       objectReference: {fileID: 0}
     - target: {fileID: 3793684263814087431, guid: 1d9dff84a1bf6f54c9e5dc700bead044,
         type: 3}
@@ -17743,7 +17743,7 @@ PrefabInstance:
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}
       propertyPath: m_Name
-      value: Rat (15)
+      value: Rat
       objectReference: {fileID: 0}
     - target: {fileID: 122913961388822368, guid: 934d4b776210933419bc15a9ad4b7b5d,
         type: 3}

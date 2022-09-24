@@ -10,10 +10,16 @@ public class SoundController : MonoBehaviour
     public AudioClip ratClip;
     public AudioClip slimeClip;
     public AudioClip golemClip;
+    private GameObject enemyHolder;
+    private string bat = "Bat";
+    private string crab = "Crab";
+    private string golem = "Golem";
+    private string rat = "Rat";
+    private string slime = "Spiked Slime";
 
     void Update()
     {
-        if (GameObject.Find("Bat(Clone)"))
+        if (GameObject.Find("Bat"))
         {
             GetComponent<AudioSource>().clip = batClip;
             GetComponent<AudioSource>().volume = 0.2f;
@@ -22,7 +28,7 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Crab(Clone)"))
+        else if (GameObject.Find("Crab"))
         {
             GetComponent<AudioSource>().clip = crabClip;
             GetComponent<AudioSource>().volume = 0.05f;
@@ -31,7 +37,7 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Rat(Clone)"))
+        else if (GameObject.Find("Rat"))
         {
             GetComponent<AudioSource>().clip = ratClip;
             GetComponent<AudioSource>().volume = 0.2f;
@@ -40,7 +46,7 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Spiked Slime(Clone)"))
+        else if (GameObject.Find("Spiked Slime"))
         {
             GetComponent<AudioSource>().clip = slimeClip;
             GetComponent<AudioSource>().volume = 0.2f;
@@ -49,7 +55,7 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Golem Phase 1(Clone)"))
+        else if (GameObject.Find("Golem Phase 1"))
         {
             GetComponent<AudioSource>().clip = golemClip;
             GetComponent<AudioSource>().volume = 0.2f;
@@ -58,7 +64,8 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
-        else if (GameObject.Find("Golem Phase 3(Clone)"))
+
+        else if (GameObject.Find("Golem Phase 3"))
         {
             GetComponent<AudioSource>().clip = golemClip;
             GetComponent<AudioSource>().volume = 0.2f;
@@ -67,5 +74,6 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
+
     }
 }
