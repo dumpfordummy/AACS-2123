@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ce62378555cefe4aa7eb4455b6cd176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoneQty: 0
+  stoneQty: 9999
   text: {fileID: 0}
 --- !u!1 &1452632716
 GameObject:
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2c3eba8df068e46a0fd682ef01c430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  woodQty: 0
+  woodQty: 9999
   text: {fileID: 0}
 --- !u!1 &1482864077
 GameObject:
@@ -2311,7 +2311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -108.4, y: -68.6}
+  m_AnchoredPosition: {x: -108.399994, y: -68.59999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1750004429
@@ -3340,7 +3340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb3007e59276a6048bfa57c14a49ee43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverMenu: {fileID: 0}
+  gameOverMenu: {fileID: 6721496616770278184}
 --- !u!1 &3041884966918481669
 GameObject:
   m_ObjectHideFlags: 0
@@ -4217,6 +4217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4716895594670986210}
+  - component: {fileID: 2083451828}
   m_Layer: 5
   m_Name: GameOverMenu
   m_TagString: Untagged
@@ -4245,9 +4246,22 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 843.16, y: 471.9}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2083451828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6721496616770278184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb3007e59276a6048bfa57c14a49ee43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverMenu: {fileID: 6721496616770278184}
 --- !u!1 &7080692547177135784
 GameObject:
   m_ObjectHideFlags: 0
@@ -5115,7 +5129,19 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  fill: {fileID: 0}
+  fill: {fileID: 3144004285719526911}
+--- !u!114 &3144004285719526911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114645527339949250, guid: ad84c37a896f54e1180d600bd7746b95,
+    type: 3}
+  m_PrefabInstance: {fileID: 3041884966078210365}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3041884966129299716
 PrefabInstance:
   m_ObjectHideFlags: 0
