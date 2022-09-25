@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -32,6 +33,24 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if (typeOfWeapon == 0)
+        {
+            GameObject.FindGameObjectWithTag("HammerFrame").GetComponent<Image>().color = new Color32(0, 225, 225, 255);
+            GameObject.FindGameObjectWithTag("SwordFrame").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.FindGameObjectWithTag("SyctheFrame").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
+        else if (typeOfWeapon == 1)
+        {
+            GameObject.FindGameObjectWithTag("HammerFrame").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.FindGameObjectWithTag("SwordFrame").GetComponent<Image>().color = new Color32(0, 225, 225, 255);
+            GameObject.FindGameObjectWithTag("SyctheFrame").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        }
+        else if (typeOfWeapon == 2)
+        {
+            GameObject.FindGameObjectWithTag("HammerFrame").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.FindGameObjectWithTag("SwordFrame").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+            GameObject.FindGameObjectWithTag("SyctheFrame").GetComponent<Image>().color = new Color32(0, 225, 225, 255);
+        }
         typeOfWeapon = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().typeOfWeapon;
         animator = GetComponent<Animator>();
         if (timeRemaining > 0)
