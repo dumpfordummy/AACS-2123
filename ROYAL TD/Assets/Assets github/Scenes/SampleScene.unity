@@ -7178,6 +7178,11 @@ PrefabInstance:
       propertyPath: spikedSlime.Array.data[29]
       value: 
       objectReference: {fileID: 1372602484}
+    - target: {fileID: 2091293589955488693, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: maxHp
+      value: 6400
+      objectReference: {fileID: 0}
     - target: {fileID: 2929172069440413922, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: m_Layer
