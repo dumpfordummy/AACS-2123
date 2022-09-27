@@ -42,5 +42,10 @@ public class EnemyHp : MonoBehaviour
         currentHp -= hpToDecrease;
         healthBar.setHealth(currentHp);
     }
+
+    public void ResetHp()
+    {
+        currentHp = maxHp;
+    }
 }
 
