@@ -18,8 +18,8 @@ public class Player : GameCharacter
     float xWidthM = 50f;
     float yHeightM = 25f;
     public int typeOfWeapon = 0;
-    private woodResources woodResouce;
-    private stoneResources stoneResource;
+    public woodResources woodResource;
+    public stoneResources stoneResource;
     private GameObject unlockSword;
     private GameObject unlockSycthe;
     private bool unlockedSword;
@@ -32,7 +32,7 @@ public class Player : GameCharacter
 
     private void Start()
     {
-        woodResouce = GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>();
+        woodResource = GameObject.FindGameObjectWithTag("WoodResources").GetComponent<woodResources>();
         stoneResource = GameObject.FindGameObjectWithTag("StoneResources").GetComponent<stoneResources>();
         unlockSword = GameObject.FindGameObjectWithTag("UnlockSword");
         unlockSycthe = GameObject.FindGameObjectWithTag("UnlockSycthe");
@@ -53,10 +53,10 @@ public class Player : GameCharacter
         }
         else
         {
-            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30 && Input.GetKeyDown(KeyCode.X))
+            if (woodResource.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30 && Input.GetKeyDown(KeyCode.X))
             {
                 unlockSword.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
-                woodResouce.decWoddQty(unlockSwordWoodQty);
+                woodResource.decWoddQty(unlockSwordWoodQty);
                 stoneResource.decStoneQty(unlockSwordStoneQty);
                 unlockedSword = true;
             }
@@ -71,10 +71,10 @@ public class Player : GameCharacter
         }
         else
         {
-            if (woodResouce.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30 && Input.GetKeyDown(KeyCode.C))
+            if (woodResource.getWoodQty() >= 10 && stoneResource.getStoneQty() >= 30 && Input.GetKeyDown(KeyCode.C))
             {
                 unlockSycthe.GetComponent<RectTransform>().localScale = new Vector3(0, 0, 0);
-                woodResouce.decWoddQty(unlockSyctheWoodQty);
+                woodResource.decWoddQty(unlockSyctheWoodQty);
                 stoneResource.decStoneQty(unlockSyctheStoneQty);
                 unlockedSycthe = true;
             }
