@@ -332,6 +332,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: fill
+      value: 
+      objectReference: {fileID: 5200979500197585040}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.ctime0
+      value: 13107
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.ctime1
+      value: 39321
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key0.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key0.r
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key1.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key1.g
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key1.r
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key2.b
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key2.g
+      value: 0.61960787
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.key2.r
+      value: 0.41176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 105685065, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+      propertyPath: gradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1749886340, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -108.400024
@@ -472,6 +532,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
+--- !u!114 &5200979500197585040 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3143715560965519581, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+    type: 3}
+  m_PrefabInstance: {fileID: 5200979500197585039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5938975008148074809
 PrefabInstance:
   m_ObjectHideFlags: 0
