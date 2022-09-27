@@ -9,6 +9,7 @@ public class EnemyHp : MonoBehaviour
     [SerializeField] private float currentHp;
     public EnemyHpBar healthBar;
     private Enemy enemy;
+    private ParticleSystem particle;
     private float dieCountDown = 1;
 
     private void Start()
@@ -16,6 +17,7 @@ public class EnemyHp : MonoBehaviour
         currentHp = maxHp;
         healthBar.setMaxHealth(maxHp);
         enemy = GetComponent<Enemy>();
+        particle = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Update()
@@ -25,6 +27,7 @@ public class EnemyHp : MonoBehaviour
             GetComponentInParent<Enemy>().target = null;
             GetComponentInParent<Enemy>().isAllive = false;
             GetComponentInParent<Enemy>().SetAnimations(2);
+            particle.Play();
             if (dieCountDown > 0)
             {
                 dieCountDown -= Time.deltaTime;
