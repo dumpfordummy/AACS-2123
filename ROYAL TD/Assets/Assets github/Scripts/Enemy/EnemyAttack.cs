@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     private Enemy parent;
     private float nextFireTime = 0.0f;
