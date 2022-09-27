@@ -33,12 +33,19 @@ public class EnemySpawner : MonoBehaviour
     public float spawnCooldownDuration;
     private Timer timer;
 
+    public static LinkedList<GameObject> activeEnemy;
+
     public GameObject[] bats;
     public GameObject[] crabs;
     public GameObject[] golem1;
     public GameObject[] golem2;
     public GameObject[] rat;
     public GameObject[] spikedSlime;
+
+    private void Start()
+    {
+        activeEnemy = new();
+    }
 
     // Update is called once per frame
     void Update()
@@ -68,6 +75,13 @@ public class EnemySpawner : MonoBehaviour
             firstEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(firstEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            if(activeEnemy.Count == 0)
+            {
+                firstEnemyWaveTime = 0;
+                spawnCooldown = 0;
+            }
+
         }
         else if (secondBuildingTime > 0)
         {
@@ -93,6 +107,12 @@ public class EnemySpawner : MonoBehaviour
             secondEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(secondEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            if (activeEnemy.Count == 0)
+            {
+                secondEnemyWaveTime = 0;
+                spawnCooldown = 0;
+            }
         }
         else if (thirdBuildingTime > 0)
         {
@@ -118,6 +138,12 @@ public class EnemySpawner : MonoBehaviour
             thirdEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(thirdEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            if (activeEnemy.Count == 0)
+            {
+                thirdEnemyWaveTime = 0;
+                spawnCooldown = 0;
+            }
         }
         else if (fourthBuildingTime > 0)
         {
@@ -143,6 +169,12 @@ public class EnemySpawner : MonoBehaviour
             fourthEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(fourthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            if (activeEnemy.Count == 0)
+            {
+                fourthEnemyWaveTime = 0;
+                spawnCooldown = 0;
+            }
         }
         else if (fifthBuildingTime > 0)
         {
@@ -168,6 +200,12 @@ public class EnemySpawner : MonoBehaviour
             fifthEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(fifthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            if (activeEnemy.Count == 0)
+            {
+                fifthEnemyWaveTime = 0;
+                spawnCooldown = 0;
+            }
         }
         else if (sixthBuildingTime > 0)
         {
@@ -193,6 +231,11 @@ public class EnemySpawner : MonoBehaviour
             sixthEnemyWaveTime -= Time.deltaTime;
             timer.DisplayTime(sixthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
+
+            if (activeEnemy.Count == 0)
+            {
+                GameObject.Find("GameCompleteMenu").SetActive(true);
+            }
         }
     }
 
@@ -234,13 +277,19 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < bats.Length; i++)
                 {
                     if (!bats[i].activeInHierarchy)
+                    {
+                        activeEnemy.AddLast(bats[i]);
                         return bats[i];
+                    }
                 }
                 break;
             case 2:
                 for (int i = 0; i < crabs.Length; i++)
                 {
                     if (!crabs[i].activeInHierarchy)
+                    {
+                        activeEnemy.AddLast(crabs[i]);
+                    }
                         return crabs[i];
                 }
                 break;
@@ -248,6 +297,9 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < golem1.Length; i++)
                 {
                     if (!golem1[i].activeInHierarchy)
+                    {
+                        activeEnemy.AddLast(golem1[i]);
+                    }
                         return golem1[i];
                 }
                 break;
@@ -255,21 +307,30 @@ public class EnemySpawner : MonoBehaviour
                 for (int i = 0; i < golem2.Length; i++)
                 {
                     if (!golem2[i].activeInHierarchy)
+                    {
+                        activeEnemy.AddLast(golem2[i]);
                         return golem2[i];
+                    }
                 }
                 break;
             case 5:
                 for (int i = 0; i < rat.Length; i++)
                 {
                     if (!rat[i].activeInHierarchy)
+                    {
+                        activeEnemy.AddLast(rat[i]);
                         return rat[i];
+                    }
                 }
                 break;
             case 6:
                 for (int i = 0; i < spikedSlime.Length; i++)
                 {
                     if (!spikedSlime[i].activeInHierarchy)
+                    {
+                        activeEnemy.AddLast(spikedSlime[i]);
                         return spikedSlime[i];
+                    }
                 }
                 break;
         }

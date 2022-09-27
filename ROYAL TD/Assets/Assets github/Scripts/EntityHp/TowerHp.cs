@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TowerHp : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class TowerHp : MonoBehaviour
     [SerializeField] private float currentHp;
     public TowerHpBar hpBar;
     public static bool isInitializing = false;
+    private static bool isTownhallImmortal = false;
 
     private void Start()
     {
@@ -17,8 +19,25 @@ public class TowerHp : MonoBehaviour
         hpBar.setMaxHealth(maxHp);
     }
 
+    public static void ToggleTownhallImmortal()
+    {
+        isTownhallImmortal = !isTownhallImmortal;
+        if (isTownhallImmortal)
+        {
+            GameObject.Find("Town_Hall_HP/Filler").GetComponent<Image>().color = new Color32(40, 40, 200, 200);
+        }
+        else
+        {
+            GameObject.Find("Town_Hall_HP/Filler").GetComponent<Image>().color = new Color32(113, 209, 40, 175);
+        }
+        
+    }
+
     public void DecreaseEntityHp(Transform enemy, float hpToDecrease)
     {
+        if (name == "TownHall" && isTownhallImmortal)
+            return;
+
         currentHp -= hpToDecrease;
 
         if (currentHp <= 0)
@@ -29,6 +48,8 @@ public class TowerHp : MonoBehaviour
                 Debug.Log("Game Over!");
                 OnTownHallDestroy?.Invoke();
             }
+
+            
 
             CleanUp(enemy);
             Destroy(gameObject);

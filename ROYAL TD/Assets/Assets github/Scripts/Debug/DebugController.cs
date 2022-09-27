@@ -10,7 +10,7 @@ public class DebugController : MonoBehaviour
 
     public Player player;
 
-    public static DebugCommand KACHING;
+    public static DebugCommand KACHING, IMMORTAL;
 
     public List<object> commandList;
 
@@ -22,9 +22,14 @@ public class DebugController : MonoBehaviour
             player.stoneResource.addStoneQty(1000);
         });
 
+        IMMORTAL = new DebugCommand("immortal", "Jesus give your townhall his immortal", "immortal", () =>
+        {
+            TowerHp.ToggleTownhallImmortal();
+        });
+
         commandList = new List<object>
         {
-            KACHING
+            KACHING, IMMORTAL
         };
     }
 
