@@ -465,6 +465,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3041884966682444191, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
 --- !u!1001 &5938975008148074809
@@ -478,6 +483,26 @@ PrefabInstance:
         type: 3}
       propertyPath: firstBuildingTime
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685087578537948983, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.81825686
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685087578537948983, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.9572997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685087578537948983, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.016036153
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685087578537948983, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.52135015
       objectReference: {fileID: 0}
     - target: {fileID: 5938975008460139233, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
