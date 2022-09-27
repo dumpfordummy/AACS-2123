@@ -33,6 +33,8 @@ public class EnemySpawner : MonoBehaviour
     public float spawnCooldownDuration;
     private Timer timer;
 
+    public GameObject gameCompleteMenu;
+
     public static LinkedList<GameObject> activeEnemy;
 
     public GameObject[] bats;
@@ -234,7 +236,7 @@ public class EnemySpawner : MonoBehaviour
 
             if (activeEnemy.Count == 0)
             {
-                GameObject.Find("GameCompleteMenu").SetActive(true);
+                gameCompleteMenu.SetActive(true);
             }
         }
     }

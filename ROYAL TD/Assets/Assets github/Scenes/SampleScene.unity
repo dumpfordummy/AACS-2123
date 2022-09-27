@@ -3255,7 +3255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenu: {fileID: 0}
-  gameCompleteMenu: {fileID: 1285946669}
 --- !u!1 &1286191628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6901047605700607622, guid: 65c18e210cf415f4085848dbf84500ad,
@@ -6333,6 +6332,11 @@ PrefabInstance:
       propertyPath: crabs.Array.size
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: gameCompleteMenu
+      value: 
+      objectReference: {fileID: 1285946669}
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: firstBuildingTime
