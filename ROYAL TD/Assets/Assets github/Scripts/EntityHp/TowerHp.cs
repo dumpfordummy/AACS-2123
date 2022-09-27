@@ -45,12 +45,8 @@ public class TowerHp : MonoBehaviour
             if (name == "TownHall")
             {
                 currentHp = 0;
-                Debug.Log("Game Over!");
                 OnTownHallDestroy?.Invoke();
             }
-
-            
-
             CleanUp(enemy);
             Destroy(gameObject);
         }

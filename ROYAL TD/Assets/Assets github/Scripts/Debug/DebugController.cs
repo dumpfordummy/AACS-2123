@@ -22,7 +22,7 @@ public class DebugController : MonoBehaviour
             player.stoneResource.addStoneQty(1000);
         });
 
-        IMMORTAL = new DebugCommand("immortal", "Jesus give your townhall his immortal", "immortal", () =>
+        IMMORTAL = new DebugCommand("immortal", "Jesus toggled your townhall his immortal", "immortal", () =>
         {
             TowerHp.ToggleTownhallImmortal();
         });
@@ -37,7 +37,7 @@ public class DebugController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.BackQuote))
         {
-            showConsole = !showConsole;
+            ToggleShowConsole();
         }
     }
 
@@ -47,17 +47,26 @@ public class DebugController : MonoBehaviour
 
         float y = 0f;
 
+
         GUI.Box(new Rect(0, y, Screen.width, 30), "");
         GUI.backgroundColor = new Color(0, 0, 0, 0);
 
-        input = GUI.TextField(new Rect(10f, y + 5f, Screen.width - 20f, 20f), input);
+        GUI.SetNextControlName("input");
+        input = GUI.TextField(new Rect(10f, y + 5f, Screen.width - 20f, 20f), input) ?? string.Empty;
+
+        GUI.FocusControl("input");
 
         if (Event.current.keyCode == KeyCode.Return)
         {
+            ToggleShowConsole();
             HandleInput();
             input = string.Empty;
-            showConsole = false;
         }
+    }
+
+    private void ToggleShowConsole()
+    {
+        showConsole = !showConsole;
     }
 
     private void HandleInput()

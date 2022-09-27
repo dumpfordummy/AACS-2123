@@ -23,7 +23,6 @@ public class EnemyAttack : MonoBehaviour
 
             if (IsPropInWaypoint(other))
             {
-                Debug.Log("setting waypoint");
                 GetComponentInParent<EnemyMovement>().SetWaypoint();
                 return;
             }
