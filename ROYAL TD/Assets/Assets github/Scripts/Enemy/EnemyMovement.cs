@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private List<Vector3> waypoint;
+    public List<Vector3> waypoint;
     public Pathfinding pathfinding;
     public Enemy enemy;
     public float moveSpeed = 1f;
@@ -31,6 +31,11 @@ public class EnemyMovement : MonoBehaviour
     public void InitializeMovement()
     {
         enemy.isAttacking = false;
+        SetWaypoint();
+    }
+
+    public void SetWaypoint()
+    {
         waypointIndex = 0;
         waypoint.Clear();
         Vector3 townHallPosition = GameObject.Find("TownHall").GetComponent<Transform>().position;
