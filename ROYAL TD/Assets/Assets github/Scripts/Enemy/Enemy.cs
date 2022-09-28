@@ -13,9 +13,13 @@ public class Enemy : MonoBehaviour
     public bool isAttacking = false;
     public bool isAllive = true;
 
-    private void Update()
+    private void Start()
     {
         animator = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
         if (isAllive)
         {
             if (target == null)
@@ -42,6 +46,7 @@ public class Enemy : MonoBehaviour
 
     public void SetAnimations(int i)
     {
+        animator = GetComponent<Animator>();
         animator.runtimeAnimatorController = overrideControllers[i];
     }
 }

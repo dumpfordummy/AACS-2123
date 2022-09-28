@@ -14,12 +14,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
-        townHallPosition = GameObject.Find("TownHall").GetComponent<Transform>().position;
-        pathfinding = GridHandler.pathInit;
-        enemy = GetComponent<Enemy>();
-        waypoint = new List<Vector3>();
         InitializeMovement();
-        initialScale = transform.localScale;
     }
 
     void FixedUpdate()
@@ -32,6 +27,11 @@ public class EnemyMovement : MonoBehaviour
 
     public void InitializeMovement()
     {
+        townHallPosition = GameObject.Find("TownHall").GetComponent<Transform>().position;
+        pathfinding = GridHandler.pathInit;
+        enemy = GetComponent<Enemy>();
+        waypoint = new List<Vector3>();
+        initialScale = transform.localScale;
         enemy.isAttacking = false;
         SetWaypoint();
     }

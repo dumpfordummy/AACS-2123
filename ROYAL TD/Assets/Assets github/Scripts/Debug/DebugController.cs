@@ -5,12 +5,13 @@ using UnityEngine;
 public class DebugController : MonoBehaviour
 {
     bool showConsole;
+    bool showHelp;
 
     string input;
 
     public Player player;
 
-    public static DebugCommand KACHING, BUDDHA, WANNACRY, GOLDENHAND;
+    public static DebugCommand KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP;
 
     public List<object> commandList;
 
@@ -38,9 +39,14 @@ public class DebugController : MonoBehaviour
             player.GetComponentInChildren<Weapon>().ToggleOneHitKill();
         });
 
+        HELP = new DebugCommand("help", "Shows list of commands", "help", () =>
+        {
+            showHelp = true;
+        });
+
         commandList = new List<object>
         {
-            KACHING, BUDDHA, WANNACRY, GOLDENHAND
+            KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP
         };
     }
 
@@ -58,6 +64,10 @@ public class DebugController : MonoBehaviour
 
         float y = 0f;
 
+        if (showHelp)
+        {
+            //GUI.Box(new Rect(0, y))
+        }
 
         GUI.Box(new Rect(0, y, Screen.width, 30), "");
         GUI.backgroundColor = new Color(0, 0, 0, 0);

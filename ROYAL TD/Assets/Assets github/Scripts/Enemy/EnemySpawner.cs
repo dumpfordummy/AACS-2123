@@ -250,6 +250,8 @@ public class EnemySpawner : MonoBehaviour
 
         enemy.GetComponent<EnemyHp>().ResetHp();
 
+        enemy.GetComponent<Enemy>().SetAnimations(0);
+
         if (spawnRegion == 0)
         {
             //GameObject.Instantiate(enemy, new Vector3(Random.Range(-50, -40) + 0.5f, Random.Range(-15, 25) - 0.5f, 0), new Quaternion());
@@ -271,7 +273,7 @@ public class EnemySpawner : MonoBehaviour
             enemy.transform.position = new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f);
         }
 
-        enemy.GetComponent<EnemyMovement>().SetWaypoint(); // initialize enemy pathfinding
+        enemy.GetComponent<EnemyMovement>().InitializeMovement(); // initialize enemy pathfinding
     }
 
     private GameObject FindEnemy(int n)
@@ -294,8 +296,8 @@ public class EnemySpawner : MonoBehaviour
                     if (!crabs[i].activeInHierarchy)
                     {
                         activeEnemy.AddLast(crabs[i]);
-                    }
                         return crabs[i];
+                    }
                 }
                 break;
             case 3:
@@ -304,8 +306,8 @@ public class EnemySpawner : MonoBehaviour
                     if (!golem1[i].activeInHierarchy)
                     {
                         activeEnemy.AddLast(golem1[i]);
-                    }
                         return golem1[i];
+                    }
                 }
                 break;
             case 4:
