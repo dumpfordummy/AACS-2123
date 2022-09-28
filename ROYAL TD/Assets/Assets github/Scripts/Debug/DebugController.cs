@@ -10,7 +10,7 @@ public class DebugController : MonoBehaviour
 
     public Player player;
 
-    public static DebugCommand KACHING, IMMORTAL;
+    public static DebugCommand KACHING, BUDDHA, WANNACRY, GOLDENHAND;
 
     public List<object> commandList;
 
@@ -22,14 +22,25 @@ public class DebugController : MonoBehaviour
             player.stoneResource.addStoneQty(1000);
         });
 
-        IMMORTAL = new DebugCommand("immortal", "Jesus toggled your townhall his immortal", "immortal", () =>
+        BUDDHA = new DebugCommand("buddha", "Immortal Townhall", "buddha", () =>
         {
             TowerHp.ToggleTownhallImmortal();
         });
 
+        WANNACRY = new DebugCommand("wannacry", "Your townhall left 1 hp ._.", "wannacry", () =>
+        {
+            GameObject.Find("TownHall").GetComponent<TowerHp>().SetCurrentHp(1f);
+            GameObject.Find("Town_Hall_HP").GetComponent<TowerHpBar>().setHealth(1);
+        });
+
+        GOLDENHAND = new DebugCommand("goldenhand", "1 Hit Kill", "goldenhand", () =>
+        {
+            player.GetComponentInChildren<Weapon>().ToggleOneHitKill();
+        });
+
         commandList = new List<object>
         {
-            KACHING, IMMORTAL
+            KACHING, BUDDHA, WANNACRY, GOLDENHAND
         };
     }
 

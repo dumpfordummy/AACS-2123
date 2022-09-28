@@ -19,16 +19,13 @@ public class Weapon : MonoBehaviour
     public int damageOfHammer;
     public int damageOfSword;
     public int damageOfSycthe;
+    private bool isOneHitKill;
 
     private void Awake()
     {
+        isOneHitKill = false;
         weaponDamage = 50;
         direction = 3;
-    }
-
-    private void Start()
-    {
-        
     }
 
     void Update()
@@ -67,18 +64,30 @@ public class Weapon : MonoBehaviour
             SetAnimations(overrideControllers[0]);
         }
 
-        if(typeOfWeapon == 0)
+        if (isOneHitKill)
         {
-            weaponDamage = damageOfHammer;
+            weaponDamage = int.MaxValue;
         }
-        else if (typeOfWeapon == 1)
+        else
         {
-            weaponDamage = damageOfSword;
+            if (typeOfWeapon == 0)
+            {
+                weaponDamage = damageOfHammer;
+            }
+            else if (typeOfWeapon == 1)
+            {
+                weaponDamage = damageOfSword;
+            }
+            else if (typeOfWeapon == 2)
+            {
+                weaponDamage = damageOfSycthe;
+            }
         }
-        else if (typeOfWeapon == 2)
-        {
-            weaponDamage = damageOfSycthe;
-        }
+    }
+
+    public void ToggleOneHitKill()
+    {
+        isOneHitKill = !isOneHitKill;
     }
 
     public void Attack(int typeOfWeapon)

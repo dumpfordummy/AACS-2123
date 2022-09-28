@@ -10,9 +10,11 @@ public class EnemyMovement : MonoBehaviour
     public float moveSpeed = 1f;
     private int waypointIndex = 0;
     Vector3 initialScale;
+    Vector3 townHallPosition;
 
     void Start()
     {
+        townHallPosition = GameObject.Find("TownHall").GetComponent<Transform>().position;
         pathfinding = GridHandler.pathInit;
         enemy = GetComponent<Enemy>();
         waypoint = new List<Vector3>();
@@ -38,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
     {
         waypointIndex = 0;
         waypoint.Clear();
-        Vector3 townHallPosition = GameObject.Find("TownHall").GetComponent<Transform>().position;
+        
         GridBase<PathNode>.GetXY(townHallPosition, out int endX, out int endY);
         GridBase<PathNode>.GetXY(transform.position, out int initX, out int initY);
 

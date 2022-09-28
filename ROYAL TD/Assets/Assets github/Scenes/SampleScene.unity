@@ -8992,6 +8992,11 @@ PrefabInstance:
       objectReference: {fileID: 130400076}
     - target: {fileID: 9203379107163705377, guid: 1b703718eb87d184fa1a6b7a44f2ce08,
         type: 3}
+      propertyPath: currentHp
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203379107163705377, guid: 1b703718eb87d184fa1a6b7a44f2ce08,
+        type: 3}
       propertyPath: gradient.ctime1
       value: 26214
       objectReference: {fileID: 0}

@@ -50,6 +50,12 @@ public class EnemyHp : MonoBehaviour
     public void ResetHp()
     {
         currentHp = maxHp;
+        ResetHpBar();
+    }
+
+    public void ResetHpBar()
+    {
+        GetComponentInChildren<EnemyHpBar>().setHealth(maxHp);
     }
 }
 

@@ -33,6 +33,11 @@ public class TowerHp : MonoBehaviour
         
     }
 
+    public void SetCurrentHp(float hp)
+    {
+        currentHp = hp;
+    }
+
     public void DecreaseEntityHp(Transform enemy, float hpToDecrease)
     {
         if (name == "TownHall" && isTownhallImmortal)
