@@ -44,9 +44,14 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] rat;
     public GameObject[] spikedSlime;
 
+    public AudioClip buildingClip;
+    public AudioClip enemyClip;
+    private AudioSource audioSource;
+
     private void Start()
     {
         activeEnemy = new();
+        audioSource = GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +63,11 @@ public class EnemySpawner : MonoBehaviour
             firstBuildingTime -= Time.deltaTime;
             timer.DisplayTime(firstBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
+            if (audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            } 
         }
         else if (firstEnemyWaveTime > 0)
         {
@@ -83,13 +93,22 @@ public class EnemySpawner : MonoBehaviour
                 firstEnemyWaveTime = 0;
                 spawnCooldown = 0;
             }
-
+            if (audioSource.clip != enemyClip)
+            {
+                audioSource.clip = enemyClip;
+                audioSource.Play();
+            }
         }
         else if (secondBuildingTime > 0)
         {
             secondBuildingTime -= Time.deltaTime;
             timer.DisplayTime(secondBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
+            if (audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            }
         }
         else if (secondEnemyWaveTime > 0)
         {
@@ -115,12 +134,22 @@ public class EnemySpawner : MonoBehaviour
                 secondEnemyWaveTime = 0;
                 spawnCooldown = 0;
             }
+            if (audioSource.clip != enemyClip)
+            {
+                audioSource.clip = enemyClip;
+                audioSource.Play();
+            }
         }
         else if (thirdBuildingTime > 0)
         {
             thirdBuildingTime -= Time.deltaTime;
             timer.DisplayTime(thirdBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
+            if (audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            }
         }
         else if (thirdEnemyWaveTime > 0)
         {
@@ -146,12 +175,22 @@ public class EnemySpawner : MonoBehaviour
                 thirdEnemyWaveTime = 0;
                 spawnCooldown = 0;
             }
+            if (audioSource.clip != enemyClip)
+            {
+                audioSource.clip = enemyClip;
+                audioSource.Play();
+            }
         }
         else if (fourthBuildingTime > 0)
         {
             fourthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fourthBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
+            if (audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            }
         }
         else if (fourthEnemyWaveTime > 0)
         {
@@ -177,12 +216,22 @@ public class EnemySpawner : MonoBehaviour
                 fourthEnemyWaveTime = 0;
                 spawnCooldown = 0;
             }
+            if (audioSource.clip != enemyClip)
+            {
+                audioSource.clip = enemyClip;
+                audioSource.Play();
+            }
         }
         else if (fifthBuildingTime > 0)
         {
             fifthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fifthBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
+            if (audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            }
         }
         else if (fifthEnemyWaveTime > 0)
         {
@@ -208,12 +257,22 @@ public class EnemySpawner : MonoBehaviour
                 fifthEnemyWaveTime = 0;
                 spawnCooldown = 0;
             }
+            if (audioSource.clip != enemyClip)
+            {
+                audioSource.clip = enemyClip;
+                audioSource.Play();
+            }
         }
         else if (sixthBuildingTime > 0)
         {
             sixthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(sixthBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
+            if (audioSource.clip != buildingClip)
+            {
+                audioSource.clip = buildingClip;
+                audioSource.Play();
+            }
         }
         else if (sixthEnemyWaveTime > 0)
         {
@@ -237,6 +296,11 @@ public class EnemySpawner : MonoBehaviour
             if (activeEnemy.Count == 0)
             {
                 gameCompleteMenu.SetActive(true);
+            }
+            if (audioSource.clip != enemyClip)
+            {
+                audioSource.clip = enemyClip;
+                audioSource.Play();
             }
         }
     }

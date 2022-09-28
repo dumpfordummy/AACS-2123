@@ -29,6 +29,7 @@ TagManager:
   - SyctheFrame
   - Timer
   - ShovelButton
+  - BGM
   layers:
   - Default
   - TransparentFX
