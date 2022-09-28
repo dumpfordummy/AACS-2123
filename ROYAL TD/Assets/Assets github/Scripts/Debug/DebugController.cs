@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DebugController : MonoBehaviour
@@ -14,6 +15,8 @@ public class DebugController : MonoBehaviour
     public static DebugCommand KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP;
 
     public List<object> commandList;
+
+    private Vector2 scroll;
 
     private void Awake()
     {
@@ -66,7 +69,26 @@ public class DebugController : MonoBehaviour
 
         if (showHelp)
         {
-            //GUI.Box(new Rect(0, y))
+            GUI.Box(new Rect(0, y, Screen.width, 100), "");
+
+            Rect viewport = new Rect(0, 0, Screen.width - 30, 20 * commandList.Count);
+
+            scroll = GUI.BeginScrollView(new Rect(0, y + 5f, Screen.width, 90), scroll, viewport);
+
+            for(int i = 0; i < commandList.Count; i++)
+            {
+                DebugCommandBase command = commandList[i] as DebugCommand;
+
+                string label = $"{command.commandFormat} - {command.commandDescription}";
+
+                Rect labelRect = new Rect(5, 20 * i, viewport.width - 100, 20);
+
+                GUI.Label(labelRect, label);
+            }
+
+            GUI.EndScrollView();
+
+            y += 100;
         }
 
         GUI.Box(new Rect(0, y, Screen.width, 30), "");
@@ -79,7 +101,6 @@ public class DebugController : MonoBehaviour
 
         if (Event.current.keyCode == KeyCode.Return)
         {
-            ToggleShowConsole();
             HandleInput();
             input = string.Empty;
         }
