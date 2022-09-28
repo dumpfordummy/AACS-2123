@@ -270,6 +270,8 @@ public class EnemySpawner : MonoBehaviour
             //GameObject.Instantiate(enemy, new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f, 0), new Quaternion());
             enemy.transform.position = new Vector3(Random.Range(-40, 50) - 0.5f, Random.Range(15, 25) - 0.5f);
         }
+
+        enemy.GetComponent<EnemyMovement>().SetWaypoint(); // initialize enemy pathfinding
     }
 
     private GameObject FindEnemy(int n)
