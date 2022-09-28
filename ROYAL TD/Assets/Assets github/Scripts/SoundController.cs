@@ -11,11 +11,6 @@ public class SoundController : MonoBehaviour
     public AudioClip slimeClip;
     public AudioClip golemClip;
     private GameObject enemyHolder;
-    private string bat = "Bat";
-    private string crab = "Crab";
-    private string golem = "Golem";
-    private string rat = "Rat";
-    private string slime = "Spiked Slime";
 
     void Update()
     {
@@ -64,7 +59,6 @@ public class SoundController : MonoBehaviour
                 sound.Play();
             }
         }
-
         else if (GameObject.Find("Golem Phase 3"))
         {
             GetComponent<AudioSource>().clip = golemClip;
@@ -73,6 +67,10 @@ public class SoundController : MonoBehaviour
             {
                 sound.Play();
             }
+        }
+        else
+        {
+            sound.clip = null;
         }
 
     }

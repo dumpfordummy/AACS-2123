@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
     public void attackTarget()
     {
 
-        if (target != null)
+        if (target != null && isAllive)
         {
             target.GetComponent<TowerHp>().DecreaseEntityHp(GetComponent<Transform>(), damage);
         }

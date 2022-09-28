@@ -132,7 +132,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(3);
+                    spawnEnemy(5);
                     thirdEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -163,7 +163,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(4);
+                    spawnEnemy(6);
                     fourthEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -194,7 +194,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(5);
+                    spawnEnemy(3);
                     fifthEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }
@@ -225,7 +225,7 @@ public class EnemySpawner : MonoBehaviour
                 }
                 else
                 {
-                    spawnEnemy(6);
+                    spawnEnemy(4);
                     sixthEnemyCount--;
                     spawnCooldown = spawnCooldownDuration;
                 }

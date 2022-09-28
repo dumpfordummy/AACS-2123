@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!TowerHp.isInitializing)
+        if (!TowerHp.isInitializing && gameObject.GetComponent<Enemy>().isAllive)
         {
             followPath();
         }

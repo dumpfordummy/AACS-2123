@@ -38,6 +38,10 @@ public class EnemyHp : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
+        else
+        {
+            GetComponentInParent<Enemy>().isAllive = true;
+        }
     }
 
     public void DecreaseEntityHp(float hpToDecrease)
