@@ -65,7 +65,7 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfButton = (typeOfButton == 1) ? 0 : 1;
             }
-            unlockTower1.GetComponent<RectTransform>().localScale = Vector3.zero;
+            //unlockTower1.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
             unlockTower1.GetComponent<RectTransform>().localScale = Vector3.one;
@@ -76,7 +76,7 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfButton = (typeOfButton == 2) ? 0 : 2;
             }
-            unlockTower2.GetComponent<RectTransform>().localScale = Vector3.zero;
+            //unlockTower2.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
             unlockTower2.GetComponent<RectTransform>().localScale = Vector3.one;
@@ -87,7 +87,7 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfButton = (typeOfButton == 3) ? 0 : 3;
             }
-            unlockTower3.GetComponent<RectTransform>().localScale = Vector3.zero;
+            //unlockTower3.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
             unlockTower3.GetComponent<RectTransform>().localScale = Vector3.one;
@@ -98,7 +98,7 @@ public class BuildingManager : MonoBehaviour
             {
                 typeOfButton = (typeOfButton == 4) ? 0 : 4;
             }
-            unlockStoneWall.GetComponent<RectTransform>().localScale = Vector3.zero;
+            //unlockStoneWall.GetComponent<RectTransform>().localScale = Vector3.zero;
         }
         else
             unlockStoneWall.GetComponent<RectTransform>().localScale = Vector3.one;

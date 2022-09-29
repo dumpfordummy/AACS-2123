@@ -67,6 +67,7 @@ public class EnemySpawner : MonoBehaviour
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         if (firstBuildingTime > 0)
         {
+            GameObject.Find("CurrentWave").GetComponent<TextMeshProUGUI>().text = "Current Wave: 1/6";
             currentWave = 1;
             firstBuildingTime -= Time.deltaTime;
             timer.DisplayTime(firstBuildingTime);
@@ -79,6 +80,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (firstEnemyWaveTime > 0)
         {
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
             if (firstEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -109,6 +111,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (secondBuildingTime > 0)
         {
+            GameObject.Find("CurrentWave").GetComponent<TextMeshProUGUI>().text = "Current Wave: 2/6";
             currentWave = 2;
             secondBuildingTime -= Time.deltaTime;
             timer.DisplayTime(secondBuildingTime);
@@ -121,6 +124,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (secondEnemyWaveTime > 0)
         {
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
             if (secondEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -151,6 +155,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (thirdBuildingTime > 0)
         {
+            GameObject.Find("CurrentWave").GetComponent<TextMeshProUGUI>().text = "Current Wave: 3/6";
             currentWave = 3;
             thirdBuildingTime -= Time.deltaTime;
             timer.DisplayTime(thirdBuildingTime);
@@ -163,6 +168,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (thirdEnemyWaveTime > 0)
         {
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
             if (thirdEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -193,6 +199,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fourthBuildingTime > 0)
         {
+            GameObject.Find("CurrentWave").GetComponent<TextMeshProUGUI>().text = "Current Wave: 4/6";
             currentWave = 4;
             fourthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fourthBuildingTime);
@@ -205,6 +212,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fourthEnemyWaveTime > 0)
         {
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
             if (fourthEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -235,6 +243,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fifthBuildingTime > 0)
         {
+            GameObject.Find("CurrentWave").GetComponent<TextMeshProUGUI>().text = "Current Wave: 5/6";
             currentWave = 5;
             fifthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fifthBuildingTime);
@@ -247,6 +256,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fifthEnemyWaveTime > 0)
         {
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
             if (fifthEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -277,6 +287,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (sixthBuildingTime > 0)
         {
+            GameObject.Find("CurrentWave").GetComponent<TextMeshProUGUI>().text = "Current Wave: 6/6";
             currentWave = 6;
             sixthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(sixthBuildingTime);
@@ -289,6 +300,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (sixthEnemyWaveTime > 0)
         {
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
             if (sixthEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
