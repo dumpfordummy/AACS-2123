@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
+using System.Linq;
+using Random = UnityEngine.Random;
+
 public class EnemySpawner : MonoBehaviour
 {
     public float firstBuildingTime;
@@ -318,33 +322,26 @@ public class EnemySpawner : MonoBehaviour
         
     }
 
-
     public void SkipCurrentBuildingTime()
     {
-        switch(currentWave)
+        switch (currentWave)
         {
             case 1:
-                firstEnemyCount = 0;
                 firstBuildingTime = 0;
                 break;
             case 2:
-                secondEnemyCount = 0;
                 secondBuildingTime = 0;
                 break;
             case 3:
-                thirdEnemyCount = 0;
                 thirdBuildingTime = 0;
                 break;
             case 4:
-                fourthEnemyCount = 0;
                 fourthBuildingTime = 0;
                 break;
             case 5:
-                firstEnemyCount = 0;
                 fifthBuildingTime = 0;
                 break;
             case 6:
-                sixthEnemyCount = 0;
                 sixthBuildingTime = 0;
                 break;
             default:

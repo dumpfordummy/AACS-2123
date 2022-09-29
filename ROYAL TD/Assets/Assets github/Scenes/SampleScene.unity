@@ -756,6 +756,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3041884966682444191, guid: 1bb4ebaf971de114a922ca4214e7a18e,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bb4ebaf971de114a922ca4214e7a18e, type: 3}
 --- !u!224 &5200979500197585040 stripped
@@ -788,9 +793,39 @@ PrefabInstance:
       objectReference: {fileID: 120859446}
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
+      propertyPath: fifthEnemyCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: firstEnemyCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: sixthEnemyCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: thirdEnemyCount
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: fourthEnemyCount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
       propertyPath: gameCompleteMenu
       value: 
       objectReference: {fileID: 1285946669}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: secondEnemyCount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5938975008460139233, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: m_RootOrder
