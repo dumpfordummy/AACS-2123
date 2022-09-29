@@ -17,7 +17,7 @@ public class EnemyAttack : MonoBehaviour
         if (other.gameObject.CompareTag("Defense"))
         {
             //&& !IsPropInWaypoint(other)
-            if (other.gameObject.name == "StoneWall(Clone)")
+            if (other.gameObject.name == "StoneWall(Clone)" && !IsPropInWaypoint(other))
             {
                 return;
             }

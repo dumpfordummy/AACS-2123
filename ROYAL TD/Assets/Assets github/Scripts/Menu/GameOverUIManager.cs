@@ -23,6 +23,7 @@ public class GameOverUIManager : MonoBehaviour
     }
     public void RestartLevel()
     {
+        Pathfinding.obstacleList.Clear();
         SceneManager.LoadScene(1);
     }
 

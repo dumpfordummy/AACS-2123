@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Linq;
 
 public class DebugController : MonoBehaviour
 {
@@ -51,12 +52,15 @@ public class DebugController : MonoBehaviour
         {
             KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP
         };
+
+        showHelp = false;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.BackQuote))
         {
+            input = string.Empty;
             ToggleShowConsole();
         }
     }
@@ -75,7 +79,7 @@ public class DebugController : MonoBehaviour
 
             scroll = GUI.BeginScrollView(new Rect(0, y + 5f, Screen.width, 90), scroll, viewport);
 
-            for(int i = 0; i < commandList.Count; i++)
+            for (int i = 0; i < commandList.Count; i++)
             {
                 DebugCommandBase command = commandList[i] as DebugCommand;
 
@@ -99,8 +103,16 @@ public class DebugController : MonoBehaviour
 
         GUI.FocusControl("input");
 
+        if (input.Contains("`"))
+            ToggleShowConsole();
+
         if (Event.current.keyCode == KeyCode.Return)
         {
+            if (!input.Equals("help") && commandList.Select(c => ((DebugCommandBase)c).commandId).ToList().Contains(input))
+            {
+                showHelp = false;
+                ToggleShowConsole();
+            }
             HandleInput();
             input = string.Empty;
         }

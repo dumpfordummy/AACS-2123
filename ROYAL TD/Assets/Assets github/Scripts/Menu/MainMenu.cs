@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        Pathfinding.obstacleList.Clear();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
