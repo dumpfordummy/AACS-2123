@@ -352,9 +352,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    publi
-
-    void spawnEnemy(int n)
+    public void spawnEnemy(int n)
     {
         GameObject enemy = FindEnemy(n);
         enemy.SetActive(true);
