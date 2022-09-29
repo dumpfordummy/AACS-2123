@@ -134,7 +134,7 @@ public class BuildingManager : MonoBehaviour
         }
         else if (typeOfButton == 5)
         {
-            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(Screen.width - 65, 25);
+            GameObject.FindGameObjectWithTag("ShovelButton").GetComponent<RectTransform>().anchoredPosition = Input.mousePosition - new Vector3(20, 150);
             ResetButtonPosition(tower1: true, tower2: true, tower3: true, tower4: true);
         }
     }

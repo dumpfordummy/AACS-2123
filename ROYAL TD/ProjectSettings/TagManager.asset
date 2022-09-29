@@ -30,6 +30,7 @@ TagManager:
   - Timer
   - ShovelButton
   - BGM
+  - UMV
   layers:
   - Default
   - TransparentFX

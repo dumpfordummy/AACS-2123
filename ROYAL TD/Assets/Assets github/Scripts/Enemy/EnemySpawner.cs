@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
     public AudioClip buildingClip;
     public AudioClip enemyClip;
     private AudioSource audioSource;
-    public AudioClip winClip;
+    public AudioSource winSource;
 
     private void Start()
     {
@@ -296,12 +296,12 @@ public class EnemySpawner : MonoBehaviour
 
             if (activeEnemy.Count == 0)
             {
-                gameCompleteMenu.SetActive(true);
                 audioSource.Stop();
-                audioSource.PlayOneShot(winClip);
+                winSource.Play();
+                gameCompleteMenu.SetActive(true);
             }
 
-            if (audioSource.clip != enemyClip && audioSource.clip != winClip)
+            if (audioSource.clip != enemyClip && activeEnemy.Count > 0)
             {
                 audioSource.clip = enemyClip;
                 audioSource.Play();
