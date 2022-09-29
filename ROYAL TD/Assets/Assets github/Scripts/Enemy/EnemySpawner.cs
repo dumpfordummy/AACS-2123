@@ -33,6 +33,8 @@ public class EnemySpawner : MonoBehaviour
     public float spawnCooldownDuration;
     private Timer timer;
 
+    public int currentWave;
+
     public GameObject gameCompleteMenu;
 
     public static LinkedList<GameObject> activeEnemy;
@@ -61,6 +63,7 @@ public class EnemySpawner : MonoBehaviour
         timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         if (firstBuildingTime > 0)
         {
+            currentWave = 1;
             firstBuildingTime -= Time.deltaTime;
             timer.DisplayTime(firstBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -102,6 +105,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (secondBuildingTime > 0)
         {
+            currentWave = 2;
             secondBuildingTime -= Time.deltaTime;
             timer.DisplayTime(secondBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -143,6 +147,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (thirdBuildingTime > 0)
         {
+            currentWave = 3;
             thirdBuildingTime -= Time.deltaTime;
             timer.DisplayTime(thirdBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -184,6 +189,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fourthBuildingTime > 0)
         {
+            currentWave = 4;
             fourthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fourthBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -225,6 +231,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fifthBuildingTime > 0)
         {
+            currentWave = 5;
             fifthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(fifthBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -266,6 +273,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (sixthBuildingTime > 0)
         {
+            currentWave = 6;
             sixthBuildingTime -= Time.deltaTime;
             timer.DisplayTime(sixthBuildingTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -309,6 +317,42 @@ public class EnemySpawner : MonoBehaviour
         }
         
     }
+
+
+    public void SkipCurrentBuildingTime()
+    {
+        switch(currentWave)
+        {
+            case 1:
+                firstEnemyCount = 0;
+                firstBuildingTime = 0;
+                break;
+            case 2:
+                secondEnemyCount = 0;
+                secondBuildingTime = 0;
+                break;
+            case 3:
+                thirdEnemyCount = 0;
+                thirdBuildingTime = 0;
+                break;
+            case 4:
+                fourthEnemyCount = 0;
+                fourthBuildingTime = 0;
+                break;
+            case 5:
+                firstEnemyCount = 0;
+                fifthBuildingTime = 0;
+                break;
+            case 6:
+                sixthEnemyCount = 0;
+                sixthBuildingTime = 0;
+                break;
+            default:
+                break;
+        }
+    }
+
+    publi
 
     void spawnEnemy(int n)
     {

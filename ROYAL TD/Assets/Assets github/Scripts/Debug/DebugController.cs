@@ -13,7 +13,7 @@ public class DebugController : MonoBehaviour
 
     public Player player;
 
-    public static DebugCommand KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP;
+    public static DebugCommand KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP, SKIPBUILDINGTIME;
 
     public List<object> commandList;
 
@@ -48,9 +48,15 @@ public class DebugController : MonoBehaviour
             showHelp = true;
         });
 
+        SKIPBUILDINGTIME = new DebugCommand("skip_buildingtime", "Skip current building time", "skip_buildingtime", () =>
+        {
+            GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().SkipCurrentBuildingTime();
+        });
+
+
         commandList = new List<object>
         {
-            KACHING, BUDDHA, WANNACRY, GOLDENHAND, HELP
+            KACHING, BUDDHA, WANNACRY, GOLDENHAND, SKIPBUILDINGTIME, HELP
         };
 
         showHelp = false;
