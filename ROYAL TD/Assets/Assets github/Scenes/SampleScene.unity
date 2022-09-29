@@ -1116,12 +1116,12 @@ PrefabInstance:
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: fifthEnemyCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: firstEnemyCount
-      value: 20
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
@@ -1131,12 +1131,12 @@ PrefabInstance:
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: thirdEnemyCount
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: fourthEnemyCount
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
@@ -1146,7 +1146,7 @@ PrefabInstance:
     - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: secondEnemyCount
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5938975008460139233, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
