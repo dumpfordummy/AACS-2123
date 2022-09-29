@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
 
     public GameObject gameCompleteMenu;
 
-    public static LinkedList<GameObject> activeEnemy;
+    public static int activeEnemyCount;
 
     public GameObject[] bats;
     public GameObject[] crabs;
@@ -57,7 +57,6 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        activeEnemy = new();
         audioSource = GameObject.FindGameObjectWithTag("BGM").GetComponent<AudioSource>();
     }
 
@@ -80,7 +79,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (firstEnemyWaveTime > 0)
         {
-            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemyCount.ToString() + " left";
             if (firstEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -98,7 +97,7 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(firstEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if(activeEnemy.Count == 0)
+            if(activeEnemyCount == 0)
             {
                 firstEnemyWaveTime = 0;
                 spawnCooldown = 0;
@@ -124,7 +123,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (secondEnemyWaveTime > 0)
         {
-            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemyCount.ToString() + " left";
             if (secondEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -142,7 +141,7 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(secondEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if (activeEnemy.Count == 0)
+            if (activeEnemyCount == 0)
             {
                 secondEnemyWaveTime = 0;
                 spawnCooldown = 0;
@@ -168,7 +167,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (thirdEnemyWaveTime > 0)
         {
-            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemyCount.ToString() + " left";
             if (thirdEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -186,7 +185,7 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(thirdEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if (activeEnemy.Count == 0)
+            if (activeEnemyCount == 0)
             {
                 thirdEnemyWaveTime = 0;
                 spawnCooldown = 0;
@@ -212,7 +211,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fourthEnemyWaveTime > 0)
         {
-            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemyCount.ToString() + " left";
             if (fourthEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -230,7 +229,7 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(fourthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if (activeEnemy.Count == 0)
+            if (activeEnemyCount == 0)
             {
                 fourthEnemyWaveTime = 0;
                 spawnCooldown = 0;
@@ -256,7 +255,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (fifthEnemyWaveTime > 0)
         {
-            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemyCount.ToString() + " left";
             if (fifthEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -274,7 +273,7 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(fifthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if (activeEnemy.Count == 0)
+            if (activeEnemyCount == 0)
             {
                 fifthEnemyWaveTime = 0;
                 spawnCooldown = 0;
@@ -300,7 +299,7 @@ public class EnemySpawner : MonoBehaviour
         }
         else if (sixthEnemyWaveTime > 0)
         {
-            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemy.Count.ToString() + " left";
+            GameObject.Find("CurrentWaveEnemyCount").GetComponent<TextMeshProUGUI>().text = activeEnemyCount.ToString() + " left";
             if (sixthEnemyCount > 0)
             {
                 if (spawnCooldown > 0)
@@ -318,14 +317,14 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(sixthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if (activeEnemy.Count == 0)
+            if (activeEnemyCount == 0)
             {
                 audioSource.Stop();
                 winSource.Play();
                 gameCompleteMenu.SetActive(true);
             }
 
-            if (audioSource.clip != enemyClip && activeEnemy.Count > 0)
+            if (audioSource.clip != enemyClip && activeEnemyCount > 0)
             {
                 audioSource.clip = enemyClip;
                 audioSource.Play();
@@ -405,7 +404,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if (!bats[i].activeInHierarchy)
                     {
-                        activeEnemy.AddLast(bats[i]);
+                        activeEnemyCount++;
                         return bats[i];
                     }
                 }
@@ -415,7 +414,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if (!crabs[i].activeInHierarchy)
                     {
-                        activeEnemy.AddLast(crabs[i]);
+                        activeEnemyCount++;
                         return crabs[i];
                     }
                 }
@@ -425,7 +424,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if (!golem1[i].activeInHierarchy)
                     {
-                        activeEnemy.AddLast(golem1[i]);
+                        activeEnemyCount++;
                         return golem1[i];
                     }
                 }
@@ -435,7 +434,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if (!golem2[i].activeInHierarchy)
                     {
-                        activeEnemy.AddLast(golem2[i]);
+                        activeEnemyCount++;
                         return golem2[i];
                     }
                 }
@@ -445,7 +444,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if (!rat[i].activeInHierarchy)
                     {
-                        activeEnemy.AddLast(rat[i]);
+                        activeEnemyCount++;
                         return rat[i];
                     }
                 }
@@ -455,7 +454,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     if (!spikedSlime[i].activeInHierarchy)
                     {
-                        activeEnemy.AddLast(spikedSlime[i]);
+                        activeEnemyCount++;
                         return spikedSlime[i];
                     }
                 }

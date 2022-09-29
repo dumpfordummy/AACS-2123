@@ -1148,6 +1148,36 @@ PrefabInstance:
       propertyPath: secondEnemyCount
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: fifthEnemyWaveTime
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: firstEnemyWaveTime
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: sixthEnemyWaveTime
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: thirdEnemyWaveTime
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: fourthEnemyWaveTime
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881208388161427872, guid: 65c18e210cf415f4085848dbf84500ad,
+        type: 3}
+      propertyPath: secondEnemyWaveTime
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 5938975008460139233, guid: 65c18e210cf415f4085848dbf84500ad,
         type: 3}
       propertyPath: m_RootOrder

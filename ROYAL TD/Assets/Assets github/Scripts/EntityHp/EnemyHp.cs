@@ -34,7 +34,7 @@ public class EnemyHp : MonoBehaviour
             }
             else if (dieCountDown <= 0)
             {
-                EnemySpawner.activeEnemy.Remove(gameObject);
+                EnemySpawner.activeEnemyCount--;
                 gameObject.SetActive(false);
             }
         }
