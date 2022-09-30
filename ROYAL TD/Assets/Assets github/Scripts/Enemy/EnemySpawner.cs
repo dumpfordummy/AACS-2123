@@ -317,10 +317,10 @@ public class EnemySpawner : MonoBehaviour
             timer.DisplayTime(sixthEnemyWaveTime);
             timer.GetComponent<TextMeshProUGUI>().color = Color.red;
 
-            if (activeEnemyCount == 0)
+            if (activeEnemyCount == 0 && audioSource.isPlaying)
             {
                 audioSource.Stop();
-                winSource.Play();
+                winSource.PlayOneShot(winSource.clip);
                 gameCompleteMenu.SetActive(true);
             }
 
