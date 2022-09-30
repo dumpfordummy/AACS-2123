@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class OptionMenu : MonoBehaviour
 {
@@ -32,6 +33,15 @@ public class OptionMenu : MonoBehaviour
         else
         {
             AudioListener.volume = 1;
+        }
+
+        if (AudioListener.volume == 0)
+        {
+            GameObject.FindGameObjectWithTag("MuteCheckBox").GetComponent<Toggle>().isOn = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("MuteCheckBox").GetComponent<Toggle>().isOn = true;
         }
     }
 
