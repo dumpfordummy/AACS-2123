@@ -1,12 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
+
+    public Toggle toggle;
+
+    public static bool fullScreen = false;
 
     public void SetMusicVolume(float MusicVolume)
     {
@@ -45,8 +51,14 @@ public class OptionMenu : MonoBehaviour
         }
     }
 
-    public void SetFullscreen (bool isFullscreen)
+    public void OnEnable()
     {
-        Screen.fullScreen = isFullscreen;
+        if(toggle != null)
+            toggle.GetComponent<Toggle>().isOn = fullScreen;
+    }
+
+    public void SetFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = fullScreen = isFullscreen;
     }
 }
