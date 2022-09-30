@@ -13,7 +13,8 @@ public class EnemyCounter : MonoBehaviour
 
     public static void DecreaseEnemyCounter()
     {
-        enemyCounter--;
+        if(enemyCounter != 0)
+            enemyCounter--;
     }
 
     public static int GetEnemyCounter()
