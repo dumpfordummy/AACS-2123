@@ -8,7 +8,8 @@ using UnityEngine.UI;
 
 public class OptionMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    public AudioMixer inGameMixer;
+    public AudioMixer soundEffectsMixer;
 
     public Toggle toggle;
 
@@ -17,17 +18,17 @@ public class OptionMenu : MonoBehaviour
 
     public void SetMusicVolume(float MusicVolume)
     {
-        audioMixer.SetFloat("MusicVolume", MusicVolume);
+        inGameMixer.SetFloat("MusicVolume", MusicVolume);
     }
 
     public void SetInGameVolume(float InGameVolume)
     {
-        audioMixer.SetFloat("InGameVolume", InGameVolume);
+        inGameMixer.SetFloat("InGameVolume", InGameVolume);
     }
 
     public void SetSoundEffectsVolume(float SoundEffectsVolume)
     {
-        audioMixer.SetFloat("SoundEffectsVolume", SoundEffectsVolume);
+        soundEffectsMixer.SetFloat("SoundEffectsVolume", SoundEffectsVolume);
     }
 
     public void SetMute(bool Muted)
