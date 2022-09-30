@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject umv;
 
+    private OptionMenu optionMenu;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

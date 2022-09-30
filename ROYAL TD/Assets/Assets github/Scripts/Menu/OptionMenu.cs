@@ -13,6 +13,7 @@ public class OptionMenu : MonoBehaviour
     public Toggle toggle;
 
     public static bool fullScreen = false;
+    public static bool isMuted;
 
     public void SetMusicVolume(float MusicVolume)
     {
@@ -34,27 +35,24 @@ public class OptionMenu : MonoBehaviour
         if (Muted)
         {
             AudioListener.volume = 0;
+            isMuted = true;
+
         }
 
         else
         {
             AudioListener.volume = 1;
-        }
-
-        if (AudioListener.volume == 0)
-        {
-            GameObject.FindGameObjectWithTag("MuteCheckBox").GetComponent<Toggle>().isOn = false;
-        }
-        else
-        {
-            GameObject.FindGameObjectWithTag("MuteCheckBox").GetComponent<Toggle>().isOn = true;
+            isMuted = false;
         }
     }
 
     public void OnEnable()
     {
         if(toggle != null)
+        {
             toggle.GetComponent<Toggle>().isOn = fullScreen;
+            GameObject.FindGameObjectWithTag("MuteCheckBox").GetComponent<Toggle>().isOn = isMuted;
+        }     
     }
 
     public void SetFullscreen(bool isFullscreen)
