@@ -13,7 +13,7 @@ public class OptionMenu : MonoBehaviour
 
     public Toggle toggle;
 
-    public static bool fullScreen = false;
+    public static bool fullScreen = true;
     public static bool isMuted;
 
     public void SetMusicVolume(float MusicVolume)

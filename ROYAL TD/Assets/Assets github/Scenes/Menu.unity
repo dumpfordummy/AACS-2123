@@ -636,7 +636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2854bd71d863ea4ea9b8bfd8cf27451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 6a8f596708d321b4b9226dd94084562a, type: 2}
+  inGameMixer: {fileID: 24100000, guid: 6a8f596708d321b4b9226dd94084562a, type: 2}
+  soundEffectsMixer: {fileID: 24100000, guid: 345e742df67b3e347b2c50005e11b744, type: 2}
   toggle: {fileID: 0}
 --- !u!1 &457345464
 GameObject:
@@ -1858,7 +1859,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2854bd71d863ea4ea9b8bfd8cf27451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 0}
+  inGameMixer: {fileID: 24100000, guid: 2ebd900ea01b99147b4b0a01bcc87d71, type: 2}
+  soundEffectsMixer: {fileID: 24100000, guid: 345e742df67b3e347b2c50005e11b744, type: 2}
   toggle: {fileID: 1934518408}
 --- !u!224 &1374970689 stripped
 RectTransform:
