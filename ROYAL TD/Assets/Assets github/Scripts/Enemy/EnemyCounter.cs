@@ -21,4 +21,9 @@ public class EnemyCounter : MonoBehaviour
     {
         return enemyCounter;
     }
+
+    public static void ResetEnemyCounter()
+    {
+        enemyCounter = 0;
+    }
 }

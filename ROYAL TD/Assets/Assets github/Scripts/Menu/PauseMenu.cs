@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
     public void Retry()
     {
         Time.timeScale = 1f;
+        EnemyCounter.ResetEnemyCounter();
         SceneManager.LoadScene(1);
     }
 
